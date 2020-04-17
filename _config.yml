@@ -1,0 +1,43 @@
+permalink   : /:categories/:year/:title/
+markdown    : kramdown
+highlighter : pygments
+plugins:
+  - jekyll-paginate
+paginate: 2 #6
+comments: true
+paginate_path: "/page/:num"
+
+source: source
+destination: _site
+sass:
+  sass_dir: _scss
+  style: compressed
+
+# Site settings
+title: Lora
+description: "A free Jekyll theme"
+email: your-email@domain.com
+baseurl: "" # the subpath of your site, e.g. /blog/
+#url: "http://yourdomain.com"
+url: "http://nandomoreira.me/lora"
+repository: "https://github.com/nandomoreirame/lora"
+disqus_shortname: "haruiz"
+google_analytics: UA-52446115-1
+
+# social footer
+social:
+  github:
+    slug: github
+    link: https://github.com/haruiz
+  facebook:
+    slug: facebook
+    link: https://www.facebook.com/devharuiz
+  twitter:
+    slug: twitter
+    link: https://twitter.com/devharuiz
+  instagram:
+    slug: instagram
+    link: https://www.instagram.com/henryruizdev/
+  linkedin:
+    slug: linkedin
+    link: https://www.linkedin.com/in/haruiz/

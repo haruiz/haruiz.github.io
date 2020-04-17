@@ -1,0 +1,251 @@
+/*=====================================
+=            Layout Styles            =
+=====================================*/
+
+/**
+ * Container
+ */
+
+.container {
+  max-width: $container-width;
+
+  padding: {
+    left: $gutter-padding;
+    right: $gutter-padding;
+  };
+
+  margin: {
+    left: auto;
+    right: auto;
+  };
+}
+
+.hr {
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: $primary-color;
+  margin: 3em auto;
+  border: none;
+}
+
+.btn {
+  appearance: none;
+  transition: background-color .2s linear, color .2s linear, border-color .2s linear;
+  border-radius: 4px;
+  box-shadow: none;
+  background-color: $primary-color;
+  border: 2px solid lighten($primary-color, 4%);
+  color: $white-color;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  line-height: 2.6em;
+  padding: 0 1.6em;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:hover,
+  &:active {
+    background-color: lighten($primary-color, 5%);
+    border-color: lighten($primary-color, 7%);
+    color: darken($white-color, 5%);
+  }
+}
+
+.pagination {
+  @extend %clearfix;
+
+  text-align: center;
+  margin: 2em 0;
+
+  li {
+    padding: 0 .4em;
+  }
+
+  li, a, span {
+    display: inline-block;
+  }
+
+  a, span {
+    line-height: 1.2em;
+    font-size: .7em;
+  }
+
+  a {}
+
+  span {
+    color: #aaa;
+    font-style: italic;
+  }
+}
+
+/**
+ * Site Header
+ */
+
+.site-header {
+  h1 {
+    margin-top: 1em;
+
+    small {
+      display: block;
+      color: #aaa;
+    }
+  }
+}
+
+.author-thumb {
+  opacity: .7;
+  display: inline-block;
+  transition: opacity .2s ease;
+
+  img {
+    width: 100px;
+    display: inline;
+    margin: 0;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: .9;
+  }
+}
+
+.navbar {
+  margin: {
+    top: 1.4em;
+    bottom: 1.4em;
+  };
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    font-size: 14px;
+    text-decoration: none;
+    color: $primary-color;
+  }
+
+  .divider {
+    padding-left: .6em;
+    padding-right: .6em;
+  }
+
+  .btn {
+    color: #fff;
+    font-weight: 400;
+    line-height: 2em;
+    padding: 0 1em;
+  }
+}
+
+/**
+ * .posts
+ */
+
+.post {
+  margin: 3em 0;
+
+  h1 {
+    margin-bottom: .3em;
+    text-align: center;
+  }
+
+  .post-meta {
+    font-style: italic;
+    color: #aaa;
+  }
+
+  &:after {
+    content: '';
+
+    @extend .hr;
+  }
+}
+
+.posts {
+  .post {
+    h1 {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.read-more {
+  font-size: 1rem;
+  padding: 0 .8em;
+}
+
+.site-footer {
+  padding: 1.6em 0 2em;
+  margin-top: 1.5em;
+
+  small {
+    color: #aaa;
+    font-size: .8em;
+    display: block;
+  }
+}
+
+.share {
+  padding: 1.2em 0 0;
+  width: 100%;
+  text-align: right;
+
+  span, a {
+    display: inline-block;
+    color: #787878;
+    text-decoration: none;
+    padding-left: 5px;
+  }
+}
+
+.social {
+  text-align: center;
+  margin: 2em 0;
+
+  li {
+    display: inline-block;
+    padding: 0 .6em;
+  }
+
+  a {
+    color: #999;
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+}
+
+.github-corner {
+  &:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
+}
+
+@keyframes octocat-wave {
+  0%,100% {
+    transform: rotate(0);
+  }
+
+  20%,60% {
+    transform: rotate(-25deg);
+  }
+
+  40%,80% {
+    transform: rotate(10deg);
+  }
+}
+
+@media (max-width: 500px) {
+  .github-corner:hover .octo-arm {
+    animation: none;
+  }
+
+  .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
+}
