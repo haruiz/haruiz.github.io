@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8e5e6098-a02e-47bb-a891-d56675c9e182" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/example.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_plugins/checked.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_plugins/cite.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_plugins/code.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_plugins/time.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/lora.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rakefile" beforeDir="false" afterPath="$PROJECT_DIR$/Rakefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_includes/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/_includes/head.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_includes/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/_includes/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_layouts/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/_layouts/default.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/2015-11-12-a-wonderful-serenity-has-taken-possession-of-my-entire-soul.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/2015-11-12-far-far-away-behind-the-word-mountains-far-from-the-countries-vokalia-and-consonantia.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/2015-11-12-lorem-ipsum-dolor-sit-amet-consectetuer-adipiscing-elit.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/2015-11-12-lorem.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/2015-11-12-the-quick-brown-fox-jumps-over-a-lazy-dog.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/2015-11-12-welcome-to-jekyll.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_scss/_layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/_scss/_layout.scss" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="ERB File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1agac4bElgxCGzGcUhm5ORmhJBK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/source/js" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8e5e6098-a02e-47bb-a891-d56675c9e182" name="Default Changelist" comment="" />
+      <created>1587159766632</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587159766632</updated>
+      <workItem from="1587159769500" duration="17000" />
+      <workItem from="1587232890909" duration="3844000" />
+      <workItem from="1587237926692" duration="32000" />
+      <workItem from="1587237967369" duration="774000" />
+      <workItem from="1587238836277" duration="5000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="672" y="354" width="633" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587238561351">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="672" y="354" width="633" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1587238561351" />
+    <state x="482" y="187" key="SettingsEditor" timestamp="1587237945200">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="482" y="187" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1587237945200" />
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1587239234819">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1587239234819" />
+  </component>
+</project>

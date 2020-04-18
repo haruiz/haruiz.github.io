@@ -2,9 +2,20 @@
 =            Layout Styles            =
 =====================================*/
 
+.ballot_box_with_check:before {
+  content: "\2611\ ";
+}
+
+.ballot_box:before {
+  content: "\2610\ ";
+}
+
+
+
 /**
  * Container
  */
+
 
 .container {
   max-width: $container-width;
@@ -149,7 +160,7 @@
 
 .post {
   margin: 3em 0;
-
+  text-align: justify;
   h1 {
     margin-bottom: .3em;
     text-align: center;
@@ -248,4 +259,64 @@
   .github-corner .octo-arm {
     animation: octocat-wave 560ms ease-in-out;
   }
+}
+
+//custom styles
+
+pre.code {
+  position: relative;
+  background-color: transparent;
+}
+pre.code > code{
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding-bottom: 40px;
+  padding-top: 30px;
+  margin: 0;
+
+}
+
+.copy-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: inline-block;
+  color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  background-color: black;
+}
+.copy-button:hover {
+  background-color: dimgray;
+  color: white;
+}
+/* for block of numbers */
+
+td.hljs-ln-line.hljs-ln-numbers{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  text-align: center;
+  color: #ccc;
+  border-right: 1px solid #CCC;
+  vertical-align: top;
+  padding-right: 5px;
+  /* your custom style here */
+}
+/*for line of codes*/
+td.hljs-ln-line.hljs-ln-code{
+  padding-left: 10px;
+  font-family: "Courier New";
+}
+
+img.post-image{
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 3px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
 }

@@ -6,7 +6,7 @@ require "jekyll"
 
 # Change your GitHub reponame
 GITHUB_REPONAME    = "haruiz/haruiz.github.io"
-GITHUB_REPO_BRANCH = "gh-pages"
+GITHUB_REPO_BRANCH = "master"
 
 SOURCE = "source/"
 DEST   = "_site"
