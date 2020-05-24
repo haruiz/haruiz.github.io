@@ -1,0 +1,10 @@
+en:
+  label: English
+  icon: us
+  path: /en
+es:
+  label: Español
+  icon: es
+  path: /es
+
+

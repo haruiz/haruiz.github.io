@@ -8,10 +8,15 @@ group :development do
   gem "jekyll", "~> 3.6"
   gem 'pygments.rb'
   gem "nokogiri"
-  gem 'jekyll-scholar'
+
 end
 
 group :jekyll_plugins do
-   gem "jekyll-paginate"
+  #gem "jekyll-paginate-v2"
+  gem 'jekyll-scholar'
+  gem "jekyll-feed", "~> 0.6"
+  gem "jekyll-paginate", "~> 1.1.0"
+  gem "jekyll-paginate-multiple", "~> 0.1.0"
+  gem 'jekyll-i18n_tags', '~>1'
 end
 

@@ -1,13 +1,21 @@
-permalink   : /:categories/:year/:title/
 markdown    : kramdown
 highlighter : pygments
 host: 0.0.0.0
 port: 5000
-plugins:
-  - jekyll-paginate
-paginate: 6
+#paginate: 2
+#paginate_path: "/page/:num"
+paginate_multiple:
+  - paginate: 5
+    paginate_path: '/en/page/:num'
+    sub_dir: '/en'
+  - paginate: 5
+    paginate_path: '/page/:num'
+    sub_dir: '/en'
+  - paginate: 5
+    paginate_path: '/es/page:num/'
+    sub_dir: '/es'
+
 comments: true
-paginate_path: "/page/:num"
 source: source
 destination: _site
 scholar:
@@ -20,7 +28,6 @@ scholar:
   bibliography_template: bib
   replace_strings: true
   join_strings:    true
-
 sass:
   sass_dir: _scss
   style: compressed
@@ -55,3 +62,16 @@ social:
   linkedin:
     slug: linkedin
     link: https://www.linkedin.com/in/haruiz/
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-paginate-multiple
+  - jekyll-i18n_tags
+source_lang: en
+translations:
+  es:
+    courses: cursos
+    home: inicio
+    about: acerca
+    Research interests: Areas de interes
+    Hi, I'm Henry Ruiz: Hola, Soy Henry Ruiz

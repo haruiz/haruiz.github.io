@@ -1,19 +1,17 @@
 ---
 layout: post
 title: "Linear Algebra (Vectors & Matrices)"
-permalink: vectors-matrices
+permalink: en/vectors-matrices
 date: 2020-05-05 14:47:56
 comments: true
 description: "vectors-matrices"
 keywords: ""
 categories:
-
+lang: "en"
 tags:
 ---
    
 Linear algebra is all about vectors, matrices, and their transformation in the space. So, in this post, we will immerse ourselves in that fascinating world, learn how the vectors and matrices are represented, and what kind of operations we can do with them. 
-
-### Getting Started
 
 Before starting to navigate deep into the definitions, let define what a vector space is.
 

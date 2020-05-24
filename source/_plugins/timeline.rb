@@ -38,7 +38,7 @@ module Jekyll
     def render(context)
       %{
          <section class="mcon-maindemo bgwhite" style="position: relative; padding-top:100px; padding-bottom:50px;">
-                <div class="full-bg" style="background-image: url(img/bg1.jpg)"></div>
+                <div class="full-bg" style="background-image: url(../img/bg1.jpg)"></div>
                 <br>
                 <div class="full-bg--overlay" style=""></div>
                   <div class="zoomtimeline mode-3dslider mode-3dslider--show-7 auto-init" data-options="{

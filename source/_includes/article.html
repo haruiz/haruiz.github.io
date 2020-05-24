@@ -13,7 +13,7 @@
       <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" title="Permalink to: {{ post.title }}">{{ post.title }}</a>
     </h1>
     <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-    <p>{{ post.content | strip_html | truncatewords: 30 }} <a href="{{ post.url | prepend: site.baseurl }}" title="Permalink to: {{ post.title }}" class="read-more">Read more &raquo;</a></p>
+    <p>{{ post.content | strip_html | truncatewords: 30 }} <a href="{{ site.baseurl }}{{ post.url }}" title="Permalink to: {{ post.title }}" class="read-more">Read more &raquo;</a></p>
   {% endif %}
 
 

@@ -38,7 +38,13 @@ GEM
       pathutil (~> 0.9)
       rouge (>= 1.7, < 4)
       safe_yaml (~> 1.0)
+    jekyll-feed (0.13.0)
+      jekyll (>= 3.7, < 5.0)
+    jekyll-i18n_tags (1.0.0)
     jekyll-paginate (1.1.0)
+    jekyll-paginate-multiple (0.1.0)
+      jekyll (>= 2.5)
+      jekyll-paginate (~> 1.1)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
     jekyll-scholar (5.16.0)
@@ -78,7 +84,10 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (~> 3.6)
-  jekyll-paginate
+  jekyll-feed (~> 0.6)
+  jekyll-i18n_tags (~> 1)
+  jekyll-paginate (~> 1.1.0)
+  jekyll-paginate-multiple (~> 0.1.0)
   jekyll-scholar
   nokogiri
   pygments.rb

@@ -1,11 +1,12 @@
 ---
 layout: post
 title: "Linear Algebra (Introduction)"
-permalink: ml-math-foundations-part-1
+permalink: en/ml-math-foundations-part-1
 date: 2020-04-17 12:34:42
 comments: true
 description: "ML-Math Foundations: Part 1"
 keywords: ""
+lang: "en"
 categories:
 tags: ml
 ---
@@ -38,7 +39,7 @@ Understanding these concepts,  you going to acquire the confidence and the intui
 
 Having some understanding of Linear algebra and Calculus gives us a better intuition about how ML algorithms work and their implementation. Especially because, in theory, most of them are based on matrix transformations, vectors, and linear functions. Further, it takes us in a privileged position where we can decide which to use for solving a particular problem, and how to face it. So if you want to be a successful data scientist or machine learning engineering, my suggestion is to spend some time digging into the essential concepts.
 
-![PCA](img/pca.gif)
+![PCA](./../img/pca.gif)
 
 ### Online Resources to learn
 

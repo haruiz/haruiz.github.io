@@ -2,21 +2,33 @@
   <div class="container txt-center">
     <nav class="navbar">
       <ul>
-        <li><a href="{{ "/" | prepend: site.baseurl }}">home</a></li>
+        <li><a href="{{site.base-url}}/{{page.lang}}">{% t home %}</a></li>
         <li class="divider">&bull;</li>
-        <li><a href="{{ "/about" | prepend: site.baseurl }}">about</a></li>
+        <li><a href="{{site.base-url}}/{{page.lang}}/about">{% t about %}</a></li>
         <li class="divider">&bull;</li>
-        <li><a href="{{ "/courses" | prepend: site.baseurl }}">courses</a></li>
-        <li class="divider">&bull;</li>
-        <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank"><i class="icon icon-feed"></i> feed</a></li>
+        <li><a href="{{site.base-url}}/{{page.lang}}/courses">{% t courses %}</a></li>
+<!--        <li class="divider">&bull;</li>-->
+<!--        <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank"><i class="icon icon-feed"></i> feed</a></li>-->
       </ul>
     </nav>
-    <a href="{{ "/" | prepend: site.baseurl }}" class="author-thumb">
+
+    <a href="{{site.base-url}}/{{page.lang}}" class="author-thumb">
       <img src="{{ "/img/author.jpg" | prepend: site.baseurl }}" alt="Author thumbnail" class="dot">
     </a>
-    <h1>Hi, I'm Henry Ruiz</h1>
+
+    <div style="display: flex; justify-content: center; margin: 20px">
+      <div class="row">
+        {% for lang in site.data.languages %}
+        {% assign language = lang[1] %}
+        <div class="column">
+          <a href="{{site.baseurl}}{{language.path}}" ><img  src="https://www.countryflags.io/{{language.icon}}/flat/32.png" alt="{{language.label}}" /></a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <h1>{% t Hi, I'm Henry Ruiz %}</h1>
     <smal style="text-align: center; font-size: medium">
-      <b style="font-weight: bold;">Research interests:</b> <br/>Artificial Intelligence, Computer Vision, Machine Learning, Pattern Recognition, Images processing, Deep learning, Remote Sensing, Ground Penetrating Radar (GPR), Data Science& High-Performance Computing (HPC), Python, C++
+      <b style="font-weight: bold;">{% t Research interests %}:</b> <br/>Artificial Intelligence, Computer Vision, Machine Learning, Pattern Recognition, Images processing, Deep learning, Remote Sensing, Ground Penetrating Radar (GPR), Data Science& High-Performance Computing (HPC), Python, C++
     </smal>
     <br/>
     <br/>
