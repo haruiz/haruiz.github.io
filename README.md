@@ -10,7 +10,7 @@
 1. Download or clone repo `git clone git@github.com:nandomoreirame/lora.git`
 2. Enter the folder: `cd lora/`
 3. Install Ruby gems: `bundle install`
-4. Start Jekyll server: `bundle exec jekyll serve --livereload`
+4. Start Jekyll server: `bundle exec jekyll serve --livereload --host `
 
 Access, [localhost:4000](http://localhost:4000/)
 
@@ -18,6 +18,7 @@ Access, [localhost:4000](http://localhost:4000/)
 
 1. Change the variables `GITHUB_REPONAME` and `GITHUB_REPO_BRANCH` in `Rakefile`
 2. Run `rake` or `bundle exec rake publish` for build and publish on Github
+3. For installing dependencies: `bundle install` 
 
 ---
 

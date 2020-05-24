@@ -42,6 +42,24 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // let output = example.format('bibliography', { format: 'html', template: 'apa', lang: 'en-US'  })
     // alert(output)
     littlefoot.default()
+
+    window.init_zoombox_settings = {
+        settings_zoom_doNotGoBeyond1X:'off'
+        ,design_skin:'skin-nebula'
+        ,settings_enableSwipe:'off'
+        ,settings_enableSwipeOnDesktop:'off'
+        ,settings_galleryMenu:'dock'
+        ,settings_useImageTag:'on'
+        ,settings_paddingHorizontal : '100'
+        ,settings_paddingVertical : '100'
+        ,settings_disablezoom:'off'
+        ,settings_transition : 'fade'
+        ,settings_transition_out : 'fade'
+        ,settings_transition_gallery : 'slide'
+        ,settings_disableSocial: 'on'
+        ,settings_zoom_use_multi_dimension: 'off'
+    };
+
 });
 
 

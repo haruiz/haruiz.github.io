@@ -1,18 +1,29 @@
 permalink   : /:categories/:year/:title/
 markdown    : kramdown
 highlighter : pygments
+host: 0.0.0.0
+port: 5000
 plugins:
   - jekyll-paginate
-paginate: 2 #6
+paginate: 6
 comments: true
 paginate_path: "/page/:num"
-
 source: source
 destination: _site
+scholar:
+  style: apa
+  locale: en
+  source: ./_bibliography
+  sort_by: year
+  order: descending
+  bibliography: references.bib
+  bibliography_template: bib
+  replace_strings: true
+  join_strings:    true
+
 sass:
   sass_dir: _scss
   style: compressed
-
 # Site settings
 title: Blog
 description: "Henry Ruiz Blog"
@@ -24,10 +35,9 @@ repository: "https://github.com/haruiz"
 disqus_shortname: "haruiz"
 google_analytics: UA-52446115-1
 highlight:
-  theme: googlecode
-  #theme: vs
+  #theme: googlecode
+  theme: vs
   #theme: xcode
-
 # social footer
 social:
   github:

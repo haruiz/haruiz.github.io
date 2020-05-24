@@ -7,6 +7,8 @@ group :development do
   gem 'sass', '~> 3.4.10'
   gem "jekyll", "~> 3.6"
   gem 'pygments.rb'
+  gem "nokogiri"
+  gem 'jekyll-scholar'
 end
 
 group :jekyll_plugins do
