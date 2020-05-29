@@ -17,12 +17,18 @@
     </a>
 
     <div style="display: flex; justify-content: center; margin: 20px">
+      {% assign url = page.url | split: "/" %}
+        {% if url.size > 2 %}
+            {% assign filename = url[-1] %}
+        {% else %}
+            {% assign filename = "" %}
+        {% endif %}
       <div class="row">
         {% for lang in site.data.languages %}
-        {% assign language = lang[1] %}
-        <div class="column">
-          <a href="{{site.baseurl}}{{language.path}}" ><img  src="https://www.countryflags.io/{{language.icon}}/flat/32.png" alt="{{language.label}}" /></a>
-        </div>
+          {% assign language = lang[1] %}
+          <div class="column">
+            <a href="{{site.baseurl}}{{language.path}}/{{filename}}" ><img  src="https://www.countryflags.io/{{language.icon}}/flat/32.png" alt="{{language.label}}" /></a>
+          </div>
         {% endfor %}
       </div>
     </div>

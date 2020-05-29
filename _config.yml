@@ -14,7 +14,6 @@ paginate_multiple:
   - paginate: 5
     paginate_path: '/es/page:num/'
     sub_dir: '/es'
-
 comments: true
 source: source
 destination: _site
@@ -42,9 +41,9 @@ repository: "https://github.com/haruiz"
 disqus_shortname: "haruiz"
 google_analytics: UA-52446115-1
 highlight:
-  #theme: googlecode
+  # theme: googlecode
   theme: vs
-  #theme: xcode
+  # theme: xcode
 # social footer
 social:
   github:

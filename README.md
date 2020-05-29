@@ -5,6 +5,13 @@
 
 ---
 
+### Install
+
+```terminal
+- pip install nbconvert #or
+- conda install nbconvert
+```
+
 ### Start in 4 steps
 
 1. Download or clone repo `git clone git@github.com:nandomoreirame/lora.git`
@@ -23,6 +30,8 @@ Access, [localhost:4000](http://localhost:4000/)
 
 ### Using Rake tasks
 
+
 * Create a new page: `bundle exec rake page name="contact.md"`
 * Create a new post: `bundle exec rake post title="TITLE OF THE POST"`
+* create a new post from a jupyter notebook: ``
 ---

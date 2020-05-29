@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Introducción al aprendizaje de maquina"
+title: "Introducción a Machine Learning"
 permalink: es/machine-learning-introduction
 date: 2020-04-16 22:48:44
 comments: true

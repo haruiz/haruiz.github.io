@@ -20,32 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e5e6098-a02e-47bb-a891-d56675c9e182" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/page.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publish.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_data/languages.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/es/2020-04-16-machine-learning-introduction.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/en/about.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/en/courses.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/en/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/es/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notebook2post.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/es/2020-04-17-ml-foundations-math.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/es/2020-05-05-vectors-matrices.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Rakefile" beforeDir="false" afterPath="$PROJECT_DIR$/Rakefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_includes/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/_includes/article.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/_includes/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/_includes/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_plugins/timeline.rb" beforeDir="false" afterPath="$PROJECT_DIR$/source/_plugins/timeline.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/2020-04-16-machine-learning-introduction.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/en/2020-04-16-machine-learning-introduction.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/2020-04-17-ml-foundations-math.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/en/2020-04-17-ml-foundations-math.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/2020-05-05-vectors-matrices.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/en/2020-05-05-vectors-matrices.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/es/2020-04-16-machine-learning-introduction.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/es/2020-04-16-machine-learning-introduction.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/_scss/_layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/_scss/_layout.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/about.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/es/about.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/courses.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/es/courses.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_scss/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/_scss/_variables.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,19 +72,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/source/_posts/es" />
-      <recent name="$PROJECT_DIR$/source/en" />
-      <recent name="$PROJECT_DIR$/source/es" />
-      <recent name="$PROJECT_DIR$/source/es/_posts" />
-      <recent name="$PROJECT_DIR$/source/css" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/source/_posts/es" />
       <recent name="$PROJECT_DIR$/source/_posts/en" />
       <recent name="$PROJECT_DIR$/source/_bibliography" />
       <recent name="$PROJECT_DIR$/source/css" />
       <recent name="$PROJECT_DIR$/source/js" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/source/_posts/es" />
+      <recent name="$PROJECT_DIR$/source/en" />
+      <recent name="$PROJECT_DIR$/source/es" />
+      <recent name="$PROJECT_DIR$/source/es/_posts" />
+      <recent name="$PROJECT_DIR$/source/css" />
     </key>
   </component>
   <component name="RunManager">
@@ -159,6 +144,8 @@
       <workItem from="1590254758937" duration="591000" />
       <workItem from="1590255366374" duration="141000" />
       <workItem from="1590255523746" duration="8733000" />
+      <workItem from="1590693918397" duration="13903000" />
+      <workItem from="1590708310719" duration="9407000" />
     </task>
     <servers />
   </component>
