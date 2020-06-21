@@ -33,5 +33,5 @@ Access, [localhost:4000](http://localhost:4000/)
 
 * Create a new page: `bundle exec rake page name="contact.md"`
 * Create a new post: `bundle exec rake post title="TITLE OF THE POST"`
-* create a new post from a jupyter notebook: ``
+* create a new post from a jupyter notebook: `bundle exec rake n2post file=$notebook_file  lang=$lan title="$title" --trace`
 ---

@@ -20,17 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e5e6098-a02e-47bb-a891-d56675c9e182" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/notebook2post.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/es/2020-04-17-ml-foundations-math.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/es/2020-05-05-vectors-matrices.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rakefile" beforeDir="false" afterPath="$PROJECT_DIR$/Rakefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_includes/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/_includes/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/es/2020-04-16-machine-learning-introduction.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/es/2020-04-16-machine-learning-introduction.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_scss/_layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/_scss/_layout.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_scss/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/_scss/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/docs/HenryRuiz-CV.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/en/about.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/en/about.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/en/courses.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/en/courses.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/es/about.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/es/about.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/es/courses.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/es/courses.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +65,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -145,7 +142,8 @@
       <workItem from="1590255366374" duration="141000" />
       <workItem from="1590255523746" duration="8733000" />
       <workItem from="1590693918397" duration="13903000" />
-      <workItem from="1590708310719" duration="9407000" />
+      <workItem from="1590708310719" duration="11764000" />
+      <workItem from="1592716323839" duration="1753000" />
     </task>
     <servers />
   </component>
