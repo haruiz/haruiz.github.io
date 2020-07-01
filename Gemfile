@@ -8,7 +8,7 @@ group :development do
   gem "jekyll", "~> 3.6"
   gem 'pygments.rb'
   gem "nokogiri"
-
+  gem "redcarpet"
 end
 
 group :jekyll_plugins do

@@ -20,13 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e5e6098-a02e-47bb-a891-d56675c9e182" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/source/es/slides.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/docs/HenryRuiz-CV.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rakefile" beforeDir="false" afterPath="$PROJECT_DIR$/Rakefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebook2post.sh" beforeDir="false" afterPath="$PROJECT_DIR$/notebook2post.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post.sh" beforeDir="false" afterPath="$PROJECT_DIR$/post.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_drafts/neural_networks.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_includes/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/_includes/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_plugins/code.rb" beforeDir="false" afterPath="$PROJECT_DIR$/source/_plugins/code.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/docs/cv.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/source/docs/cv.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/en/about.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/en/about.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/en/courses.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/en/courses.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/es/about.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/es/about.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/es/courses.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/es/courses.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,9 +63,10 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/source/_posts/es" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../dense_depth_web" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -70,16 +78,16 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/source/_drafts/es" />
+      <recent name="$PROJECT_DIR$/source/_drafts/en" />
       <recent name="$PROJECT_DIR$/source/_posts/es" />
       <recent name="$PROJECT_DIR$/source/_posts/en" />
       <recent name="$PROJECT_DIR$/source/_bibliography" />
-      <recent name="$PROJECT_DIR$/source/css" />
-      <recent name="$PROJECT_DIR$/source/js" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/source/es" />
       <recent name="$PROJECT_DIR$/source/_posts/es" />
       <recent name="$PROJECT_DIR$/source/en" />
-      <recent name="$PROJECT_DIR$/source/es" />
       <recent name="$PROJECT_DIR$/source/es/_posts" />
       <recent name="$PROJECT_DIR$/source/css" />
     </key>
@@ -109,11 +117,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Rake.post: haruiz.github.io" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -143,7 +146,13 @@
       <workItem from="1590255523746" duration="8733000" />
       <workItem from="1590693918397" duration="13903000" />
       <workItem from="1590708310719" duration="11764000" />
-      <workItem from="1592716323839" duration="1753000" />
+      <workItem from="1592716323839" duration="15939000" />
+      <workItem from="1593008441659" duration="2433000" />
+      <workItem from="1593011659233" duration="20558000" />
+      <workItem from="1593633671779" duration="19000" />
+      <workItem from="1593633705065" duration="17000" />
+      <workItem from="1593633749191" duration="46000" />
+      <workItem from="1593633905856" duration="1344000" />
     </task>
     <servers />
   </component>
@@ -178,14 +187,22 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="672" y="354" width="633" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1588695394951" />
-    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1587336220031">
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1593612161192">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1587336220031" />
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1593612161192" />
     <state x="482" y="187" key="SettingsEditor" timestamp="1590255506616">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="482" y="187" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1590255506616" />
+    <state x="603" y="166" width="770" height="773" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1593633637659">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="603" y="166" width="770" height="773" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1593633637659" />
+    <state x="657" y="253" key="run.anything.popup" timestamp="1592799811027">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="657" y="253" key="run.anything.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1592799811027" />
     <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1587239234819">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

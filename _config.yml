@@ -41,9 +41,9 @@ repository: "https://github.com/haruiz"
 disqus_shortname: "haruiz"
 google_analytics: UA-52446115-1
 highlight:
-  # theme: googlecode
-  theme: vs
-  # theme: xcode
+  #theme: googlecode
+  #theme: vs
+  theme: xcode
 # social footer
 social:
   github:
@@ -74,3 +74,5 @@ translations:
     about: acerca
     Research interests: Areas de interes
     Hi, I'm Henry Ruiz: Hola, Soy Henry Ruiz
+    posters: posters
+    slides: presentaciones

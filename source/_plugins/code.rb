@@ -2,13 +2,16 @@ module Jekyll
   class CodeBlock < Liquid::Block
     def initialize(name, params, tokens)
       args = split_params(params)
-      @language = args[0]
+      @language = "python"
+      if args.size > 0
+        @language = args[0].strip
+      end
       super
     end
     def render(context)
       text = super
       "<pre class=\"code\">
-      <code class=\"#{@language}\">
+       <code class=\"#{@language}\">
           #{text}
       </code>
       </pre>
