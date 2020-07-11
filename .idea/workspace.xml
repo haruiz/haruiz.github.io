@@ -20,20 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e5e6098-a02e-47bb-a891-d56675c9e182" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/source/es/slides.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rakefile" beforeDir="false" afterPath="$PROJECT_DIR$/Rakefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebook2post.sh" beforeDir="false" afterPath="$PROJECT_DIR$/notebook2post.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post.sh" beforeDir="false" afterPath="$PROJECT_DIR$/post.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_drafts/neural_networks.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_includes/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/_includes/head.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/_includes/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/_includes/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_plugins/code.rb" beforeDir="false" afterPath="$PROJECT_DIR$/source/_plugins/code.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/docs/cv.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/source/docs/cv.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/en/about.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/en/about.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/es/about.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/es/about.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/img/test/American_water_spaniel_00648.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/img/test/Brittany_02625.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/img/test/Curly-coated_retriever_03896.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/img/test/Labrador_retriever_06449.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/img/test/Labrador_retriever_06455.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/img/test/Labrador_retriever_06457.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/img/test/Welsh_springer_spaniel_08203.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/img/test/sample_dog_output.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/img/test/sample_human_output.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/source/js/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,6 +152,7 @@
       <workItem from="1593633705065" duration="17000" />
       <workItem from="1593633749191" duration="46000" />
       <workItem from="1593633905856" duration="1344000" />
+      <workItem from="1594494527632" duration="1284000" />
     </task>
     <servers />
   </component>

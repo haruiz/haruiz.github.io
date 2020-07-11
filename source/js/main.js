@@ -1,4 +1,13 @@
 document.addEventListener('DOMContentLoaded', (event) => {
+
+    var options = {
+        strings: ["I'm a Data Science", "I'm a ML and DL Engineer", "I'm Henry Ruiz"],
+        typeSpeed: 50
+    };
+    var typed = new Typed('#typed_text', options);
+
+
+
     document.querySelectorAll('pre.code code').forEach((block) => {
         hljs.highlightBlock(block);
         hljs.lineNumbersBlock(block);
