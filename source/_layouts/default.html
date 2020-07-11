@@ -4,19 +4,14 @@
     {% include head.html %}
   </head>
   <body class="{% if page.bodyclass %}{{ page.bodyclass }}{% endif %}">
-
+    <canvas id="demo-canvas" style="position: absolute;  z-index: -1; "></canvas>
     <main class="container">
-
         {% include header.html %}
-
-        <section class="main-content">
-          {{ content}}
-        </section>
-
+            <section class="main-content">
+              {{ content}}
+            </section>
         {% include footer.html %}
-
     </main>
-
     {% include github-corner.html %}
   </body>
 </html>{% endstrip %}

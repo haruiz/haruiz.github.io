@@ -1,6 +1,10 @@
 /*=====================================
 =            Layout Styles            =
 =====================================*/
+body{
+  background-color: #f2f1f2;
+  cursor: pointer;
+}
 
 .ballot_box_with_check:before {
   content: "\2611\ ";
