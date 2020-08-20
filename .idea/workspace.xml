@@ -20,11 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e5e6098-a02e-47bb-a891-d56675c9e182" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/source/js/background.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_includes/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/_includes/head.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_layouts/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/_layouts/default.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_scss/_layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/_scss/_layout.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/en/2020-05-05-vectors-matrices.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/en/2020-05-05-vectors-matrices.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/js/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/source/js/background.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +55,7 @@
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../dense_depth_web" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Coursera-Specialization" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -109,6 +107,7 @@
       </method>
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -144,7 +143,12 @@
       <workItem from="1593633705065" duration="17000" />
       <workItem from="1593633749191" duration="46000" />
       <workItem from="1593633905856" duration="1344000" />
-      <workItem from="1594494527632" duration="5559000" />
+      <workItem from="1594494527632" duration="6315000" />
+      <workItem from="1595981500934" duration="29000" />
+      <workItem from="1595981560552" duration="2352000" />
+      <workItem from="1596345557038" duration="1394000" />
+      <workItem from="1596395937391" duration="24000" />
+      <workItem from="1596559341433" duration="1415000" />
     </task>
     <servers />
   </component>
@@ -179,9 +183,11 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="672" y="354" width="633" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1588695394951" />
-    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1593612161192">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state x="2655" y="290" width="424" height="484" key="FileChooserDialogImpl" timestamp="1596395956269">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
+    <state x="2655" y="290" key="FileChooserDialogImpl/1920.0.1920.1080/3840.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1596395956269" />
+    <state x="776" y="310" key="FileChooserDialogImpl/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1595981573724" />
     <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1593612161192" />
     <state x="482" y="187" key="SettingsEditor" timestamp="1590255506616">
       <screen x="67" y="27" width="1853" height="1053" />
@@ -195,9 +201,5 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="657" y="253" key="run.anything.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1592799811027" />
-    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1587239234819">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1587239234819" />
   </component>
 </project>

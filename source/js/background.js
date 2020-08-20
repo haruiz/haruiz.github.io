@@ -11,9 +11,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         width = document.body.scrollWidth;//window.innerWidth;
         height = document.body.scrollHeight;//window.innerHeight;
         target = {x: width / 2, y: height / 2};
-
-
-
         canvas = document.getElementById('demo-canvas');
         console.log(canvas);
         canvas.width = width;

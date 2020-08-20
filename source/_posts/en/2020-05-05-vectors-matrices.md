@@ -13,7 +13,7 @@ tags:
    
 Linear algebra is all about vectors, matrices, and their transformation in the space. So, in this post, we will immerse ourselves in that fascinating world, learn how the vectors and matrices are represented, and what kind of operations we can do with them. 
 
-Before starting to navigate deep into the definitions, let define what a vector space is.
+Before starting to navigate deep into the topics, let define what a vector space is.
 
 **Vector space**: We can think about vector spaces as a collection of objects called vectors, which can be used to represents locations, physical forces, or numerical quantities. So, the number of components of the vectors defines the number of dimensions of the vector space. 
  
