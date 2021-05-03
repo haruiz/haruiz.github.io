@@ -17,7 +17,7 @@
     </nav>
 
     <a href="{{site.base-url}}/{{page.lang}}" class="author-thumb">
-      <img src="{{ "/img/author.jpg" | prepend: site.baseurl }}" alt="Author thumbnail" class="dot">
+      <img src="{{ "/img/author2.jpg" | prepend: site.baseurl }}" alt="Author thumbnail" class="dot">
     </a>
 
     <div style="display: flex; justify-content: center; margin: 20px">
@@ -31,19 +31,20 @@
         {% for lang in site.data.languages %}
           {% assign language = lang[1] %}
           <div class="column">
-            <a href="{{site.baseurl}}{{language.path}}/{{filename}}" ><img  src="https://www.countryflags.io/{{language.icon}}/flat/32.png" alt="{{language.label}}" /></a>
+            <a href="{{site.baseurl}}{{language.path}}/{{filename}}" ><img src="{{site.baseurl}}/img/{{language.icon}}.png" alt="{{language.label}}" /></a>
           </div>
         {% endfor %}
       </div>
     </div>
 <!--    <h1 class=".typed_text">{% t Hi, I'm Henry Ruiz %}</h1>-->
-    <h1 id="typed_text"></h1>
+    <span class="typed_text"></span><br>
+
     <smal style="text-align: center; font-size: medium">
-      <b style="font-weight: bold;">{% t Research interests %}:</b> <br/>Artificial Intelligence, Computer Vision, Machine Learning, Pattern Recognition, Images processing, Deep learning, Remote Sensing, Ground Penetrating Radar (GPR), Data Science& High-Performance Computing (HPC), Python, C++
+      <b style="font-weight: bold;">{% t Research interests %}:</b> <br/>Artificial Intelligence, Machine Learning, Depp Learning, Computer Vision, Pattern Recognition, Signal processing, Remote Sensing, Ground Penetrating Radar (GPR), Data Science& High-Performance Computing (HPC), Python, C++
     </smal>
     <br/>
     <br/>
-<!--    <a class="btn" href="{{ site.url }}/docs/cv.pdf" target="_blank">download</a>-->
+<!--    <a class="btn" href="{{ site.url }}/docs/cv3.pdf" target="_blank">download</a>-->
     <style>.bmc-button img{height: 34px !important;width: 35px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{padding: 7px 10px 7px 10px !important;line-height: 35px !important;height:51px !important;min-width:217px !important;text-decoration: none !important;display:inline-flex !important;color:#ffffff !important;background-color:#79D6B5 !important;border-radius: 5px !important;border: 1px solid transparent !important;padding: 7px 10px 7px 10px !important;font-size: 28px !important;letter-spacing:0.6px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Cookie', cursive !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#ffffff !important;}</style><link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet"><a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/haruiz"><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:15px;font-size:28px !important;">Buy me a coffee</span></a>
     <hr class="hr">
   </div>

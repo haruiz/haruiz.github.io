@@ -111,13 +111,23 @@ body{
   }
 }
 
+.typed_text{
+  font-weight: bold;
+  font-size: xx-large;
+}
+.typed-cursor {
+  font-size: xx-large;
+}
+
+
+
 .author-thumb {
   opacity: .7;
   display: inline-block;
   transition: opacity .2s ease;
 
   img {
-    width: 100px;
+    width: 150px;
     display: inline;
     margin: 0;
   }

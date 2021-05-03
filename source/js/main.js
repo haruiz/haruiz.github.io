@@ -1,12 +1,16 @@
 document.addEventListener('DOMContentLoaded', (event) => {
+    littlefoot.littlefoot()
 
     var options = {
-        strings: ["I'm a Data Science", "I'm a ML and DL Engineer", "I'm Henry Ruiz"],
-        typeSpeed: 50
+        strings: ["Ph.D. Student", "Machine Learning GDE", "I'm Henry Ruiz"],
+        typeSpeed: 50,
+        showCursor: true,
+        autoInsertCss: true,
+        onComplete: (self) => {
+            //console.log(self);
+        }
     };
-    var typed = new Typed('#typed_text', options);
-
-
+    var typed = new Typed('.typed_text', options);
 
     document.querySelectorAll('pre.code code').forEach((block) => {
         hljs.highlightBlock(block);
@@ -39,18 +43,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }, 2000);
     });
 
-    document.querySelectorAll('.equation').forEach((block) => {
-        katex.render(String.raw`${block.textContent}`, block, {
-            throwOnError: false
-        });
-    });
+    // document.querySelectorAll('.equation').forEach((block) => {
+    //     katex.render(String.raw`${block.textContent}`, block, {
+    //         throwOnError: false
+    //     });
+    // });
 
     //references
     // const Cite = require('citation-js')
     // let example = new Cite('https://blog.sverrirs.com/2016/04/custom-jekyll-tags.html')
     // let output = example.format('bibliography', { format: 'html', template: 'apa', lang: 'en-US'  })
     // alert(output)
-    littlefoot.default()
 
     window.init_zoombox_settings = {
         settings_zoom_doNotGoBeyond1X:'off'
