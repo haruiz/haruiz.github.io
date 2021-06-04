@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Machine Learning Introduction | Blog</title>
+<meta name="description" content="A wonderful serenity has taken possession of my entire soul">
+<meta name="keywords" content="machine learning">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/zoomtimeline.css" >
+<!--foots-->
+<link rel="stylesheet" href="/css/littlefoot.css" >
+<!--highlight-->
+<link rel="stylesheet"  href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/xcode.min.css">
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<link href='https://fonts.googleapis.com/css?family=Dosis:300,400,400italic,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+<!--<link href='http://fonts.googleapis.com/css?family=Merriweather:400' rel='stylesheet' type='text/css'>-->
+<link href='https://fonts.googleapis.com/css?family=Raleway:200,400,700' rel='stylesheet' type='text/css'>
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="theme-color" content="#2ecc71">
+<link rel="canonical" href="http://haruiz.github.io/en/machine-learning-introduction">
+<link rel="alternate" type="application/rss+xml" title="Blog" href="http://haruiz.github.io/feed.xml" />
+  </head>
+  <body class="">
+    <canvas id="demo-canvas" style="position: absolute;  z-index: -1; "></canvas>
+    <main class="container">
+        <header class="site-header">
+  <div class="container txt-center">
+    <nav class="navbar">
+      <ul>
+        <li><a href="/en">home</a></li>
+        <li class="divider">&bull;</li>
+        <li><a href="/en/about">about</a></li>
+        <li class="divider">&bull;</li>
+        <li><a href="/en/courses">courses</a></li>
+        <li class="divider">&bull;</li>
+        <li><a href="/en/posters">posters</a></li>
+        <li class="divider">&bull;</li>
+        <li><a href="/en/slides">slides</a></li>
+<!--        <li class="divider">&bull;</li>-->
+<!--        <li><a href="/feed.xml" target="_blank"><i class="icon icon-feed"></i> feed</a></li>-->
+      </ul>
+    </nav>
+    <a href="/en" class="author-thumb">
+      <img src="/img/author2.jpg" alt="Author thumbnail" class="dot">
+    </a>
+    <div style="display: flex; justify-content: center; margin: 20px">
+      <div class="row">
+          <div class="column">
+            <a href="/en/machine-learning-introduction" ><img src="/img/us.png" alt="English" /></a>
+          </div>
+          <div class="column">
+            <a href="/es/machine-learning-introduction" ><img src="/img/es.png" alt="Español" /></a>
+          </div>
+      </div>
+    </div>
+<!--    <h1 class=".typed_text">Hi, I'm Henry Ruiz</h1>-->
+    <span class="typed_text"></span><br>
+    <smal style="text-align: center; font-size: medium">
+      <b style="font-weight: bold;">Research interests:</b> <br/>Artificial Intelligence, Machine Learning, Deep Learning, Computer Vision, Pattern Recognition, Signal processing, Remote Sensing, Ground Penetrating Radar (GPR), Data Science& High-Performance Computing (HPC), Python, C++
+    </smal>
+    <br/>
+    <br/>
+<!--    <a class="btn" href="http://haruiz.github.io/docs/cv3.pdf" target="_blank">download</a>-->
+    <style>.bmc-button img{height: 34px !important;width: 35px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{padding: 7px 10px 7px 10px !important;line-height: 35px !important;height:51px !important;min-width:217px !important;text-decoration: none !important;display:inline-flex !important;color:#ffffff !important;background-color:#79D6B5 !important;border-radius: 5px !important;border: 1px solid transparent !important;padding: 7px 10px 7px 10px !important;font-size: 28px !important;letter-spacing:0.6px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Cookie', cursive !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#ffffff !important;}</style><link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet"><a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/haruiz"><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:15px;font-size:28px !important;">Buy me a coffee</span></a>
+    <hr class="hr">
+  </div>
+</header>
+            <section class="main-content">
+              <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">Machine Learning Introduction</h1>
+    <p class="post-meta">Apr 16, 2020</p>
+  </header>
+  <div class="post-content">
+    <p>In 1833 Charles Babbage, the renowned English mathematician, known as “father of the computer,” invented the “Analytical Engine,” a mechanical machine that was capable of processing arithmetic operations, control flow instructions, and loops, making it the first design for a general-purpose computer. <sup id="fnref:1 "><a href="#fn:1 " class="footnote">[1 ]</a></sup>
+This brilliant invention would be the precursor of great ideas that emerged later and would mark the evolution of computing.
+For instance, years later, lady Ada Lovelace would describe a sequence of operations for solving mathematical problems using Babbage’s invention. Ada remarked that “The Analytical Engine has no pretensions to originate anything. It can do whatever we know how to order it to perform”, a statement that was cited later by the AI pioneer Alan Turing in his publication “Computing Machinery and Intelligence.” <sup id="fnref:2 "><a href="#fn:2 " class="footnote">[2 ]</a></sup>
+In that landmark publication, where the England mathematician introduced the Turing test as well, he was quoting Ada Lovelace while pondering whether general-purpose computers could be capable of learning and originality, and he came to the conclusion that they could.<sup id="fnref:3 "><a href="#fn:3 " class="footnote">[3 ]</a></sup>
+Machine learning arises from this question: could a computer go beyond “what we know how to order it to perform” and learn on its own how to perform a specified task? Could a computer surprise us? Rather than programmers crafting data-processing rules by hand, could a computer automatically learn these rules by looking at data?  This question opens the door to a new programming paradigm. 
+Let start defining the essential concepts required for understanding how the ML algorithms work and the kind of problems we can face.</p>
+<section class="mcon-maindemo bgwhite" style="position: relative; padding-top:100px; padding-bottom:50px;">
+                <div class="full-bg" style="background-image: url(../img/bg1.jpg)"></div>
+                <br />
+                <div class="full-bg--overlay" style=""></div>
+                  <div class="zoomtimeline mode-3dslider mode-3dslider--show-7 auto-init" data-options="{
+                      startItem: 6
+                      ,color_highlight: 'lime'
+                      ,mode_3dslider_item_width: '200'
+                      ,mode_3dslider_item_height: '300'
+                      ,mode_3dslider_year_padding: '15'
+                      }">
+                      <div class="items">
+              <div class="ztm-item" data-image="../img/pascal.jpeg">
+                  <div class="hex-desc-con">
+                    <div class="hex-desc">
+                      1642
+                    </div>
+                  </div>
+                  <div class="ztm-content">
+                    <h3 class="the-heading">Blaise Pascal</h3>
+                    <p>Blaise Pascal was 19 when he made an “arithmetic machine” for his tax collector father. It could add, subtract, multiply, and divide. Three centuries later, the IRS uses machine learning to combat tax evasion</p>
+                  </div>
+              </div>
+              <div class="ztm-item" data-image="../img/Gottfried.jpeg">
+                  <div class="hex-desc-con">
+                    <div class="hex-desc">
+                      1679
+                    </div>
+                  </div>
+                  <div class="ztm-content">
+                    <h3 class="the-heading">Gottfried Wilhelm</h3>
+                    <p>German mathematician, philosopher, and occasional poet Gottfried Wilhelm Leibniz devised the system of binary code that laid the foundation for modern computing.</p>
+                  </div>
+              </div>
+              <div class="ztm-item" data-image="../img/Turk.jpg">
+                  <div class="hex-desc-con">
+                    <div class="hex-desc">
+                      1770
+                    </div>
+                  </div>
+                  <div class="ztm-content">
+                    <h3 class="the-heading">The Turk</h3>
+                    <p>A moving, mechanical device designed to imitate a human. “The Turk” fooled even Napoleon into thinking it could play chess. The jig was up in 1857 when The Turk’s final owner revealed how a person hidden inside moved its arms.</p>
+                  </div>
+              </div>
+              <div class="ztm-item" data-image="../img/bayes.png">
+                  <div class="hex-desc-con">
+                    <div class="hex-desc">
+                      1763
+                    </div>
+                  </div>
+                  <div class="ztm-content">
+                    <h3 class="the-heading">Thomas Bayes</h3>
+                    <p>Several vital concepts in machine learning derive from probability theory and statistics, and they root back to the 18th century. In 1763, English statistician Thomas Bayes set out a mathematical theorem for probability, which came to be known as Bayes Theorem that remains a central concept in some modern approaches to machine learning.</p>
+                  </div>
+              </div>
+              <div class="ztm-item" data-image="../img/charlesbabbage.jpg">
+                  <div class="hex-desc-con">
+                    <div class="hex-desc">
+                      1834
+                    </div>
+                  </div>
+                  <div class="ztm-content">
+                    <h3 class="the-heading">Charles Babbage</h3>
+                    <p>Englishman Charles Babbage conceived a general all-purpose device that could be programmed with punched cards. His Analytical Machine was never built, yet nearly all modern computers rely on its logical structure.</p>
+                  </div>
+              </div>
+              <div class="ztm-item" data-image="../img/ada-lovelace-290.jpeg">
+                  <div class="hex-desc-con">
+                    <div class="hex-desc">
+                      1842
+                    </div>
+                  </div>
+                  <div class="ztm-content">
+                    <h3 class="the-heading">Ada Lovelace</h3>
+                    <p>The 27-year-old mathematician described a sequence of operations for solving mathematical problems using Charles' Babbage's theoretical punch-card machine.  In the 70s, the US Department of Defense paid homage, naming a new software language Ada.</p>
+                  </div>
+              </div>
+              <div class="ztm-item" data-image="../img/220px-George_Boole_color.jpg">
+                  <div class="hex-desc-con">
+                    <div class="hex-desc">
+                      1847
+                    </div>
+                  </div>
+                  <div class="ztm-content">
+                    <h3 class="the-heading">George Boole</h3>
+                    <p>Philosopher and closet mystic George Boole created a form of algebra in which all values can be reduced to “true” or “false.” Essential to modern computing, Boolean logic helps a CPU decide how to process new inputs.</p>
+                  </div>
+              </div>
+              <div class="ztm-item" data-image="../img/Fritz.jpg">
+                  <div class="hex-desc-con">
+                    <div class="hex-desc">
+                      1927
+                    </div>
+                  </div>
+                  <div class="ztm-content">
+                    <h3 class="the-heading">Fritz Lang</h3>
+                    <p>Set in 2026 Berlin, Fritz Lang’s expressionist sci-fi film “Metropolis” introduced moviegoers to the idea of a thinking machine. His character, “False Maria,” was the first robot ever depicted on film.</p>
+                  </div>
+              </div>
+              <div class="ztm-item" data-image="../img/turing.png">
+                  <div class="hex-desc-con">
+                    <div class="hex-desc">
+                      1936
+                    </div>
+                  </div>
+                  <div class="ztm-content">
+                    <h3 class="the-heading">Alan Turing</h3>
+                    <p>English mathematician Alan Turing’s papers were full of ideas on machine intelligence. “Can machines think?” was the first question about he started to write. In 1950, he suggested a test for machine intelligence, later known as the Turing Test, in which a machine is called “intelligent” if its responses to questions could convince a human.</p>
+                  </div>
+              </div>
+              <div class="ztm-item" data-image="../img/warren.jpg">
+                  <div class="hex-desc-con">
+                    <div class="hex-desc">
+                      1943
+                    </div>
+                  </div>
+                  <div class="ztm-content">
+                    <h3 class="the-heading">Warren McCulloch</h3>
+                    <p>A neurophysiologist and a mathematician co-wrote a paper on how human neurons might work. To illustrate the theory, they modeled a neural network with electrical circuits. In the 1950s, computer scientists would begin applying the idea to their work</p>
+                  </div>
+              </div>
+              <div class="ztm-item" data-image="../img/samuel.jpg">
+                  <div class="hex-desc-con">
+                    <div class="hex-desc">
+                      1952
+                    </div>
+                  </div>
+                  <div class="ztm-content">
+                    <h3 class="the-heading">Arthur Samuel</h3>
+                    <p>Machine learning pioneer Arthur Samuel created a program that helped an IBM computer get better at checkers the more it played. Machine learning scientists often use board games because they are both understandable and complex.</p>
+                  </div>
+              </div>
+              <div class="ztm-item" data-image="../img/Rosenblatt_21.jpg">
+                  <div class="hex-desc-con">
+                    <div class="hex-desc">
+                      1957
+                    </div>
+                  </div>
+                  <div class="ztm-content">
+                    <h3 class="the-heading">Frank Rosenblatt</h3>
+                    <p>Noted American psychologist Frank Rosenblatt’s Perceptron was an early attempt to create a neural network with the use of a rotary resistor (potentiometer) driven by an electric motor. The machine could take an input (such as pixels of images) and create an output (such as labels).</p>
+                  </div>
+              </div>
+              <div class="ztm-item" data-image="../img/Fukushima.jpg">
+                  <div class="hex-desc-con">
+                    <div class="hex-desc">
+                      1957
+                    </div>
+                  </div>
+                  <div class="ztm-content">
+                    <h3 class="the-heading">Kunihiko Fukushima</h3>
+                    <p>The neocognitron was introduced by Kunihiko Fukushima in 1980, this introduced two basic types of layers in CNNs: convolutional layers, and downsampling layers. A convolutional layer contains units whose receptive fields cover a patch of the previous layer. </p>
+                  </div>
+              </div>
+              <div class="ztm-item" data-image="../img/lecun.jpg">
+                  <div class="hex-desc-con">
+                    <div class="hex-desc">
+                      1989
+                    </div>
+                  </div>
+                  <div class="ztm-content">
+                    <h3 class="the-heading">Yann André Lecun</h3>
+                    <p>in  1989 Yann LeCun used back-propagation to learn the convolution kernel coefficients directly from images of hand-written numbers. Learning was thus fully automatic, performed better than manual coefficient design, and was suited to a broader range of image recognition problems and image types. This approach became a foundation of modern computer vision.</p>
+                  </div>
+              </div>
+              <div class="ztm-item" data-image="../img/Geoffrey.jpg">
+                  <div class="hex-desc-con">
+                    <div class="hex-desc">
+                      2006
+                    </div>
+                  </div>
+                  <div class="ztm-content">
+                    <h3 class="the-heading">Geoffrey Hinton</h3>
+                    <p>When his field fell off the academic radar, computer scientist Geoffrey Hinton rebranded neural net research as “deep learning.” Today, the internet’s heaviest hitters use his techniques to improve tools like voice recognition and image classification.</p>
+                  </div>
+              </div>
+              <div class="ztm-item" data-image="../img/netflix_winners.jpg">
+                  <div class="hex-desc-con">
+                    <div class="hex-desc">
+                      2009
+                    </div>
+                  </div>
+                  <div class="ztm-content">
+                    <h3 class="the-heading">AT&amp;T scientists</h3>
+                    <p>n 2006, Netflix offered $1M to anyone who could beat its algorithm at predicting consumer film ratings. The BellKor team of AT&amp;T scientists took the prize three years later, beating the second-place team by mere minutes.</p>
+                  </div>
+              </div>
+              <div class="ztm-item" data-image="../img/watson.jpg">
+                  <div class="hex-desc-con">
+                    <div class="hex-desc">
+                      2011
+                    </div>
+                  </div>
+                  <div class="ztm-content">
+                    <h3 class="the-heading">Watson IBM</h3>
+                    <p>Though not a perfect player, IBM’s Watson did manage to outwit two Jeopardy! champions in a three-day showdown. Plans for this technology include powering a computerized doctor’s assistant.</p>
+                  </div>
+              </div>
+              <div class="ztm-item" data-image="../img/alphago.jpeg">
+                  <div class="hex-desc-con">
+                    <div class="hex-desc">
+                      2015
+                    </div>
+                  </div>
+                  <div class="ztm-content">
+                    <h3 class="the-heading">Google’s AlphaGo</h3>
+                    <p>Google’s AlphaGo was the first program to best a professional player at Go, considered the most difficult board game in the world. With this defeat, computers officially beat human opponents in every classical board game</p>
+                  </div>
+              </div>
+              <div class="ztm-item" data-image="../img/future.jpg">
+                  <div class="hex-desc-con">
+                    <div class="hex-desc">
+                      2020
+                    </div>
+                  </div>
+                  <div class="ztm-content">
+                    <h3 class="the-heading">What's next in machine learning?</h3>
+                    <p>How far this technology will take us remains to be seen, but applications in the works span everything from improving in-store retail experiences with IoT to boosting security with biometric data to predicting and diagnosing disease.</p>
+                  </div>
+              </div>
+                      </div>
+                  </div>
+                 <!-- the preloader START -->
+                <div class="preloader-wave">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <!-- the preloader END -->
+         </section>
+<p><br />
+<em>
+Most of the text in this visualization was taken from <a href="https://cloud.withgoogle.com/build/data-analytics/explore-history-machine-learning/">History of machine learning</a>, I would like to extend my thanks for the valuable contribution.
+</em></p>
+<p><br /></p>
+<h2 id="a-new-paradigm">A new Paradigm</h2>
+<p><strong>Traditional Programming:</strong> In classical programming, the paradigm of symbolic AI, humans input rules (a program) and data to be processed according to these rules, and out come answers</p>
+<p><strong>Machine Learning:</strong> With machine learning, humans input data as well as the answers expected from the data, and out come the rules. These rules can then be applied to new data to produce original answers.</p>
+<h2 id="definition">Definition</h2>
+<p>Machine learning is a field of computer science under the umbrella of artificial intelligence, which has evolved and experienced many transformations for decades, that is why we can find multiple definitions on the internet and the literature. In this post, I am going to provide my interpretation based on them.</p>
+<p><strong>From a general perspective</strong>, we could define Machine Learning as a discipline focused on describing how to build systems (Hardware/software) that can learn by themselves using some input data, further in the discovery of the mathematics-statistics-computation laws which govern this kind of systems (The learning process ).</p>
+<p>On the other hand, <strong>from an expert point of view</strong>, do or apply Machine Learning consists of training a mathematical-statistic model to infer o predict the value of a numerical variable, which can be discrete or continuous depending on whether we are trying to solve classification, or regression problem, generally, using historical information and with the primary goal of explaining or understand a phenomenon, forecasting, or identify patterns in the data.</p>
+<h2 id="kind-of-problems">Kind of problems</h2>
+<p><strong>Unsupervised Learning:</strong> Inferring a function that describe the structure of the unlabeled data.</p>
+<p><strong><em>common algorithms:</em></strong></p>
+<ol style="margin: 10px">
+  <li>K-means</li>
+  <li>k-Medians</li>
+  <li>Expectation Maximisation (EM)</li>
+  <li>Hierarchical Clustering</li>
+</ol>
+<p><strong>Supervised Learning:</strong> Learning a function that maps an input to an output based on example input-output parts</p>
+<p><strong><em>common algorithms:</em></strong></p>
+<ol style="margin: 10px">
+  <li>Nearest Neighbor</li>
+  <li>Naive Bayes</li>
+  <li>Decision Trees</li>
+  <li>Linear Regression</li>
+  <li>Support Vector Machines (SVM)</li>
+  <li>Neural Networks</li>
+</ol>
+<p><strong>Reinforcement learning</strong> Area of machine learning concerned with how software agents ought to take actions in an environment in order to maximize the notion of cumulative reward.</p>
+<p><strong><em>common algorithms:</em></strong></p>
+<ol style="margin: 10px">
+  <li>Q-Learning</li>
+  <li>Temporal Difference (TD)</li>
+  <li>Deep Adversarial Networks</li>
+</ol>
+<h2 id="applications">Applications</h2>
+<ol style="margin: 10px">
+<li>Virtual Personal Assistants</li>
+<li>self-driving cars</li>
+<li>Videos Surveillance</li>
+<li>Email Spam and Malware Filtering</li>
+<li>face detection</li>
+<li>Search Engine Result Refining</li>
+<li> Product Recommendations</li>
+<li>Online Fraud Detection</li>
+</ol>
+<p>If this is the first time you are reading about this topic, is very likely that the previous definitions and concepts sound obscure, maybe cloudy, and you can get confused quickly, so this is why before start thinking about the implementation of the algorithms or which is the best library or framework  to use, you need to  understand the foundations. So in the next post I am going to explain in detail the different type of problems and how to approach them.</p>
+<div class="footnotes"><ul><li id="fn:1">Analytical Engine<a href="https://en.wikipedia.org/wiki/Analytical_Engine" class="reversefootnote" target="_blank">&#160;&#8617;</a></li><li id="fn:2">Computing Machinery and Intelligence<a href="https://academic.oup.com/mind/article/LIX/236/433/986238" class="reversefootnote" target="_blank">&#160;&#8617;</a></li><li id="fn:3">Deep Learning with Python<a href="https://www.manning.com/books/deep-learning-with-python" class="reversefootnote" target="_blank">&#160;&#8617;</a></li></ul></div>
+    <aside class="share">
+      <span>Share this: </span>
+      <a href="http://twitter.com/share?text=Machine Learning Introduction&amp;url=http://haruiz.github.io/en/machine-learning-introduction&amp;hashtags=web,dev,blog,soudev&amp;via=nandomoreirame"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+        <i class="icon icon-twitter-rounded"></i>
+      </a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://haruiz.github.io/en/machine-learning-introduction"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+        <i class="icon icon-facebook-rounded"></i>
+      </a>
+    </aside>
+  </div>
+  <hr>
+  <aside id="comments" class="disqus">
+    <h3>Comments</h3>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = 'haruiz';
+      var disqus_identifier = '/en/machine-learning-introduction';
+      var disqus_title = 'Machine Learning Introduction';
+      var disqus_url = 'http://haruiz.github.io';
+      /*var disqus_developer = 1;*/
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>
+      Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+    </noscript>
+  </aside>
+</article>
+            </section>
+<div class="clearfix"></div>
+<footer class="site-footer txt-center">
+  <hr>
+  <ul class="social">
+        <li><a href="" target="_blank"><i class="icon icon-"></i></a></li>
+        <li><a href="https://github.com/haruiz" target="_blank"><i class="icon icon-github"></i></a></li>
+        <li><a href="" target="_blank"><i class="icon icon-"></i></a></li>
+        <li><a href="https://www.facebook.com/devharuiz" target="_blank"><i class="icon icon-facebook"></i></a></li>
+        <li><a href="" target="_blank"><i class="icon icon-"></i></a></li>
+        <li><a href="https://twitter.com/devharuiz" target="_blank"><i class="icon icon-twitter"></i></a></li>
+        <li><a href="" target="_blank"><i class="icon icon-"></i></a></li>
+        <li><a href="https://www.instagram.com/henryruizdev/" target="_blank"><i class="icon icon-instagram"></i></a></li>
+        <li><a href="" target="_blank"><i class="icon icon-"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/haruiz/" target="_blank"><i class="icon icon-linkedin"></i></a></li>
+  </ul>
+  <small>&copy; 2021 All rights reserved. Made with <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and <i class="icon icon-heart"></i></small>
+  <small>by <a href="http://nandomoreira.me" target="_blank">nandomoreira.me</a></small>
+</footer>
+<!--jquery-->
+<script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+<!--foots-->
+<script type="text/javascript" src="/js/littlefoot.js"></script>
+<!--highlight-->
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.7.0/highlightjs-line-numbers.min.js"></script>
+<!--timeline-->
+<script src="/js/zoomtimeline.js"></script>
+<!--typed.js-->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+<!--Background-->
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js"></script>
+<script src="/js/background.js"></script>
+<!--latex-->
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<!--citations-->
+<script type="text/javascript" src="/js/citation-0.4.0-9.min.js"></script>
+<!--main script-->
+<script type="text/javascript" src="/js/main.js"></script>
+    </main>
+    <a href="https://github.com/haruiz" target="_blank" class="github-corner"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#2ecc71; color:#f7f8f9; position: absolute; top: 0; border: 0; right: 0;"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+  </body>
+</html>

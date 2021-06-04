@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Package manager tools for Python | Blog</title>
+<meta name="description" content="Package manager tools for Python">
+<meta name="keywords" content="">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/zoomtimeline.css" >
+<!--foots-->
+<link rel="stylesheet" href="/css/littlefoot.css" >
+<!--highlight-->
+<link rel="stylesheet"  href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/xcode.min.css">
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<link href='https://fonts.googleapis.com/css?family=Dosis:300,400,400italic,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+<!--<link href='http://fonts.googleapis.com/css?family=Merriweather:400' rel='stylesheet' type='text/css'>-->
+<link href='https://fonts.googleapis.com/css?family=Raleway:200,400,700' rel='stylesheet' type='text/css'>
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="theme-color" content="#2ecc71">
+<link rel="canonical" href="http://haruiz.github.io/en/package-manager-tools-for-python">
+<link rel="alternate" type="application/rss+xml" title="Blog" href="http://haruiz.github.io/feed.xml" />
+  </head>
+  <body class="">
+    <canvas id="demo-canvas" style="position: absolute;  z-index: -1; "></canvas>
+    <main class="container">
+        <header class="site-header">
+  <div class="container txt-center">
+    <nav class="navbar">
+      <ul>
+        <li><a href="/en">home</a></li>
+        <li class="divider">&bull;</li>
+        <li><a href="/en/about">about</a></li>
+        <li class="divider">&bull;</li>
+        <li><a href="/en/courses">courses</a></li>
+        <li class="divider">&bull;</li>
+        <li><a href="/en/posters">posters</a></li>
+        <li class="divider">&bull;</li>
+        <li><a href="/en/slides">slides</a></li>
+<!--        <li class="divider">&bull;</li>-->
+<!--        <li><a href="/feed.xml" target="_blank"><i class="icon icon-feed"></i> feed</a></li>-->
+      </ul>
+    </nav>
+    <a href="/en" class="author-thumb">
+      <img src="/img/author2.jpg" alt="Author thumbnail" class="dot">
+    </a>
+    <div style="display: flex; justify-content: center; margin: 20px">
+      <div class="row">
+          <div class="column">
+            <a href="/en/package-manager-tools-for-python" ><img src="/img/us.png" alt="English" /></a>
+          </div>
+          <div class="column">
+            <a href="/es/package-manager-tools-for-python" ><img src="/img/es.png" alt="Español" /></a>
+          </div>
+      </div>
+    </div>
+<!--    <h1 class=".typed_text">Hi, I'm Henry Ruiz</h1>-->
+    <span class="typed_text"></span><br>
+    <smal style="text-align: center; font-size: medium">
+      <b style="font-weight: bold;">Research interests:</b> <br/>Artificial Intelligence, Machine Learning, Deep Learning, Computer Vision, Pattern Recognition, Signal processing, Remote Sensing, Ground Penetrating Radar (GPR), Data Science& High-Performance Computing (HPC), Python, C++
+    </smal>
+    <br/>
+    <br/>
+<!--    <a class="btn" href="http://haruiz.github.io/docs/cv3.pdf" target="_blank">download</a>-->
+    <style>.bmc-button img{height: 34px !important;width: 35px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{padding: 7px 10px 7px 10px !important;line-height: 35px !important;height:51px !important;min-width:217px !important;text-decoration: none !important;display:inline-flex !important;color:#ffffff !important;background-color:#79D6B5 !important;border-radius: 5px !important;border: 1px solid transparent !important;padding: 7px 10px 7px 10px !important;font-size: 28px !important;letter-spacing:0.6px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Cookie', cursive !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#ffffff !important;}</style><link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet"><a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/haruiz"><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:15px;font-size:28px !important;">Buy me a coffee</span></a>
+    <hr class="hr">
+  </div>
+</header>
+            <section class="main-content">
+              <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">Package manager tools for Python</h1>
+    <p class="post-meta">Sep 26, 2020</p>
+  </header>
+  <div class="post-content">
+    <p>A package manager is a software tool that automates the process of installing, upgrading, configuring, and removing computer programs/libraries from our machines. For python specifically, we have different alternatives, such as conda, virtualenv, pip, etc. The video below provides us more information about these kind of tools, and highlight the aspects that we should consider when choosing the most appropriate:</p>
+<center>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3J02sec99RM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</center>
+<p>In particular, this blog post will show how to use poetry, an open-source packaging-dependency management tool that gives us all we need to create, build, and publish our python applications. So lets started.</p>
+<p>First, we need to install pyenv, a command-line tool that enables us to run multiple python versions in our development machines. It is extremely useful since sometimes we need to check if there are any compatibility issues across different versions. If you come from a javascript background, pyenv is quite similar to NVM( Node version manager). 
+I will explain how to do this in Ubuntu, but you can find the instruction for windows in the Github repository. In general, this process is straight-forward:</p>
+<p>Run the install command:</p>
+<p><code>curl https://pyenv.run | bash</code></p>
+<p>Then, restart your shell, so the path changes take effect:</p>
+<p><code>exec $SHELL</code></p>
+<p>You can now begin using pyenv.</p>
+<pre><code>pyenv install 2.7.15 3.8.0 3.7.0
+pyenv local 2.7.15  # Activate Python 2.7 for the current project
+</code></pre>
+<p>Another essential aspect of the development process is the scaffolding. Sometimes, it is tricky to determine the best folder structure for our projects. Here it’s where poetry comes to the rescue. With a few commands, we can create our project, install and remove dependencies, and perform other actions such as building and packaging our software.
+For create our new projects, we just execute the next command in the terminal:</p>
+<p><code>poetry new mypackage</code></p>
+<p>Then we install the initial dependencies and set up our project using the pyenv  environment previously activated:</p>
+<p><code>poetry install</code></p>
+<p>Building our project and publishing it is just running the <code>poetry build</code> and <code>poetry publish</code> commands, so it is pretty intuitive. The publish command will submit our application to pip, so other developers can easily install it.</p>
+<p><strong>Some useful resource</strong></p>
+<ul>
+  <li><a href="https://python-poetry.org/">Poetry Documentation</a></li>
+  <li><a href="https://github.com/pyenv/pyenv">Pyenv Documentation</a></li>
+  <li><a href="https://www.youtube.com/watch?v=QX_Nhu1zhlg&amp;ab_channel=PyGotham2019">Great talk about poetry</a></li>
+</ul>
+<center style="margin: 20px">
+If you enjoyed this post, I’d be very grateful if you’d help it spread by emailing it to a friend, or sharing it on Twitter or Facebook. 
+Thank you!
+</center>
+    <aside class="share">
+      <span>Share this: </span>
+      <a href="http://twitter.com/share?text=Package manager tools for Python&amp;url=http://haruiz.github.io/en/package-manager-tools-for-python&amp;hashtags=web,dev,blog,soudev&amp;via=nandomoreirame"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+        <i class="icon icon-twitter-rounded"></i>
+      </a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://haruiz.github.io/en/package-manager-tools-for-python"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+        <i class="icon icon-facebook-rounded"></i>
+      </a>
+    </aside>
+  </div>
+  <hr>
+  <aside id="comments" class="disqus">
+    <h3>Comments</h3>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = 'haruiz';
+      var disqus_identifier = '/en/package-manager-tools-for-python';
+      var disqus_title = 'Package manager tools for Python';
+      var disqus_url = 'http://haruiz.github.io';
+      /*var disqus_developer = 1;*/
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>
+      Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+    </noscript>
+  </aside>
+</article>
+            </section>
+<div class="clearfix"></div>
+<footer class="site-footer txt-center">
+  <hr>
+  <ul class="social">
+        <li><a href="" target="_blank"><i class="icon icon-"></i></a></li>
+        <li><a href="https://github.com/haruiz" target="_blank"><i class="icon icon-github"></i></a></li>
+        <li><a href="" target="_blank"><i class="icon icon-"></i></a></li>
+        <li><a href="https://www.facebook.com/devharuiz" target="_blank"><i class="icon icon-facebook"></i></a></li>
+        <li><a href="" target="_blank"><i class="icon icon-"></i></a></li>
+        <li><a href="https://twitter.com/devharuiz" target="_blank"><i class="icon icon-twitter"></i></a></li>
+        <li><a href="" target="_blank"><i class="icon icon-"></i></a></li>
+        <li><a href="https://www.instagram.com/henryruizdev/" target="_blank"><i class="icon icon-instagram"></i></a></li>
+        <li><a href="" target="_blank"><i class="icon icon-"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/haruiz/" target="_blank"><i class="icon icon-linkedin"></i></a></li>
+  </ul>
+  <small>&copy; 2021 All rights reserved. Made with <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and <i class="icon icon-heart"></i></small>
+  <small>by <a href="http://nandomoreira.me" target="_blank">nandomoreira.me</a></small>
+</footer>
+<!--jquery-->
+<script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+<!--foots-->
+<script type="text/javascript" src="/js/littlefoot.js"></script>
+<!--highlight-->
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.7.0/highlightjs-line-numbers.min.js"></script>
+<!--timeline-->
+<script src="/js/zoomtimeline.js"></script>
+<!--typed.js-->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+<!--Background-->
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js"></script>
+<script src="/js/background.js"></script>
+<!--latex-->
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<!--citations-->
+<script type="text/javascript" src="/js/citation-0.4.0-9.min.js"></script>
+<!--main script-->
+<script type="text/javascript" src="/js/main.js"></script>
+    </main>
+    <a href="https://github.com/haruiz" target="_blank" class="github-corner"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#2ecc71; color:#f7f8f9; position: absolute; top: 0; border: 0; right: 0;"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+  </body>
+</html>

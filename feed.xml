@@ -1,0 +1,991 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog</title>
+    <description>Henry Ruiz Blog</description>
+    <link>http://haruiz.github.io/</link>
+    <atom:link href="http://haruiz.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 04 Jun 2021 12:30:16 -0500</pubDate>
+    <lastBuildDate>Fri, 04 Jun 2021 12:30:16 -0500</lastBuildDate>
+    <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>Package manager tools for Python</title>
+        <description>&lt;p&gt;A package manager is a software tool that automates the process of installing, upgrading, configuring, and removing computer programs/libraries from our machines. For python specifically, we have different alternatives, such as conda, virtualenv, pip, etc. The video below provides us more information about these kind of tools, and highlight the aspects that we should consider when choosing the most appropriate:&lt;/p&gt;
+&lt;center&gt;
+    &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/3J02sec99RM&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/center&gt;
+&lt;p&gt;In particular, this blog post will show how to use poetry, an open-source packaging-dependency management tool that gives us all we need to create, build, and publish our python applications. So lets started.&lt;/p&gt;
+
+&lt;p&gt;First, we need to install pyenv, a command-line tool that enables us to run multiple python versions in our development machines. It is extremely useful since sometimes we need to check if there are any compatibility issues across different versions. If you come from a javascript background, pyenv is quite similar to NVM( Node version manager). 
+I will explain how to do this in Ubuntu, but you can find the instruction for windows in the Github repository. In general, this process is straight-forward:&lt;/p&gt;
+
+&lt;p&gt;Run the install command:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;curl https://pyenv.run | bash&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Then, restart your shell, so the path changes take effect:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;exec $SHELL&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;You can now begin using pyenv.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pyenv install 2.7.15 3.8.0 3.7.0
+pyenv local 2.7.15  # Activate Python 2.7 for the current project
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Another essential aspect of the development process is the scaffolding. Sometimes, it is tricky to determine the best folder structure for our projects. Here it’s where poetry comes to the rescue. With a few commands, we can create our project, install and remove dependencies, and perform other actions such as building and packaging our software.
+For create our new projects, we just execute the next command in the terminal:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;poetry new mypackage&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Then we install the initial dependencies and set up our project using the pyenv  environment previously activated:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;poetry install&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Building our project and publishing it is just running the &lt;code&gt;poetry build&lt;/code&gt; and &lt;code&gt;poetry publish&lt;/code&gt; commands, so it is pretty intuitive. The publish command will submit our application to pip, so other developers can easily install it.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Some useful resource&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://python-poetry.org/&quot;&gt;Poetry Documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/pyenv/pyenv&quot;&gt;Pyenv Documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=QX_Nhu1zhlg&amp;amp;ab_channel=PyGotham2019&quot;&gt;Great talk about poetry&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;center style=&quot;margin: 20px&quot;&gt;
+If you enjoyed this post, I’d be very grateful if you’d help it spread by emailing it to a friend, or sharing it on Twitter or Facebook. 
+Thank you!
+&lt;/center&gt;
+
+</description>
+        <pubDate>Sat, 26 Sep 2020 17:45:24 -0500</pubDate>
+        <link>http://haruiz.github.io/en/package-manager-tools-for-python</link>
+        <guid isPermaLink="true">http://haruiz.github.io/en/package-manager-tools-for-python</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Algebra Lineal (Vectores &amp; Matrizes)</title>
+        <description>&lt;p&gt;Linear algebra is all about vectors, matrices, and their transformation in the space. So, in this post, we will immerse ourselves in that fascinating world, learn how the vectors and matrices are represented, and what kind of operations we can do with them.&lt;/p&gt;
+
+&lt;p&gt;Before starting to navigate deep into the definitions, let define what a vector space is.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Vector space&lt;/strong&gt;: We can think about vector spaces as a collection of objects called vectors, which can be used to represents locations, physical forces, or numerical quantities. So, the number of components of the vectors defines the number of dimensions of the vector space.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Vector:&lt;/strong&gt; A vector is a set of elements where each element represents a dimension inside a defined space; they have magnitude and direction. 
+The magnitude defines the length of the vector,  and the direction the orientation of it.
+In other words, we can think of vectors as identifying points in space, with each element giving the coordinate along a different axis. For instance,  we could define our location in the world using the vector &lt;script type=&quot;math/tex&quot;&gt;\vec{l}= [x, y, z ]&lt;/script&gt;. Typically, we give vectors lowercase names in bold typeface (such as &lt;script type=&quot;math/tex&quot;&gt;\vec{x}&lt;/script&gt;).&lt;/p&gt;
+
+&lt;p&gt;In Machine Learning, vectors are extremely important since we describe our data observations using them (data points). For example, Imagine we have a dataset with the information of 1000 diabetes patients; for each, we collected his age, sex, stratum, number of siblings, weight, etc. Then we have 1000 vectors in the form
+patient = [ age, sex, stratum, number of siblings, weight]&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Vector Operations&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;To add or subtract two vectors, we add or subtract the corresponding components. 
+Let &lt;script type=&quot;math/tex&quot;&gt;\vec{u}=\left\langle u_{1}, u_{2}\right\rangle&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\vec{v}=\left\langle v_{1}, v_{2}\right\rangle&lt;/script&gt; be two vectors. Then, the sum of &lt;script type=&quot;math/tex&quot;&gt;\vec{u}&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\vec{v}&lt;/script&gt; is the vector: &lt;script type=&quot;math/tex&quot;&gt;\vec{u}+\vec{v}=\left\langle u_{1}+v_{1}, u_{2}+v_{2}\right\rangle&lt;/script&gt; and the difference of &lt;script type=&quot;math/tex&quot;&gt;\vec{u}&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\vec{b}&lt;/script&gt; is: &lt;script type=&quot;math/tex&quot;&gt;\vec{u} - \vec{b} =\left\langle u_{1}-v_{1}, u_{2}-v_{2}\right\rangle&lt;/script&gt;.
+This might sound complicated, but it is not. Doing arithmetic calculations on vectors is simply doing arithmetic operations on their components.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Numerical example&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Find (a) &lt;script type=&quot;math/tex&quot;&gt;\vec{u} + \vec{v}&lt;/script&gt; and (b) &lt;script type=&quot;math/tex&quot;&gt;\vec{u} - \vec{v}&lt;/script&gt; if &lt;script type=&quot;math/tex&quot;&gt;\vec{u} = \left\langle 3,4 \right\rangle&lt;/script&gt; and  &lt;script type=&quot;math/tex&quot;&gt;\vec{v} = \left\langle 5,-1 \right\rangle&lt;/script&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{aligned}
+For (a):
+\vec{u}+\vec{v} =\left\langle u_{1}+v_{1}, u_{2}+v_{2}\right\rangle \\ =\langle 3+5,4+(-1)\rangle \\ =\langle 8,3\rangle
+\end{aligned}&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{aligned}
+For (b):
+\vec{u}+\vec{v} =\left\langle u_{1}+v_{1}, u_{2}-v_{2}\right\rangle \\ =\langle 3 - 5,4 -(-1)\rangle \\ =\langle -1,5\rangle
+\end{aligned}&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;python implementation&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&quot;code&quot;&gt;
+       &lt;code class=&quot;python&quot;&gt;
+          
+import numpy as np
+def sub_vectors(a: list, b: list) -&amp;gt; []:
+    assert len(a) == len(b), &quot;Invalid vectors size&quot;
+    result = []
+    for x,y in zip(a, b):
+        result.append(x-y)
+    return result
+if __name__ == '__main__':
+    a, b = [1,2,3], [4,5,6]
+    print('the result is:' % sub_vectors(a, b))
+    # using numpy
+    print('the result is:' % np.asarray(a) - np.asarray(b))    
+
+      &lt;/code&gt;
+      &lt;/pre&gt;
+
+</description>
+        <pubDate>Tue, 05 May 2020 09:47:56 -0500</pubDate>
+        <link>http://haruiz.github.io/es/vectors-matrices</link>
+        <guid isPermaLink="true">http://haruiz.github.io/es/vectors-matrices</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Linear Algebra (Vectors &amp; Matrices)</title>
+        <description>&lt;p&gt;Linear algebra is all about vectors, matrices, and their transformation in the space. So, in this post, we will immerse ourselves in that fascinating world, learn how the vectors and matrices are represented, and what kind of operations we can do with them.&lt;/p&gt;
+
+&lt;p&gt;Before starting to navigate deep into the topics, let define what a vector space is.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Vector space&lt;/strong&gt;: We can think about vector spaces as a collection of objects called vectors, which can be used to represents locations, physical forces, or numerical quantities. So, the number of components of the vectors defines the number of dimensions of the vector space.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Vector:&lt;/strong&gt; A vector is a set of elements where each element represents a dimension inside a defined space; they have magnitude and direction. 
+The magnitude defines the length of the vector,  and the direction the orientation of it.
+In other words, we can think of vectors as identifying points in space, with each element giving the coordinate along a different axis. For instance,  we could define our location in the world using the vector &lt;script type=&quot;math/tex&quot;&gt;\vec{l}= [x, y, z ]&lt;/script&gt;. Typically, we give vectors lowercase names in bold typeface (such as &lt;script type=&quot;math/tex&quot;&gt;\vec{x}&lt;/script&gt;).&lt;/p&gt;
+
+&lt;p&gt;In Machine Learning, vectors are extremely important since we describe our data observations using them (data points). For example, Imagine we have a dataset with the information of 1000 diabetes patients; for each, we collected his age, sex, stratum, number of siblings, weight, etc. Then we have 1000 vectors in the form
+patient = [ age, sex, stratum, number of siblings, weight]&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Vector Operations&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;To add or subtract two vectors, we add or subtract the corresponding components. 
+Let &lt;script type=&quot;math/tex&quot;&gt;\vec{u}=\left\langle u_{1}, u_{2}\right\rangle&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\vec{v}=\left\langle v_{1}, v_{2}\right\rangle&lt;/script&gt; be two vectors. Then, the sum of &lt;script type=&quot;math/tex&quot;&gt;\vec{u}&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\vec{v}&lt;/script&gt; is the vector: &lt;script type=&quot;math/tex&quot;&gt;\vec{u}+\vec{v}=\left\langle u_{1}+v_{1}, u_{2}+v_{2}\right\rangle&lt;/script&gt; and the difference of &lt;script type=&quot;math/tex&quot;&gt;\vec{u}&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\vec{b}&lt;/script&gt; is: &lt;script type=&quot;math/tex&quot;&gt;\vec{u} - \vec{b} =\left\langle u_{1}-v_{1}, u_{2}-v_{2}\right\rangle&lt;/script&gt;.
+This might sound complicated, but it is not. Doing arithmetic calculations on vectors is simply doing arithmetic operations on their components.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Numerical example&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Find (a) &lt;script type=&quot;math/tex&quot;&gt;\vec{u} + \vec{v}&lt;/script&gt; and (b) &lt;script type=&quot;math/tex&quot;&gt;\vec{u} - \vec{v}&lt;/script&gt; if &lt;script type=&quot;math/tex&quot;&gt;\vec{u} = \left\langle 3,4 \right\rangle&lt;/script&gt; and  &lt;script type=&quot;math/tex&quot;&gt;\vec{v} = \left\langle 5,-1 \right\rangle&lt;/script&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{aligned}
+For (a):
+\vec{u}+\vec{v} =\left\langle u_{1}+v_{1}, u_{2}+v_{2}\right\rangle \\ =\langle 3+5,4+(-1)\rangle \\ =\langle 8,3\rangle
+\end{aligned}&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{aligned}
+For (b):
+\vec{u}+\vec{v} =\left\langle u_{1}+v_{1}, u_{2}-v_{2}\right\rangle \\ =\langle 3 - 5,4 -(-1)\rangle \\ =\langle -1,5\rangle
+\end{aligned}&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;python implementation&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&quot;code&quot;&gt;
+       &lt;code class=&quot;python&quot;&gt;
+          
+import numpy as np
+def sub_vectors(a: list, b: list) -&amp;gt; []:
+    assert len(a) == len(b), &quot;Invalid vectors size&quot;
+    result = []
+    for x,y in zip(a, b):
+        result.append(x-y)
+    return result
+if __name__ == '__main__':
+    a, b = [1,2,3], [4,5,6]
+    print('the result is:' % sub_vectors(a, b))
+    # using numpy
+    print('the result is:' % np.asarray(a) - np.asarray(b))    
+
+      &lt;/code&gt;
+      &lt;/pre&gt;
+
+</description>
+        <pubDate>Tue, 05 May 2020 09:47:56 -0500</pubDate>
+        <link>http://haruiz.github.io/en/vectors-matrices</link>
+        <guid isPermaLink="true">http://haruiz.github.io/en/vectors-matrices</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Algebra Lineal(Introducción)</title>
+        <description>&lt;p&gt;Such was previously mentioned, In others posts,  in machine learning, most of the models are statistical or mathematical, so consequently, you are probably wondering if I need to be a mathematician or statistician to start using it.
+The answer to that question is NO, Several open-source libraries to do machine learning exist,  but it will be beneficial if you have some knowledge about Algebra Lineal, Multivariable calculus, and statistics to interpret the algorithms and be able to tune them (Play around with the parameters). In this section, I am going to explain why Linear algebra is relate with ML and why is important.&lt;/p&gt;
+
+&lt;h3 id=&quot;getting-started&quot;&gt;Getting Started&lt;/h3&gt;
+
+&lt;p&gt;To begin our journey learning the bases of linear algebra, let look at a simple problem fo getting started.  Imagine we have a system of two linear equations to solve: &lt;script type=&quot;math/tex&quot;&gt;a) x-2y = 6&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;b) 3x + y = 4&lt;/script&gt;. How can we do it? Well,  for some of you, it can be straightforward, for others could sound confusing. Different ways to do it exist; however, if we follow our intuition, we can initiate with a basic approach isolating &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt; in the first equation and then use it to solve y in the second.
+After solving &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt; in the first equation, we get &lt;script type=&quot;math/tex&quot;&gt;x = 6 + 2y&lt;/script&gt;, now we can plug that into the second equation and do the same process for &lt;script type=&quot;math/tex&quot;&gt;y&lt;/script&gt;.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{aligned}
+3(6+2 y)+y &amp;=4 \\
+18+7 y &amp;=4 \\
+y &amp;=-2
+\end{aligned} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;Solving for &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt; gives &lt;script type=&quot;math/tex&quot;&gt;x=2&lt;/script&gt;, so we have obtained a unique solution, &lt;script type=&quot;math/tex&quot;&gt;x=2&lt;/script&gt; ,&lt;script type=&quot;math/tex&quot;&gt;y=-2&lt;/script&gt;.
+In this section, we are going to learn about different techniques to solve this kind of problem and how linear algebra helps us to come with the solutions, but before going further, let start describing what linear algebra is about and why it is so useful in the field of machine learning.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-is-linear-algebra&quot;&gt;What is Linear Algebra?&lt;/h3&gt;
+
+&lt;p&gt;According to Wikipedia &lt;sup id=&quot;fnref:1 &quot;&gt;&lt;a href=&quot;#fn:1 &quot; class=&quot;footnote&quot;&gt;[1 ]&lt;/a&gt;&lt;/sup&gt;, Linear Algebra is the branch of mathematics concerning linear equations such as: &lt;script type=&quot;math/tex&quot;&gt;a_{1} x_{1}+\cdots+a_{n} x_{n}=b&lt;/script&gt;
+linear functions such as: &lt;script type=&quot;math/tex&quot;&gt;\left(x_{1}, \ldots, x_{n}\right) \mapsto a_{1} x_{1}+\ldots+a_{n} x_{n}&lt;/script&gt;, and their representations through matrices and vector spaces. 
+Understanding these concepts,  you going to acquire the confidence and the intuition necessary to understand how most of the machine learning algorithms works, for instance, K-means, KNN, SVM, etc.&lt;/p&gt;
+
+&lt;h3 id=&quot;why-is-linear-algebra-important-in-ml&quot;&gt;Why is linear algebra important in ML?&lt;/h3&gt;
+
+&lt;p&gt;Having some understanding of Linear algebra and Calculus gives us a better intuition about how ML algorithms work and their implementation. Especially because, in theory, most of them are based on matrix transformations, vectors, and linear functions. Further, it takes us in a privileged position where we can decide which to use for solving a particular problem, and how to face it. So if you want to be a successful data scientist or machine learning engineering, my suggestion is to spend some time digging into the essential concepts.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;./../img/pca.gif&quot; alt=&quot;PCA&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;online-resources-to-learn&quot;&gt;Online Resources to learn&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://brilliant.org/courses/linear-algebra/&quot; target=&quot;_blank&quot;&gt;Brilliant - Linear Algebra Course&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.khanacademy.org/math/linear-algebra&quot; target=&quot;_blank&quot;&gt;Khan Academy - Linear Algebra Course&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab&quot; target=&quot;_blank&quot;&gt;3Blue1Brown - Essence of linear algebra&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/playlist?list=PL49CF3715CB9EF31D&quot; target=&quot;_blank&quot;&gt;MIT - Gilbert Strang lectures on Linear Algebra &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;&lt;ul&gt;&lt;li id=&quot;fn:1&quot;&gt;Linear Algebra&lt;a href=&quot;https://en.wikipedia.org/wiki/Linear_algebra&quot; class=&quot;reversefootnote&quot; target=&quot;_blank&quot;&gt;&amp;#160;&amp;#8617;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Fri, 17 Apr 2020 07:34:42 -0500</pubDate>
+        <link>http://haruiz.github.io/es/ml-math-foundations-part-1</link>
+        <guid isPermaLink="true">http://haruiz.github.io/es/ml-math-foundations-part-1</guid>
+        
+        <category>ml</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Linear Algebra (Introduction)</title>
+        <description>&lt;p&gt;Such was previously mentioned, In others posts,  in machine learning, most of the models are statistical or mathematical, so consequently, you are probably wondering if I need to be a mathematician or statistician to start using it.
+The answer to that question is NO, Several open-source libraries to do machine learning exist,  but it will be beneficial if you have some knowledge about Algebra Lineal, Multivariable calculus, and statistics to interpret the algorithms and be able to tune them (Play around with the parameters). In this section, I am going to explain why Linear algebra is relate with ML and why is important.&lt;/p&gt;
+
+&lt;h3 id=&quot;getting-started&quot;&gt;Getting Started&lt;/h3&gt;
+
+&lt;p&gt;To begin our journey learning the bases of linear algebra, let look at a simple problem fo getting started.  Imagine we have a system of two linear equations to solve: &lt;script type=&quot;math/tex&quot;&gt;a) x-2y = 6&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;b) 3x + y = 4&lt;/script&gt;. How can we do it? Well,  for some of you, it can be straightforward, for others could sound confusing. Different ways to do it exist; however, if we follow our intuition, we can initiate with a basic approach isolating &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt; in the first equation and then use it to solve y in the second.
+After solving &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt; in the first equation, we get &lt;script type=&quot;math/tex&quot;&gt;x = 6 + 2y&lt;/script&gt;, now we can plug that into the second equation and do the same process for &lt;script type=&quot;math/tex&quot;&gt;y&lt;/script&gt;.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{aligned}
+3(6+2 y)+y &amp;=4 \\
+18+7 y &amp;=4 \\
+y &amp;=-2
+\end{aligned} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;Solving for &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt; gives &lt;script type=&quot;math/tex&quot;&gt;x=2&lt;/script&gt;, so we have obtained a unique solution, &lt;script type=&quot;math/tex&quot;&gt;x=2&lt;/script&gt; ,&lt;script type=&quot;math/tex&quot;&gt;y=-2&lt;/script&gt;.
+In this section, we are going to learn about different techniques to solve this kind of problem and how linear algebra helps us to come with the solutions, but before going further, let start describing what linear algebra is about and why it is so useful in the field of machine learning.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-is-linear-algebra&quot;&gt;What is Linear Algebra?&lt;/h3&gt;
+
+&lt;p&gt;According to Wikipedia &lt;sup id=&quot;fnref:1 &quot;&gt;&lt;a href=&quot;#fn:1 &quot; class=&quot;footnote&quot;&gt;[1 ]&lt;/a&gt;&lt;/sup&gt;, Linear Algebra is the branch of mathematics concerning linear equations such as: &lt;script type=&quot;math/tex&quot;&gt;a_{1} x_{1}+\cdots+a_{n} x_{n}=b&lt;/script&gt;
+linear functions such as: &lt;script type=&quot;math/tex&quot;&gt;\left(x_{1}, \ldots, x_{n}\right) \mapsto a_{1} x_{1}+\ldots+a_{n} x_{n}&lt;/script&gt;, and their representations through matrices and vector spaces. 
+Understanding these concepts,  you going to acquire the confidence and the intuition necessary to understand how most of the machine learning algorithms works, for instance, K-means, KNN, SVM, etc.&lt;/p&gt;
+
+&lt;h3 id=&quot;why-is-linear-algebra-important-in-ml&quot;&gt;Why is linear algebra important in ML?&lt;/h3&gt;
+
+&lt;p&gt;Having some understanding of Linear algebra and Calculus gives us a better intuition about how ML algorithms work and their implementation. Especially because, in theory, most of them are based on matrix transformations, vectors, and linear functions. Further, it takes us in a privileged position where we can decide which to use for solving a particular problem, and how to face it. So if you want to be a successful data scientist or machine learning engineering, my suggestion is to spend some time digging into the essential concepts.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;./../img/pca.gif&quot; alt=&quot;PCA&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;online-resources-to-learn&quot;&gt;Online Resources to learn&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://brilliant.org/courses/linear-algebra/&quot; target=&quot;_blank&quot;&gt;Brilliant - Linear Algebra Course&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.khanacademy.org/math/linear-algebra&quot; target=&quot;_blank&quot;&gt;Khan Academy - Linear Algebra Course&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab&quot; target=&quot;_blank&quot;&gt;3Blue1Brown - Essence of linear algebra&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/playlist?list=PL49CF3715CB9EF31D&quot; target=&quot;_blank&quot;&gt;MIT - Gilbert Strang lectures on Linear Algebra &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;&lt;ul&gt;&lt;li id=&quot;fn:1&quot;&gt;Linear Algebra&lt;a href=&quot;https://en.wikipedia.org/wiki/Linear_algebra&quot; class=&quot;reversefootnote&quot; target=&quot;_blank&quot;&gt;&amp;#160;&amp;#8617;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Fri, 17 Apr 2020 07:34:42 -0500</pubDate>
+        <link>http://haruiz.github.io/en/ml-math-foundations-part-1</link>
+        <guid isPermaLink="true">http://haruiz.github.io/en/ml-math-foundations-part-1</guid>
+        
+        <category>ml</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Introducción a Machine Learning</title>
+        <description>&lt;p&gt;In 1833 Charles Babbage, the renowned English mathematician, known as “father of the computer,” invented the “Analytical Engine,” a mechanical machine that was capable of processing arithmetic operations, control flow instructions, and loops, making it the first design for a general-purpose computer. &lt;sup id=&quot;fnref:1 &quot;&gt;&lt;a href=&quot;#fn:1 &quot; class=&quot;footnote&quot;&gt;[1 ]&lt;/a&gt;&lt;/sup&gt;
+This brilliant invention would be the precursor of great ideas that emerged later and would mark the evolution of computing.
+For instance, years later, lady Ada Lovelace would describe a sequence of operations for solving mathematical problems using Babbage’s invention. Ada remarked that “The Analytical Engine has no pretensions to originate anything. It can do whatever we know how to order it to perform”, a statement that was cited later by the AI pioneer Alan Turing in his publication “Computing Machinery and Intelligence.” &lt;sup id=&quot;fnref:2 &quot;&gt;&lt;a href=&quot;#fn:2 &quot; class=&quot;footnote&quot;&gt;[2 ]&lt;/a&gt;&lt;/sup&gt;
+In that landmark publication, where the England mathematician introduced the Turing test as well, he was quoting Ada Lovelace while pondering whether general-purpose computers could be capable of learning and originality, and he came to the conclusion that they could.&lt;sup id=&quot;fnref:3 &quot;&gt;&lt;a href=&quot;#fn:3 &quot; class=&quot;footnote&quot;&gt;[3 ]&lt;/a&gt;&lt;/sup&gt;
+Machine learning arises from this question: could a computer go beyond “what we know how to order it to perform” and learn on its own how to perform a specified task? Could a computer surprise us? Rather than programmers crafting data-processing rules by hand, could a computer automatically learn these rules by looking at data?  This question opens the door to a new programming paradigm. 
+Let start defining the essential concepts required for understanding how the ML algorithms work and the kind of problems we can face.&lt;/p&gt;
+
+&lt;section class=&quot;mcon-maindemo bgwhite&quot; style=&quot;position: relative; padding-top:100px; padding-bottom:50px;&quot;&gt;
+                &lt;div class=&quot;full-bg&quot; style=&quot;background-image: url(../img/bg1.jpg)&quot;&gt;&lt;/div&gt;
+                &lt;br /&gt;
+                &lt;div class=&quot;full-bg--overlay&quot; style=&quot;&quot;&gt;&lt;/div&gt;
+                  &lt;div class=&quot;zoomtimeline mode-3dslider mode-3dslider--show-7 auto-init&quot; data-options=&quot;{
+                      startItem: 6
+                      ,color_highlight: 'lime'
+                      ,mode_3dslider_item_width: '200'
+                      ,mode_3dslider_item_height: '300'
+                      ,mode_3dslider_year_padding: '15'
+                      }&quot;&gt;
+                      &lt;div class=&quot;items&quot;&gt;
+                          
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/pascal.jpeg&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      1642
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;Blaise Pascal&lt;/h3&gt;
+                    &lt;p&gt;Blaise Pascal was 19 when he made an “arithmetic machine” for his tax collector father. It could add, subtract, multiply, and divide. Three centuries later, the IRS uses machine learning to combat tax evasion&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/Gottfried.jpeg&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      1679
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;Gottfried Wilhelm&lt;/h3&gt;
+                    &lt;p&gt;German mathematician, philosopher, and occasional poet Gottfried Wilhelm Leibniz devised the system of binary code that laid the foundation for modern computing.&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/Turk.jpg&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      1770
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;The Turk&lt;/h3&gt;
+                    &lt;p&gt;A moving, mechanical device designed to imitate a human. “The Turk” fooled even Napoleon into thinking it could play chess. The jig was up in 1857 when The Turk’s final owner revealed how a person hidden inside moved its arms.&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/bayes.png&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      1763
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;Thomas Bayes&lt;/h3&gt;
+                    &lt;p&gt;Several vital concepts in machine learning derive from probability theory and statistics, and they root back to the 18th century. In 1763, English statistician Thomas Bayes set out a mathematical theorem for probability, which came to be known as Bayes Theorem that remains a central concept in some modern approaches to machine learning.&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/charlesbabbage.jpg&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      1834
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;Charles Babbage&lt;/h3&gt;
+                    &lt;p&gt;Englishman Charles Babbage conceived a general all-purpose device that could be programmed with punched cards. His Analytical Machine was never built, yet nearly all modern computers rely on its logical structure.&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/ada-lovelace-290.jpeg&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      1842
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;Ada Lovelace&lt;/h3&gt;
+                    &lt;p&gt;The 27-year-old mathematician described a sequence of operations for solving mathematical problems using Charles' Babbage's theoretical punch-card machine.  In the 70s, the US Department of Defense paid homage, naming a new software language Ada.&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/220px-George_Boole_color.jpg&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      1847
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;George Boole&lt;/h3&gt;
+                    &lt;p&gt;Philosopher and closet mystic George Boole created a form of algebra in which all values can be reduced to “true” or “false.” Essential to modern computing, Boolean logic helps a CPU decide how to process new inputs.&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/Fritz.jpg&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      1927
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;Fritz Lang&lt;/h3&gt;
+                    &lt;p&gt;Set in 2026 Berlin, Fritz Lang’s expressionist sci-fi film “Metropolis” introduced moviegoers to the idea of a thinking machine. His character, “False Maria,” was the first robot ever depicted on film.&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/turing.png&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      1936
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;Alan Turing&lt;/h3&gt;
+                    &lt;p&gt;English mathematician Alan Turing’s papers were full of ideas on machine intelligence. “Can machines think?” was the first question about he started to write. In 1950, he suggested a test for machine intelligence, later known as the Turing Test, in which a machine is called “intelligent” if its responses to questions could convince a human.&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/warren.jpg&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      1943
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;Warren McCulloch&lt;/h3&gt;
+                    &lt;p&gt;A neurophysiologist and a mathematician co-wrote a paper on how human neurons might work. To illustrate the theory, they modeled a neural network with electrical circuits. In the 1950s, computer scientists would begin applying the idea to their work&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/samuel.jpg&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      1952
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;Arthur Samuel&lt;/h3&gt;
+                    &lt;p&gt;Machine learning pioneer Arthur Samuel created a program that helped an IBM computer get better at checkers the more it played. Machine learning scientists often use board games because they are both understandable and complex.&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/Rosenblatt_21.jpg&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      1957
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;Frank Rosenblatt&lt;/h3&gt;
+                    &lt;p&gt;Noted American psychologist Frank Rosenblatt’s Perceptron was an early attempt to create a neural network with the use of a rotary resistor (potentiometer) driven by an electric motor. The machine could take an input (such as pixels of images) and create an output (such as labels).&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/Fukushima.jpg&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      1957
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;Kunihiko Fukushima&lt;/h3&gt;
+                    &lt;p&gt;The neocognitron was introduced by Kunihiko Fukushima in 1980, this introduced two basic types of layers in CNNs: convolutional layers, and downsampling layers. A convolutional layer contains units whose receptive fields cover a patch of the previous layer. &lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/lecun.jpg&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      1989
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;Yann André Lecun&lt;/h3&gt;
+                    &lt;p&gt;in  1989 Yann LeCun used back-propagation to learn the convolution kernel coefficients directly from images of hand-written numbers. Learning was thus fully automatic, performed better than manual coefficient design, and was suited to a broader range of image recognition problems and image types. This approach became a foundation of modern computer vision.&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/Geoffrey.jpg&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      2006
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;Geoffrey Hinton&lt;/h3&gt;
+                    &lt;p&gt;When his field fell off the academic radar, computer scientist Geoffrey Hinton rebranded neural net research as “deep learning.” Today, the internet’s heaviest hitters use his techniques to improve tools like voice recognition and image classification.&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/netflix_winners.jpg&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      2009
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;AT&amp;amp;T scientists&lt;/h3&gt;
+                    &lt;p&gt;n 2006, Netflix offered $1M to anyone who could beat its algorithm at predicting consumer film ratings. The BellKor team of AT&amp;amp;T scientists took the prize three years later, beating the second-place team by mere minutes.&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/watson.jpg&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      2011
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;Watson IBM&lt;/h3&gt;
+                    &lt;p&gt;Though not a perfect player, IBM’s Watson did manage to outwit two Jeopardy! champions in a three-day showdown. Plans for this technology include powering a computerized doctor’s assistant.&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/alphago.jpeg&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      2015
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;Google’s AlphaGo&lt;/h3&gt;
+                    &lt;p&gt;Google’s AlphaGo was the first program to best a professional player at Go, considered the most difficult board game in the world. With this defeat, computers officially beat human opponents in every classical board game&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/future.jpg&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      2020
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;What's next in machine learning?&lt;/h3&gt;
+                    &lt;p&gt;How far this technology will take us remains to be seen, but applications in the works span everything from improving in-store retail experiences with IoT to boosting security with biometric data to predicting and diagnosing disease.&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+                      &lt;/div&gt;
+                  &lt;/div&gt;
+                 &lt;!-- the preloader START --&gt;
+                &lt;div class=&quot;preloader-wave&quot;&gt;
+                    &lt;span&gt;&lt;/span&gt;
+                    &lt;span&gt;&lt;/span&gt;
+                    &lt;span&gt;&lt;/span&gt;
+                    &lt;span&gt;&lt;/span&gt;
+                    &lt;span&gt;&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;!-- the preloader END --&gt;
+         &lt;/section&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;em&gt;
+Most of the text in this visualization was taken from &lt;a href=&quot;https://cloud.withgoogle.com/build/data-analytics/explore-history-machine-learning/&quot;&gt;History of machine learning&lt;/a&gt;, I would like to extend my thanks for the valuable contribution.
+&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;a-new-paradigm&quot;&gt;A new Paradigm&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Traditional Programming:&lt;/strong&gt; In classical programming, the paradigm of symbolic AI, humans input rules (a program) and data to be processed according to these rules, and out come answers&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Machine Learning:&lt;/strong&gt; With machine learning, humans input data as well as the answers expected from the data, and out come the rules. These rules can then be applied to new data to produce original answers.&lt;/p&gt;
+
+&lt;h2 id=&quot;definition&quot;&gt;Definition&lt;/h2&gt;
+
+&lt;p&gt;Machine learning is a field of computer science under the umbrella of artificial intelligence, which has evolved and experienced many transformations for decades, that is why we can find multiple definitions on the internet and the literature. In this post, I am going to provide my interpretation based on them.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;From a general perspective&lt;/strong&gt;, we could define Machine Learning as a discipline focused on describing how to build systems (Hardware/software) that can learn by themselves using some input data, further in the discovery of the mathematics-statistics-computation laws which govern this kind of systems (The learning process ).&lt;/p&gt;
+
+&lt;p&gt;On the other hand, &lt;strong&gt;from an expert point of view&lt;/strong&gt;, do or apply Machine Learning consists of training a mathematical-statistic model to infer o predict the value of a numerical variable, which can be discrete or continuous depending on whether we are trying to solve classification, or regression problem, generally, using historical information and with the primary goal of explaining or understand a phenomenon, forecasting, or identify patterns in the data.&lt;/p&gt;
+
+&lt;h2 id=&quot;kind-of-problems&quot;&gt;Kind of problems&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Unsupervised Learning:&lt;/strong&gt; Inferring a function that describe the structure of the unlabeled data.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;common algorithms:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ol style=&quot;margin: 10px&quot;&gt;
+  &lt;li&gt;K-means&lt;/li&gt;
+  &lt;li&gt;k-Medians&lt;/li&gt;
+  &lt;li&gt;Expectation Maximisation (EM)&lt;/li&gt;
+  &lt;li&gt;Hierarchical Clustering&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Supervised Learning:&lt;/strong&gt; Learning a function that maps an input to an output based on example input-output parts&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;common algorithms:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ol style=&quot;margin: 10px&quot;&gt;
+  &lt;li&gt;Nearest Neighbor&lt;/li&gt;
+  &lt;li&gt;Naive Bayes&lt;/li&gt;
+  &lt;li&gt;Decision Trees&lt;/li&gt;
+  &lt;li&gt;Linear Regression&lt;/li&gt;
+  &lt;li&gt;Support Vector Machines (SVM)&lt;/li&gt;
+  &lt;li&gt;Neural Networks&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Reinforcement learning&lt;/strong&gt; Area of machine learning concerned with how software agents ought to take actions in an environment in order to maximize the notion of cumulative reward.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;common algorithms:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ol style=&quot;margin: 10px&quot;&gt;
+  &lt;li&gt;Q-Learning&lt;/li&gt;
+  &lt;li&gt;Temporal Difference (TD)&lt;/li&gt;
+  &lt;li&gt;Deep Adversarial Networks&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;applications&quot;&gt;Applications&lt;/h2&gt;
+
+&lt;ol style=&quot;margin: 10px&quot;&gt;
+&lt;li&gt;Virtual Personal Assistants&lt;/li&gt;
+&lt;li&gt;self-driving cars&lt;/li&gt;
+&lt;li&gt;Videos Surveillance&lt;/li&gt;
+&lt;li&gt;Email Spam and Malware Filtering&lt;/li&gt;
+&lt;li&gt;face detection&lt;/li&gt;
+&lt;li&gt;Search Engine Result Refining&lt;/li&gt;
+&lt;li&gt; Product Recommendations&lt;/li&gt;
+&lt;li&gt;Online Fraud Detection&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;If this is the first time you are reading about this topic, is very likely that the previous definitions and concepts sound obscure, maybe cloudy, and you can get confused quickly, so this is why before start thinking about the implementation of the algorithms or which is the best library or framework  to use, you need to  understand the foundations. So in the next post I am going to explain in detail the different type of problems and how to approach them.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;&lt;ul&gt;&lt;li id=&quot;fn:1&quot;&gt;Analytical Engine&lt;a href=&quot;https://en.wikipedia.org/wiki/Analytical_Engine&quot; class=&quot;reversefootnote&quot; target=&quot;_blank&quot;&gt;&amp;#160;&amp;#8617;&lt;/a&gt;&lt;/li&gt;&lt;li id=&quot;fn:2&quot;&gt;Computing Machinery and Intelligence&lt;a href=&quot;https://academic.oup.com/mind/article/LIX/236/433/986238&quot; class=&quot;reversefootnote&quot; target=&quot;_blank&quot;&gt;&amp;#160;&amp;#8617;&lt;/a&gt;&lt;/li&gt;&lt;li id=&quot;fn:3&quot;&gt;Deep Learning with Python&lt;a href=&quot;https://www.manning.com/books/deep-learning-with-python&quot; class=&quot;reversefootnote&quot; target=&quot;_blank&quot;&gt;&amp;#160;&amp;#8617;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Thu, 16 Apr 2020 17:48:44 -0500</pubDate>
+        <link>http://haruiz.github.io/es/machine-learning-introduction</link>
+        <guid isPermaLink="true">http://haruiz.github.io/es/machine-learning-introduction</guid>
+        
+        
+        <category>deep</category>
+        
+        <category>learning</category>
+        
+      </item>
+    
+      <item>
+        <title>Machine Learning Introduction</title>
+        <description>&lt;p&gt;In 1833 Charles Babbage, the renowned English mathematician, known as “father of the computer,” invented the “Analytical Engine,” a mechanical machine that was capable of processing arithmetic operations, control flow instructions, and loops, making it the first design for a general-purpose computer. &lt;sup id=&quot;fnref:1 &quot;&gt;&lt;a href=&quot;#fn:1 &quot; class=&quot;footnote&quot;&gt;[1 ]&lt;/a&gt;&lt;/sup&gt;
+This brilliant invention would be the precursor of great ideas that emerged later and would mark the evolution of computing.
+For instance, years later, lady Ada Lovelace would describe a sequence of operations for solving mathematical problems using Babbage’s invention. Ada remarked that “The Analytical Engine has no pretensions to originate anything. It can do whatever we know how to order it to perform”, a statement that was cited later by the AI pioneer Alan Turing in his publication “Computing Machinery and Intelligence.” &lt;sup id=&quot;fnref:2 &quot;&gt;&lt;a href=&quot;#fn:2 &quot; class=&quot;footnote&quot;&gt;[2 ]&lt;/a&gt;&lt;/sup&gt;
+In that landmark publication, where the England mathematician introduced the Turing test as well, he was quoting Ada Lovelace while pondering whether general-purpose computers could be capable of learning and originality, and he came to the conclusion that they could.&lt;sup id=&quot;fnref:3 &quot;&gt;&lt;a href=&quot;#fn:3 &quot; class=&quot;footnote&quot;&gt;[3 ]&lt;/a&gt;&lt;/sup&gt;
+Machine learning arises from this question: could a computer go beyond “what we know how to order it to perform” and learn on its own how to perform a specified task? Could a computer surprise us? Rather than programmers crafting data-processing rules by hand, could a computer automatically learn these rules by looking at data?  This question opens the door to a new programming paradigm. 
+Let start defining the essential concepts required for understanding how the ML algorithms work and the kind of problems we can face.&lt;/p&gt;
+
+&lt;section class=&quot;mcon-maindemo bgwhite&quot; style=&quot;position: relative; padding-top:100px; padding-bottom:50px;&quot;&gt;
+                &lt;div class=&quot;full-bg&quot; style=&quot;background-image: url(../img/bg1.jpg)&quot;&gt;&lt;/div&gt;
+                &lt;br /&gt;
+                &lt;div class=&quot;full-bg--overlay&quot; style=&quot;&quot;&gt;&lt;/div&gt;
+                  &lt;div class=&quot;zoomtimeline mode-3dslider mode-3dslider--show-7 auto-init&quot; data-options=&quot;{
+                      startItem: 6
+                      ,color_highlight: 'lime'
+                      ,mode_3dslider_item_width: '200'
+                      ,mode_3dslider_item_height: '300'
+                      ,mode_3dslider_year_padding: '15'
+                      }&quot;&gt;
+                      &lt;div class=&quot;items&quot;&gt;
+                          
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/pascal.jpeg&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      1642
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;Blaise Pascal&lt;/h3&gt;
+                    &lt;p&gt;Blaise Pascal was 19 when he made an “arithmetic machine” for his tax collector father. It could add, subtract, multiply, and divide. Three centuries later, the IRS uses machine learning to combat tax evasion&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/Gottfried.jpeg&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      1679
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;Gottfried Wilhelm&lt;/h3&gt;
+                    &lt;p&gt;German mathematician, philosopher, and occasional poet Gottfried Wilhelm Leibniz devised the system of binary code that laid the foundation for modern computing.&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/Turk.jpg&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      1770
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;The Turk&lt;/h3&gt;
+                    &lt;p&gt;A moving, mechanical device designed to imitate a human. “The Turk” fooled even Napoleon into thinking it could play chess. The jig was up in 1857 when The Turk’s final owner revealed how a person hidden inside moved its arms.&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/bayes.png&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      1763
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;Thomas Bayes&lt;/h3&gt;
+                    &lt;p&gt;Several vital concepts in machine learning derive from probability theory and statistics, and they root back to the 18th century. In 1763, English statistician Thomas Bayes set out a mathematical theorem for probability, which came to be known as Bayes Theorem that remains a central concept in some modern approaches to machine learning.&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/charlesbabbage.jpg&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      1834
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;Charles Babbage&lt;/h3&gt;
+                    &lt;p&gt;Englishman Charles Babbage conceived a general all-purpose device that could be programmed with punched cards. His Analytical Machine was never built, yet nearly all modern computers rely on its logical structure.&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/ada-lovelace-290.jpeg&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      1842
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;Ada Lovelace&lt;/h3&gt;
+                    &lt;p&gt;The 27-year-old mathematician described a sequence of operations for solving mathematical problems using Charles' Babbage's theoretical punch-card machine.  In the 70s, the US Department of Defense paid homage, naming a new software language Ada.&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/220px-George_Boole_color.jpg&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      1847
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;George Boole&lt;/h3&gt;
+                    &lt;p&gt;Philosopher and closet mystic George Boole created a form of algebra in which all values can be reduced to “true” or “false.” Essential to modern computing, Boolean logic helps a CPU decide how to process new inputs.&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/Fritz.jpg&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      1927
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;Fritz Lang&lt;/h3&gt;
+                    &lt;p&gt;Set in 2026 Berlin, Fritz Lang’s expressionist sci-fi film “Metropolis” introduced moviegoers to the idea of a thinking machine. His character, “False Maria,” was the first robot ever depicted on film.&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/turing.png&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      1936
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;Alan Turing&lt;/h3&gt;
+                    &lt;p&gt;English mathematician Alan Turing’s papers were full of ideas on machine intelligence. “Can machines think?” was the first question about he started to write. In 1950, he suggested a test for machine intelligence, later known as the Turing Test, in which a machine is called “intelligent” if its responses to questions could convince a human.&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/warren.jpg&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      1943
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;Warren McCulloch&lt;/h3&gt;
+                    &lt;p&gt;A neurophysiologist and a mathematician co-wrote a paper on how human neurons might work. To illustrate the theory, they modeled a neural network with electrical circuits. In the 1950s, computer scientists would begin applying the idea to their work&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/samuel.jpg&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      1952
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;Arthur Samuel&lt;/h3&gt;
+                    &lt;p&gt;Machine learning pioneer Arthur Samuel created a program that helped an IBM computer get better at checkers the more it played. Machine learning scientists often use board games because they are both understandable and complex.&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/Rosenblatt_21.jpg&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      1957
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;Frank Rosenblatt&lt;/h3&gt;
+                    &lt;p&gt;Noted American psychologist Frank Rosenblatt’s Perceptron was an early attempt to create a neural network with the use of a rotary resistor (potentiometer) driven by an electric motor. The machine could take an input (such as pixels of images) and create an output (such as labels).&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/Fukushima.jpg&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      1957
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;Kunihiko Fukushima&lt;/h3&gt;
+                    &lt;p&gt;The neocognitron was introduced by Kunihiko Fukushima in 1980, this introduced two basic types of layers in CNNs: convolutional layers, and downsampling layers. A convolutional layer contains units whose receptive fields cover a patch of the previous layer. &lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/lecun.jpg&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      1989
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;Yann André Lecun&lt;/h3&gt;
+                    &lt;p&gt;in  1989 Yann LeCun used back-propagation to learn the convolution kernel coefficients directly from images of hand-written numbers. Learning was thus fully automatic, performed better than manual coefficient design, and was suited to a broader range of image recognition problems and image types. This approach became a foundation of modern computer vision.&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/Geoffrey.jpg&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      2006
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;Geoffrey Hinton&lt;/h3&gt;
+                    &lt;p&gt;When his field fell off the academic radar, computer scientist Geoffrey Hinton rebranded neural net research as “deep learning.” Today, the internet’s heaviest hitters use his techniques to improve tools like voice recognition and image classification.&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/netflix_winners.jpg&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      2009
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;AT&amp;amp;T scientists&lt;/h3&gt;
+                    &lt;p&gt;n 2006, Netflix offered $1M to anyone who could beat its algorithm at predicting consumer film ratings. The BellKor team of AT&amp;amp;T scientists took the prize three years later, beating the second-place team by mere minutes.&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/watson.jpg&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      2011
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;Watson IBM&lt;/h3&gt;
+                    &lt;p&gt;Though not a perfect player, IBM’s Watson did manage to outwit two Jeopardy! champions in a three-day showdown. Plans for this technology include powering a computerized doctor’s assistant.&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/alphago.jpeg&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      2015
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;Google’s AlphaGo&lt;/h3&gt;
+                    &lt;p&gt;Google’s AlphaGo was the first program to best a professional player at Go, considered the most difficult board game in the world. With this defeat, computers officially beat human opponents in every classical board game&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+              &lt;div class=&quot;ztm-item&quot; data-image=&quot;../img/future.jpg&quot;&gt;
+                  &lt;div class=&quot;hex-desc-con&quot;&gt;
+                    &lt;div class=&quot;hex-desc&quot;&gt;
+                      2020
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;ztm-content&quot;&gt;
+                    &lt;h3 class=&quot;the-heading&quot;&gt;What's next in machine learning?&lt;/h3&gt;
+                    &lt;p&gt;How far this technology will take us remains to be seen, but applications in the works span everything from improving in-store retail experiences with IoT to boosting security with biometric data to predicting and diagnosing disease.&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            
+                      &lt;/div&gt;
+                  &lt;/div&gt;
+                 &lt;!-- the preloader START --&gt;
+                &lt;div class=&quot;preloader-wave&quot;&gt;
+                    &lt;span&gt;&lt;/span&gt;
+                    &lt;span&gt;&lt;/span&gt;
+                    &lt;span&gt;&lt;/span&gt;
+                    &lt;span&gt;&lt;/span&gt;
+                    &lt;span&gt;&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;!-- the preloader END --&gt;
+         &lt;/section&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;em&gt;
+Most of the text in this visualization was taken from &lt;a href=&quot;https://cloud.withgoogle.com/build/data-analytics/explore-history-machine-learning/&quot;&gt;History of machine learning&lt;/a&gt;, I would like to extend my thanks for the valuable contribution.
+&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;a-new-paradigm&quot;&gt;A new Paradigm&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Traditional Programming:&lt;/strong&gt; In classical programming, the paradigm of symbolic AI, humans input rules (a program) and data to be processed according to these rules, and out come answers&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Machine Learning:&lt;/strong&gt; With machine learning, humans input data as well as the answers expected from the data, and out come the rules. These rules can then be applied to new data to produce original answers.&lt;/p&gt;
+
+&lt;h2 id=&quot;definition&quot;&gt;Definition&lt;/h2&gt;
+
+&lt;p&gt;Machine learning is a field of computer science under the umbrella of artificial intelligence, which has evolved and experienced many transformations for decades, that is why we can find multiple definitions on the internet and the literature. In this post, I am going to provide my interpretation based on them.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;From a general perspective&lt;/strong&gt;, we could define Machine Learning as a discipline focused on describing how to build systems (Hardware/software) that can learn by themselves using some input data, further in the discovery of the mathematics-statistics-computation laws which govern this kind of systems (The learning process ).&lt;/p&gt;
+
+&lt;p&gt;On the other hand, &lt;strong&gt;from an expert point of view&lt;/strong&gt;, do or apply Machine Learning consists of training a mathematical-statistic model to infer o predict the value of a numerical variable, which can be discrete or continuous depending on whether we are trying to solve classification, or regression problem, generally, using historical information and with the primary goal of explaining or understand a phenomenon, forecasting, or identify patterns in the data.&lt;/p&gt;
+
+&lt;h2 id=&quot;kind-of-problems&quot;&gt;Kind of problems&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Unsupervised Learning:&lt;/strong&gt; Inferring a function that describe the structure of the unlabeled data.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;common algorithms:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ol style=&quot;margin: 10px&quot;&gt;
+  &lt;li&gt;K-means&lt;/li&gt;
+  &lt;li&gt;k-Medians&lt;/li&gt;
+  &lt;li&gt;Expectation Maximisation (EM)&lt;/li&gt;
+  &lt;li&gt;Hierarchical Clustering&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Supervised Learning:&lt;/strong&gt; Learning a function that maps an input to an output based on example input-output parts&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;common algorithms:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ol style=&quot;margin: 10px&quot;&gt;
+  &lt;li&gt;Nearest Neighbor&lt;/li&gt;
+  &lt;li&gt;Naive Bayes&lt;/li&gt;
+  &lt;li&gt;Decision Trees&lt;/li&gt;
+  &lt;li&gt;Linear Regression&lt;/li&gt;
+  &lt;li&gt;Support Vector Machines (SVM)&lt;/li&gt;
+  &lt;li&gt;Neural Networks&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Reinforcement learning&lt;/strong&gt; Area of machine learning concerned with how software agents ought to take actions in an environment in order to maximize the notion of cumulative reward.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;common algorithms:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ol style=&quot;margin: 10px&quot;&gt;
+  &lt;li&gt;Q-Learning&lt;/li&gt;
+  &lt;li&gt;Temporal Difference (TD)&lt;/li&gt;
+  &lt;li&gt;Deep Adversarial Networks&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;applications&quot;&gt;Applications&lt;/h2&gt;
+
+&lt;ol style=&quot;margin: 10px&quot;&gt;
+&lt;li&gt;Virtual Personal Assistants&lt;/li&gt;
+&lt;li&gt;self-driving cars&lt;/li&gt;
+&lt;li&gt;Videos Surveillance&lt;/li&gt;
+&lt;li&gt;Email Spam and Malware Filtering&lt;/li&gt;
+&lt;li&gt;face detection&lt;/li&gt;
+&lt;li&gt;Search Engine Result Refining&lt;/li&gt;
+&lt;li&gt; Product Recommendations&lt;/li&gt;
+&lt;li&gt;Online Fraud Detection&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;If this is the first time you are reading about this topic, is very likely that the previous definitions and concepts sound obscure, maybe cloudy, and you can get confused quickly, so this is why before start thinking about the implementation of the algorithms or which is the best library or framework  to use, you need to  understand the foundations. So in the next post I am going to explain in detail the different type of problems and how to approach them.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;&lt;ul&gt;&lt;li id=&quot;fn:1&quot;&gt;Analytical Engine&lt;a href=&quot;https://en.wikipedia.org/wiki/Analytical_Engine&quot; class=&quot;reversefootnote&quot; target=&quot;_blank&quot;&gt;&amp;#160;&amp;#8617;&lt;/a&gt;&lt;/li&gt;&lt;li id=&quot;fn:2&quot;&gt;Computing Machinery and Intelligence&lt;a href=&quot;https://academic.oup.com/mind/article/LIX/236/433/986238&quot; class=&quot;reversefootnote&quot; target=&quot;_blank&quot;&gt;&amp;#160;&amp;#8617;&lt;/a&gt;&lt;/li&gt;&lt;li id=&quot;fn:3&quot;&gt;Deep Learning with Python&lt;a href=&quot;https://www.manning.com/books/deep-learning-with-python&quot; class=&quot;reversefootnote&quot; target=&quot;_blank&quot;&gt;&amp;#160;&amp;#8617;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Thu, 16 Apr 2020 17:48:44 -0500</pubDate>
+        <link>http://haruiz.github.io/en/machine-learning-introduction</link>
+        <guid isPermaLink="true">http://haruiz.github.io/en/machine-learning-introduction</guid>
+        
+        
+        <category>deep</category>
+        
+        <category>learning</category>
+        
+      </item>
+    
+  </channel>
+</rss>
