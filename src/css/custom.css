@@ -1,0 +1,125 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=PTSans&display=swap');*/
+/*@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');*/
+
+/*
+ * override docusaurus theme styles
+ */
+
+:root {
+    --ifm-font-family-base: 'Lora','Roboto', 'Open Sans', 'PT Sans','Lora', serif;
+    --ifm-color-primary: #25c2a0;
+    --ifm-color-primary-dark: rgb(33, 175, 144);
+    --ifm-color-primary-darker: rgb(31, 165, 136);
+    --ifm-color-primary-darkest: rgb(26, 136, 112);
+    --ifm-color-primary-light: rgb(70, 203, 174);
+    --ifm-color-primary-lighter: rgb(102, 212, 189);
+    --ifm-color-primary-lightest: rgb(146, 224, 208);
+    --ifm-code-font-size: 95%;
+}
+
+[data-theme='dark'] {
+    --ifm-color-primary: white;
+    --ifm-background-color: #1C0001;
+}
+
+[data-theme='light'] {
+    --ifm-color-primary: #1C0001;
+    --ifm-background-color: #F2F1F2;
+
+}
+
+html[data-theme='dark'] .docusaurus-highlight-code-line {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+html[data-theme='dark'] * {
+    color: #fff;
+}
+
+.docusaurus-highlight-code-line {
+    background-color: rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 calc(-1 * var(--ifm-pre-padding));
+    padding: 0 var(--ifm-pre-padding);
+}
+
+/*
+ * override TypedText styles
+ */
+
+
+.typed_text {
+    font-weight: bold;
+    font-size: xx-large;
+}
+.typed-cursor {
+    font-size: xx-large;
+}
+
+
+/*
+ * override Button Buy me a coffee styles
+ */
+
+
+@font-face {
+    font-family: 'Cookie';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/cookie/v12/syky-y18lb0tSbf9kgqS.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+.bmc-button img {
+    height: 34px !important;
+    width: 35px !important;
+    margin-bottom: 1px !important;
+    box-shadow: none !important;
+    border: none !important;
+    vertical-align: middle !important;
+}
+
+.bmc-button {
+    padding: 7px 10px 7px 10px !important;
+    line-height: 35px !important;
+    height: 51px !important;
+    min-width: 217px !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    color: #ffffff !important;
+    background-color: #3fc48b !important;
+    border-radius: 5px !important;
+    border: 1px solid transparent !important;
+    font-size: 28px !important;
+    letter-spacing: 0.6px !important;
+    /*box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;*/
+    /*-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;*/
+    margin: 0 auto !important;
+    font-family: 'Cookie', cursive !important;
+    -webkit-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    -o-transition: 0.3s all linear !important;
+    -webkit-transition: 0.3s all linear !important;
+    -moz-transition: 0.3s all linear !important;
+    -ms-transition: 0.3s all linear !important;
+    transition: 0.3s all linear !important;
+}
+.bmc-text{
+    margin-left:15px;font-size:28px !important;
+}
+
+.bmc-button:hover,
+.bmc-button:active,
+.bmc-button:focus {
+    -webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+    text-decoration: none !important;
+    box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+    opacity: 0.85 !important;
+    color: #ffffff !important;
+}

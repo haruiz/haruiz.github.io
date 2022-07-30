@@ -1,0 +1,48 @@
+{
+  "name": "blog",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "docusaurus": "docusaurus",
+    "start": "docusaurus start",
+    "build": "docusaurus build",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "clear": "docusaurus clear",
+    "serve": "docusaurus serve",
+    "write-translations": "docusaurus write-translations",
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "sayHi": "node -e \"require('./util/commands').sayHi();\"",
+    "new-post": "node -e \"require('./util/commands').createBlogEntry();\""
+  },
+  "dependencies": {
+    "@docusaurus/core": "^2.0.0-beta.22",
+    "@docusaurus/preset-classic": "^2.0.0-beta.22",
+    "@fortawesome/fontawesome-svg-core": "^6.1.2",
+    "@fortawesome/free-brands-svg-icons": "^6.1.2",
+    "@fortawesome/free-regular-svg-icons": "^6.1.2",
+    "@fortawesome/free-solid-svg-icons": "^6.1.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@mdx-js/react": "^1.6.21",
+    "babel-plugin-macros": "^3.1.0",
+    "clsx": "^1.1.1",
+    "gsap": "^3.9.1",
+    "prism-react-renderer": "^1.2.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "rebass": "^4.0.7",
+    "typed.js": "^2.0.12"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
