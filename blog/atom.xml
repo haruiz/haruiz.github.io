@@ -20,7 +20,6 @@ Thank you!</p>]]></content>
             <uri>https://github.com/haruiz</uri>
         </author>
         <category label="python" term="python"/>
-        <category label="package manager" term="package manager"/>
-        <category label="tools" term="tools"/>
+        <category label="data-science" term="data-science"/>
     </entry>
 </feed>
