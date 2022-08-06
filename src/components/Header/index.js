@@ -6,39 +6,14 @@ import {ProfilePicture} from "./profilePicture";
 import {MeStatement} from "./meStatement";
 import {ProInterests} from "./interests";
 import {BuyMeACoffee} from "./buyMeACoffee";
+import { useMediaQuery } from 'react-responsive'
+import styles from "./index.module.css";
+import clsx from "clsx";
 
 export default function  Header(){
 
     const {siteConfig} = useDocusaurusContext();
     const {githubUri, pictureUri} = siteConfig.customFields;
-
-    const divProfileInfoWrapperStyle = {
-        margin: "0",
-        width: "100%",
-        // border: "3px solid green",
-        padding: "0px",
-    }
-
-    const githubCornerStyles = {
-        color: "#f7f8f9",
-        position: "absolute",
-        top: 0,
-        border: 0,
-        right: 0,
-        zIndex: -1
-    }
-
-    const divProfilePicWrapperStyle = {margin: "20px"}
-    const divProfilePicStyle = {width: 180, margin: "auto"}
-
-    const proInterestsStyle ={
-            textAlign: "center",
-            margin: "auto",
-            fontSize: "medium",
-            // border: "3px solid green",
-            width: "50%",
-    }
-
     const btnBuyMeACoffeeStyle ={
         margin: "20px"
     }
@@ -46,13 +21,13 @@ export default function  Header(){
     return (
         <header>
             <Banner>
-                <div style={divProfileInfoWrapperStyle}>
-                <GithubCorner repoUri={githubUri} style={githubCornerStyles}/>
-                <div style={divProfilePicWrapperStyle}>
-                    <ProfilePicture opacity={0.8} pictureUri={pictureUri} style={divProfilePicStyle} />
+                <div>
+                <GithubCorner repoUri={githubUri} className={clsx(styles.github_corner)}/>
+                <div className={clsx(styles.profile_pic_wrapper_div)}>
+                    <ProfilePicture opacity={0.8} pictureUri={pictureUri} className={clsx(styles.profile_pic)} />
                 </div>
                 <MeStatement strings={siteConfig.tagline.split("|")}/>
-                <ProInterests style={proInterestsStyle}/>
+                <ProInterests className={clsx(styles.pro_interest_div)}/>
                  <div style={btnBuyMeACoffeeStyle}>
                     <BuyMeACoffee/>
                  </div>

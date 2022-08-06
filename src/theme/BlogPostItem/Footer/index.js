@@ -1,11 +1,12 @@
 import React from 'react';
 import clsx from 'clsx';
 import {useBlogPost} from '@docusaurus/theme-common/internal';
-import EditThisPage from '@theme/EditThisPage';
 import TagsListInline from '@theme/TagsListInline';
 import ReadMoreLink from '@theme/BlogPostItem/Footer/ReadMoreLink';
 import BlogPostItemHeaderAuthors from '@theme/BlogPostItem/Header/Authors';
 import styles from './styles.module.css';
+
+
 export default function BlogPostItemFooter() {
   const {metadata, isBlogPostPage} = useBlogPost();
   const {tags, title, editUrl, hasTruncateMarker} = metadata;
@@ -22,11 +23,13 @@ export default function BlogPostItemFooter() {
         'row docusaurus-mt-lg',
         isBlogPostPage && styles.blogPostFooterDetailsFull,
       )}>
+
       {tagsExists && (
         <div className={clsx('col', {'col--9': truncatedPost})}>
           <TagsListInline tags={tags} />
         </div>
       )}
+
 
       {isBlogPostPage && editUrl && (
         <div className="col margin-top--sm">

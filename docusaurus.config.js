@@ -21,6 +21,7 @@ const config = {
     githubUri: "https://github.com/haruiz",
     pictureUri: "/img/profile.png"
   },
+  plugins: ['@docusaurus/plugin-ideal-image'],
   presets: [
     [
       'classic',
@@ -62,6 +63,9 @@ const config = {
           //   label: 'Tutorial',
           // },
           {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/courses', label: 'Courses', position: 'left'},
+          {to: '/publications', label: 'Publications', position: 'left'},
+
           {
             href: 'https://github.com/haruiz',
             label: 'GitHub',

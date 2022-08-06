@@ -31,7 +31,7 @@ function Footer() {
         icon: faLinkedin
     },
     {
-      uri: "Github",
+      uri: "https://github.com/haruiz",
       type: "fa",
       icon: faGithub
     },
@@ -67,8 +67,8 @@ function Footer() {
     }
   ]
 
-  const socialLinks = social_links.map(({icon,type, uri}) => (
-      <a href={uri} target="_blank" style={{margin: 10}}>{
+  const socialLinks = social_links.map(({icon,type, uri}, index) => (
+      <a href={uri} target="_blank" style={{margin: 10}} key={index}>{
         type === "custom" ? icon : <FontAwesomeIcon icon={icon} size="lg"/>
       }
       </a>

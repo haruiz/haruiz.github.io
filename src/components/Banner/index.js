@@ -1,6 +1,7 @@
-import React, {useCallback, useEffect, useRef} from "react";
+import React, {useCallback, useEffect, useRef, useState} from "react";
 import clsx from "clsx";
 import styles from "./index.module.css";
+import { useMediaQuery } from 'react-responsive'
 
 const loadScriptAsync = (src) => new Promise((resolve, reject) => {
     const s = document.createElement('script');
@@ -12,6 +13,15 @@ const loadScriptAsync = (src) => new Promise((resolve, reject) => {
 
 export function Banner({children}) {
     const vantaRenderElement = useRef(null);
+    // const isDesktopOrLaptop = useMediaQuery({
+    //     query: '(min-width: 1224px)'
+    // })
+    // const isBigScreen = useMediaQuery({ query: '(min-width: 1824px)' })
+    // const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
+    // const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' })
+    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
+
+
     const loadVantaScript = useCallback(async () => {
         try {
             await loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js');
@@ -23,23 +33,26 @@ export function Banner({children}) {
 
     useEffect(() => {
         loadVantaScript().then(() => {
-            VANTA.HALO({
+            let options = {
                 el: vantaRenderElement.current,
                 baseColor: 0x6cc866,
                 backgroundColor: "#272936",
                 mouseControls: false,
                 touchControls: false,
                 gyroControls: false,
-                // minHeight: 600.00,
-                // minWidth: 600.00,
-                //amplitudeFactor: 0.60,
                 xOffset: 0.0,
-                yOffset: 0.28,
-                size: 1.0
-            })
+            }
+            if(isTabletOrMobile){
+                options = {...{size: 0.7, yOffset: 0.32}, ...options}
+            }
+            else{
+                options = {...{size: 1.0, yOffset: 0.28}, ...options}
+            }
+            VANTA.HALO(options)
 
         });
     }, [loadVantaScript, vantaRenderElement]);
+
 
     return (
         <div ref={vantaRenderElement} className={clsx('hero hero--primary', styles.banner)}>

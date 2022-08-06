@@ -1,0 +1,54 @@
+.pro_interest_div{
+    text-align : center;
+    margin: auto;
+    font-size: medium;
+    width: 50%;
+}
+
+.github_corner{
+    color: #f7f8f9;
+    position: absolute;
+    top: 0;
+    border: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.profile_pic_wrapper_div{
+    margin: 10px;
+}
+
+.profile_pic{
+    width: 180px;
+    margin: auto;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .pro_interest_div{
+        width: 80%;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .pro_interest_div{
+        width: 80%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .pro_interest_div{
+        width: 50%;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}

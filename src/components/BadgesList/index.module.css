@@ -1,0 +1,35 @@
+.badge_list {
+    margin-top: 0;
+    position: relative;
+    /*border: #3fc48b solid 1px;*/
+}
+
+.badge_item{
+    /*border: red solid 1px;*/
+    margin: 10px 0 0 0;
+    max-width: 150px;
+    display: inline-block;
+    vertical-align:middle;
+}
+/*phones*/
+@media screen and (max-width: 1224px) {
+    .badge_item{
+        margin: 10px;
+    }
+}
+
+.badge_item > img {
+    height: 100px;
+}
+.badge_item > p {
+    margin: 0;
+}
+
+.badge_item > p:nth-of-type(1){
+    font-size: 14px;
+}
+
+.badge_item > p:nth-of-type(2){
+    font-size: 10px;
+}
+

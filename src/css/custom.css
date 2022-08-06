@@ -4,7 +4,7 @@
  * work well for content-centric websites.
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 /*@import url('https://fonts.googleapis.com/css2?family=PTSans&display=swap');*/
 /*@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');*/
 
@@ -12,41 +12,75 @@
  * override docusaurus theme styles
  */
 
+
 :root {
-    --ifm-font-family-base: 'Lora','Roboto', 'Open Sans', 'PT Sans','Lora', serif;
-    --ifm-color-primary: #25c2a0;
-    --ifm-color-primary-dark: rgb(33, 175, 144);
-    --ifm-color-primary-darker: rgb(31, 165, 136);
-    --ifm-color-primary-darkest: rgb(26, 136, 112);
-    --ifm-color-primary-light: rgb(70, 203, 174);
-    --ifm-color-primary-lighter: rgb(102, 212, 189);
-    --ifm-color-primary-lightest: rgb(146, 224, 208);
-    --ifm-code-font-size: 95%;
+    --ifm-font-family-base: 'Google Sans','Roboto', 'Open Sans', 'PT Sans','Lora', serif;
+    /*--ifm-color-primary: #25c2a0;*/
+    /*--ifm-color-primary-dark: rgb(33, 175, 144);*/
+    /*--ifm-color-primary-darker: rgb(31, 165, 136);*/
+    /*--ifm-color-primary-darkest: rgb(26, 136, 112);*/
+    /*--ifm-color-primary-light: rgb(70, 203, 174);*/
+    /*--ifm-color-primary-lighter: rgb(102, 212, 189);*/
+    /*--ifm-color-primary-lightest: rgb(146, 224, 208);*/
+    /*--ifm-code-font-size: 95%;*/
 }
+
+
 
 [data-theme='dark'] {
     --ifm-color-primary: white;
     --ifm-background-color: #1C0001;
+     --docusaurus-highlighted-code-line-bg: rgb(100, 100, 100);
 }
 
 [data-theme='light'] {
     --ifm-color-primary: #1C0001;
     --ifm-background-color: #F2F1F2;
-
+     --docusaurus-highlighted-code-line-bg: rgb(203, 201, 201);
 }
 
-html[data-theme='dark'] .docusaurus-highlight-code-line {
-    background-color: rgba(0, 0, 0, 0.3);
-}
 html[data-theme='dark'] * {
     color: #fff;
 }
+/*[data-theme='light'] a:hover {*/
+/*  color: #2ECC71;*/
+/*}*/
+
+/*[data-theme='dark'] a:hover {*/
+/*    color: #2ECC71;*/
+/*}*/
+
+/*[data-theme='light'] a:visited {*/
+/*    color: #000000;*/
+/*}*/
+
+
+
 
 .docusaurus-highlight-code-line {
     background-color: rgba(0, 0, 0, 0.1);
     display: block;
     margin: 0 calc(-1 * var(--ifm-pre-padding));
     padding: 0 var(--ifm-pre-padding);
+}
+
+.responsive-wrapper {
+    width: 50%;
+    /*border: #3fc48b solid 2px;*/
+    padding: 10px;
+}
+.responsive-wrapper h1 {
+
+}
+@media screen and (max-width: 767px) {
+    .responsive-wrapper{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 400px) {
+    .responsive-wrapper{
+        width: 90%;
+    }
 }
 
 /*
@@ -122,4 +156,110 @@ html[data-theme='dark'] * {
     box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
     opacity: 0.85 !important;
     color: #ffffff !important;
+}
+
+
+/**
+ * termynal.js
+ *
+ * @author Ines Montani <ines@ines.io>
+ * @version 0.0.1
+ * @license MIT
+ */
+
+:root {
+    --color-bg: #252a33;
+    --color-text: #eee;
+    --color-text-subtle: #a2a2a2;
+
+    /*--color-bg: #F6F8FA;*/
+    /*--color-text: #1a1e24;*/
+    /*--color-text-subtle: #D76D77;*/
+}
+
+[data-termynal] {
+    max-width: 100%;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-size: 14px;
+    font-family: Consolas, Menlo, Monaco, 'Courier New', Courier, monospace;
+    border-radius: 8px;
+    padding: 50px 30px 20px;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+[data-termynal]:before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    /* A little hack to display the window buttons in one pseudo element. */
+    background: #d9515d;
+    -webkit-box-shadow: 25px 0 0 #f4c025, 50px 0 0 #3ec930;
+    box-shadow: 25px 0 0 #f4c025, 50px 0 0 #3ec930;
+}
+
+[data-termynal]:after {
+    content: 'bash';
+    position: absolute;
+    color: var(--color-text-subtle);
+    top: 5px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+[data-ty] {
+    display: block;
+    line-height: 2;
+}
+
+[data-ty]:before {
+    /* Set up defaults and ensure empty lines are displayed. */
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+}
+
+[data-ty="input"]:before,
+[data-ty-prompt]:before {
+    margin-right: 0.75em;
+    color: var(--color-text-subtle);
+}
+
+[data-ty="input"]:before {
+    content: '$';
+}
+
+[data-ty][data-ty-prompt]:before {
+    content: attr(data-ty-prompt);
+}
+
+[data-ty-cursor]:after {
+    content: attr(data-ty-cursor);
+    font-family: monospace;
+    margin-left: 0.5em;
+    -webkit-animation: blink 1s infinite;
+    animation: blink 1s infinite;
+}
+
+
+/* Cursor animation */
+
+@-webkit-keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
 }

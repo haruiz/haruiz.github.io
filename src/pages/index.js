@@ -6,7 +6,7 @@ import {AboutMe} from "../components/AboutMe";
 
 export default function IndexPage() {
     return (
-        <Layout title="Hello" description="Hello React Page">
+        <Layout title="Hello" description="Hello From my Blog">
             <Header/>
             <AboutMe/>
         </Layout>
