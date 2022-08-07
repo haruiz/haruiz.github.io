@@ -18,7 +18,7 @@
     }
 }
 
-.badge_item > img {
+.badge_item a > img {
     height: 100px;
 }
 .badge_item > p {

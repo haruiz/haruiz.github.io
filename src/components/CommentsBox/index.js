@@ -14,12 +14,11 @@ export default function CommentsBox({term}) {
               mapping="specific"
               term={term}
               reactionsEnabled="1"
-              strict="1"
+              strict="0"
               emitMetadata="0"
               inputPosition="top"
               theme={colorMode === 'dark' ? 'dark' : 'light'}
               lang="en"
-              loading="lazy"
               crossorigin="anonymous"
             />
     );

@@ -48,7 +48,7 @@ const issuedBadges = [
 
 export default  function BadgeList() {
     const badgeItems =  issuedBadges.map(({imgUri, title,issuedDate, sourceUri}, index) => <div className={clsx(styles.badge_item)} key={index}>
-        <img src={useBaseUrl(imgUri)} alt={title}/>
+        <a href={sourceUri} target="_blank"><img src={useBaseUrl(imgUri)} alt={title}/></a>
         <p><a href={sourceUri} target="_blank">{title}</a></p>
         <p>{issuedDate}</p>
     </div>)
