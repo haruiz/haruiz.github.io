@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Henry Ruiz',
-  tagline: 'Hello world|I\'m Henry Ruiz|Ph.D. Student|Machine Learning GDE|Open Source Lover',
+  tagline: 'Hello world!|I\'m Henry Ruiz|Ph.D. Student|Machine Learning GDE|Open Source Lover',
   url: 'https://haruiz.github.io/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -21,7 +21,14 @@ const config = {
     githubUri: "https://github.com/haruiz",
     pictureUri: "/img/profile.png"
   },
-  plugins: ['@docusaurus/plugin-ideal-image'],
+  plugins: [
+      '@docusaurus/plugin-ideal-image',
+      ['./plugins/blog-plugin', {
+        id: "blog",
+        routeBasePath: "blog",
+        path: "./blog",
+      }]
+  ],
   presets: [
     [
       'classic',
@@ -33,12 +40,13 @@ const config = {
         //   editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         // },
         docs: false,
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        // blog: {
+        //   showReadingTime: true,
+        //   // Please change this to your repo.
+        //   editUrl:
+        //     'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+        // },
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -62,6 +70,7 @@ const config = {
           //   position: 'left',
           //   label: 'Tutorial',
           // },
+          {to: '/about', label: 'About', position: 'left'},
           {to: '/blog', label: 'Blog', position: 'left'},
           {to: '/courses', label: 'Courses', position: 'left'},
           {to: '/publications', label: 'Publications', position: 'left'},

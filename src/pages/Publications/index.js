@@ -4,7 +4,7 @@ import {Box} from "rebass";
 import {parseBibFile, normalizeFieldValue} from "bibtex";
 import styles from "./index.module.css";
 import clsx from "clsx";
-import Cite from "citation-js";
+
 
 
 const Highlighted = ({ text = "", highlight = "" }) => {
@@ -95,7 +95,7 @@ const PublicationsList = (props) => {
             <div>
             <h3>Journal Articles</h3>
             {renderEntries(articleEntries)}
-            <h3>Conference Paper</h3>
+            <h3>Conference Papers</h3>
             {renderEntries(bookEntries)}
         </div>
     )

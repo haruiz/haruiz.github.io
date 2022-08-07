@@ -3,12 +3,11 @@
 }
 
 .pub_item h4{
-    color:black;
     margin: 0;
 }
 
 .pub_item p:nth-of-type(1){
-    color:dimgray;
+    color: #a9a8a8;
     margin: 0;
     font-size: medium;
 }

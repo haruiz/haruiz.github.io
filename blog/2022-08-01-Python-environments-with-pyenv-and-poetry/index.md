@@ -2,7 +2,7 @@
 title: Data Science notes - Python environments with pyenv and poetry
 slug: python-environments-with-pyenv-and-poetry
 hide_table_of_contents: true
-description: Doubtless, python is one of the most widely used programming languages today, according to the 2022 stack overflow developer survey.  Of 71,467 responses compiled from coders around the world, 68% have admitted that they love and are planning to continue working with Python, and approximately 12.000 of those who haven't got the chance to work with it yet have expressed their interest in starting developing with it.
+description: If you have been using Python for a while or just started, you may have already noticed that handling different python-installations and dependencies(packages) can be a nightmare! So, having tools that enable us to isolate and manage our project's dependencies is highly convenient. In this post, I will show you how to use pyenv and poetry to create your code environments.
 authors: [haruiz]
 tags: [python, data-science]
 ---
@@ -39,7 +39,7 @@ Dependency hell in Python often happens because pip does not have a dependency r
 
 On top of it, since Python doesn't distinguish between different versions of the same library in the `/site-packages` directory, this leads to many conflicts when you have two projects requiring different versions of the same library or the global installation doesn't match.
 
-Thus, having tools that enable us to isolate and manage our project's dependencies is highly convenient. In this post, I will show you to use pyenv and poetry to create your code environments.
+Thus, having tools that enable us to isolate and manage our project's dependencies is highly convenient. In this post, I will show you how to use pyenv and poetry to create your code environments.
 
 <div style={{textAlign: "center"}}>
     <Image img={require("./dependency-hell.png")} alt="Dependency hell" />
@@ -385,7 +385,7 @@ Code :
 <Tabs>
   <TabItem value="main.py" label="main.py" default>
 
-```python
+```python showLineNumbers 
 from style_image import StyleImage
 
 if __name__ == "__main__":
@@ -403,7 +403,7 @@ if __name__ == "__main__":
 </TabItem>
   <TabItem value="core/style_image.py" label="core/style_image.py">
 
-```python
+```python showLineNumbers 
 import tensorflow as tf
 import tensorflow_hub as hub
 
@@ -451,7 +451,7 @@ class StyleImage:
   </TabItem>
   <TabItem value="util/image_utils.py" label="util/image_utils.py">
 
-```python
+```python showLineNumbers 
 import functools
 import tensorflow as tf
 import os
@@ -496,7 +496,7 @@ class ImageUtils:
   </TabItem>
 <TabItem value="style_image/main.py" label="style_image/main.py">
 
-```python
+```python showLineNumbers 
 from style_image import StyleImage
 import typer
 

@@ -1,0 +1,15 @@
+.post_item {
+    margin: 20px;
+    text-align: center;
+}
+
+.post_item p {
+   font-size: small;
+    margin: 5px;
+}
+
+.post_item div > p:nth-of-type(1){
+    font-size: small;
+    margin: 0;
+    color: #7a7a7a;
+}

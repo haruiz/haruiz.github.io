@@ -161,7 +161,6 @@ class Termynal {
      */
     lineDataToElements(lineData) {
         return lineData.map(line => {
-            console.log(line);
             let div = document.createElement('div');
             div.innerHTML = `<span ${this._attributes(line)} style="color: ${line.color}">${line.value || ''}</span>`;
 

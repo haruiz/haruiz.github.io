@@ -5,7 +5,7 @@ import TagsListInline from '@theme/TagsListInline';
 import ReadMoreLink from '@theme/BlogPostItem/Footer/ReadMoreLink';
 import BlogPostItemHeaderAuthors from '@theme/BlogPostItem/Header/Authors';
 import styles from './styles.module.css';
-
+import CommentsBox from "../../../components/CommentsBox";
 
 export default function BlogPostItemFooter() {
   const {metadata, isBlogPostPage} = useBlogPost();
@@ -30,13 +30,20 @@ export default function BlogPostItemFooter() {
         </div>
       )}
 
+      {/*{isBlogPostPage && editUrl && (*/}
+      {/*  <div className="col margin-top--sm">*/}
+      {/*    <EditThisPage editUrl={editUrl} />*/}
+      {/*  </div>*/}
+      {/*)}*/}
 
-      {isBlogPostPage && editUrl && (
-        <div className="col margin-top--sm">
-          {/*<EditThisPage editUrl={editUrl} />*/}
-          <BlogPostItemHeaderAuthors />
-        </div>
+      {isBlogPostPage && (
+          <div className="col margin-top--sm">
+            <BlogPostItemHeaderAuthors />
+            <CommentsBox term={title}/>
+          </div>
       )}
+
+      {}
 
       {truncatedPost && (
         <div

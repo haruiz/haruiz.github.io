@@ -21,7 +21,7 @@ export default function  Header(){
     return (
         <header>
             <Banner>
-                <div>
+                <div style={{width: "100%"}}>
                 <GithubCorner repoUri={githubUri} className={clsx(styles.github_corner)}/>
                 <div className={clsx(styles.profile_pic_wrapper_div)}>
                     <ProfilePicture opacity={0.8} pictureUri={pictureUri} className={clsx(styles.profile_pic)} />
