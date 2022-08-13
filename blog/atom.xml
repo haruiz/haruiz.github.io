@@ -8,7 +8,7 @@
     <subtitle>Henry Ruiz Blog</subtitle>
     <icon>https://haruiz.github.io/img/favicon.ico</icon>
     <entry>
-        <title type="html"><![CDATA[Data Science notes - Python environments with pyenv and poetry]]></title>
+        <title type="html"><![CDATA[Python environments with pyenv and poetry]]></title>
         <id>python-environments-with-pyenv-and-poetry</id>
         <link href="https://haruiz.github.io/blog/python-environments-with-pyenv-and-poetry"/>
         <updated>2022-08-07T00:00:00.000Z</updated>
