@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[561],{4577:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Python for Data Science - Part 1","permalink":"/blog/python-for-data-science-part-1"},{"title":"Python environments with pyenv and poetry","permalink":"/blog/python-environments-with-pyenv-and-poetry"}]}')}}]);
