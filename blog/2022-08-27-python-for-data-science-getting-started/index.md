@@ -1,6 +1,6 @@
 ---
-title: Python for Data Science - Part 1
-slug: python-for-data-science-part-1
+title: Python for Data Science - Getting started
+slug: python-for-data-science-part-getting-started
 description: Thinking about jumping into a data science role, but you don't know why you should learn how to program and which programming language to choose? In this post, I will show you how to use python and discuss why this programming language is considered one of the top used in data science. 
 authors: [haruiz]
 tags: [python, data-science]
@@ -113,6 +113,6 @@ To open our python_demo folder in pycharm check the animation below.
 
 <ReactPlayer playing controls url={require("./open-folder-pycharm.mp4").default} />
 
-At this point, you should know how to create and run python files. So, in the coming tutorials, we will be working on the hello_world.py file, exploring the python syntax and learn cool things about python, and data science.
+At this point, you should know how to create and run python files. So, in the coming tutorials, we will be working on the hello_world.py file, exploring the python syntax, and learning cool things about Python and data science.
 
 Thanks for reading!, and I hope this tutorial helped you to get started with Python.
