@@ -31,9 +31,8 @@ const config = {
   ],
   presets: [
     [
-      'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      '@docusaurus/preset-classic',
+      {
         // docs: {
         //   sidebarPath: require.resolve('./sidebars.js'),
         //   // Please change this to your repo.
@@ -50,13 +49,18 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-      }),
+        googleAnalytics: {
+          trackingID: 'G-K381GSE8KL'
+        },
+        gtag: {
+          trackingID: 'G-K381GSE8KL'
+        }
+      },
     ],
   ],
 
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
+    {
       navbar: {
         title: 'Home',
         // logo: {
@@ -74,7 +78,8 @@ const config = {
           {to: '/blog', label: 'Blog', position: 'left'},
           {to: '/courses', label: 'Courses', position: 'left'},
           {to: '/publications', label: 'Publications', position: 'left'},
-
+          {to: '/posters', label: 'Posters', position: 'left'},
+          // {to: '/slides', label: 'Slides', position: 'left'},
           {
             href: 'https://github.com/haruiz',
             label: 'GitHub',
@@ -131,7 +136,7 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
-    }),
+    }
 };
 
 module.exports = config;

@@ -1,0 +1,17 @@
+.responsive_iframe {
+    margin: 20px;
+    min-width: 600px;
+    height: 600px;
+}
+@media screen and (max-width: 767px) {
+    .responsive_iframe {
+        min-width: 300px;
+        height: 300px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .responsive_iframe {
+        min-width: 300px;
+        height: 300px;
+    }
+}

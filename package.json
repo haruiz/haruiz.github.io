@@ -18,6 +18,7 @@
   "dependencies": {
     "@citation-js/plugin-bibtex": "^0.6.1",
     "@docusaurus/core": "^2.0.1",
+    "@docusaurus/plugin-google-analytics": "^2.0.1",
     "@docusaurus/plugin-ideal-image": "^2.0.1",
     "@docusaurus/preset-classic": "^2.0.1",
     "@emotion/react": "^11.10.0",
@@ -37,11 +38,15 @@
     "citation-js": "^0.6.4",
     "clsx": "^1.1.1",
     "gsap": "^3.9.1",
+    "moment": "^2.29.4",
     "prism-react-renderer": "^1.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-pdf": "^5.7.2",
+    "react-player": "^2.10.1",
     "react-responsive": "^9.0.0-beta.10",
     "rebass": "^4.0.7",
+    "slugify": "^1.6.5",
     "typed.js": "^2.0.12"
   },
   "browserslist": {
