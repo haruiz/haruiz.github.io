@@ -3,6 +3,8 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+require('dotenv').config()
+
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -19,7 +21,9 @@ const config = {
   deploymentBranch: "main",
   customFields: {
     githubUri: "https://github.com/haruiz",
-    pictureUri: "/img/profile.png"
+    pictureUri: "/img/profile.png",
+    CONVERTKIT_API_KEY: process.env.CONVERTKIT_API_KEY,
+    CONVERTKIT_FORM_ID: process.env.CONVERTKIT_FORM_ID
   },
   plugins: [
       '@docusaurus/plugin-ideal-image',
@@ -79,6 +83,7 @@ const config = {
           {to: '/courses', label: 'Courses', position: 'left'},
           {to: '/publications', label: 'Publications', position: 'left'},
           {to: '/posters', label: 'Posters', position: 'left'},
+          {to: '/newsletter', label: 'Newsletter', position: 'right'},
           // {to: '/slides', label: 'Slides', position: 'left'},
           {
             href: 'https://github.com/haruiz',
@@ -135,6 +140,18 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+        magicComments: [
+          // Remember to extend the default highlight class name as well!
+          // {
+          //   className: 'theme-code-block-highlighted-line',
+          //   line: 'highlight-next-line',
+          //   block: {start: 'highlight-start', end: 'highlight-end'},
+          // },
+          {
+            className: 'code-block-error-line',
+            line: 'error-line-next',
+          }
+        ]
       },
     }
 };

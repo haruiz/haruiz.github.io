@@ -1,6 +1,7 @@
 ---
 title: Python for Data Science - Getting started
 slug: python-for-data-science-part-getting-started
+image: https://haruiz.github.io/img/2022-08-27-python-for-data-science-getting-started-og-image.jpg
 description: Thinking about jumping into a data science role, but you don't know why you should learn how to program and which programming language to choose? In this post, I will show you how to use python and discuss why this programming language is considered one of the top used in data science. 
 authors: [haruiz]
 tags: [python, data-science]
@@ -8,7 +9,7 @@ tags: [python, data-science]
 <!--truncate-->
 
 import TermynalReact from "@site/src/components/Termynal";
-import ReactPlayer from 'react-player'
+import VideoPlayer from "@site/src/components/VideoPlayer";
 
 ## Introduction
 
@@ -111,8 +112,20 @@ To check the python version run the command `pyenv version` in the terminal.
 
 To open our python_demo folder in pycharm check the animation below.
 
-<ReactPlayer playing controls url={require("./open-folder-pycharm.mp4").default} />
+<VideoPlayer videoUrl={require("./open-folder-pycharm.mp4").default} />
 
 At this point, you should know how to create and run python files. So, in the coming tutorials, we will be working on the hello_world.py file, exploring the python syntax, and learning cool things about Python and data science.
 
 Thanks for reading!, and I hope this tutorial helped you to get started with Python.
+
+
+**Some useful resources**
+
+- [Python Tutorial](https://docs.python.org/3/tutorial/)
+- [Python Language Reference](https://docs.python.org/3/reference/)
+- [Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/)
+- [Why Coding is important in Data Science](https://www.dqindia.com/coding-important-data-science/)
+- [Python for Data Science](https://www.geeksforgeeks.org/python-for-data-science/)
+- [Top programming languages for data scientists in 2022](https://www.datacamp.com/blog/top-programming-languages-for-data-scientists-in-2022)
+- [Why Python is so slow and how to speed it up](https://towardsdatascience.com/why-is-python-so-slow-and-how-to-speed-it-up-485b5a84154e)
+- [Write Your Own C-extension to Speed Up Python by 100x](https://towardsdatascience.com/write-your-own-c-extension-to-speed-up-python-x100-626bb9d166e7)

@@ -1,0 +1,595 @@
+---
+title: Python for Data Science - Exploring the syntax
+slug: python-for-data-science-exploring-the-syntax
+image: https://haruiz.github.io/img/2022-10-26-python-for-data-science-exploring-the-syntax-og-image.jpg
+description: In the last post, we discussed the importance of programming in the data science context and why Python is considered one of the top languages used by data scientists. In this week's post, we will explore the syntax of Python and create a simple program that uses Google Cloud Vision API to detect faces in an image.
+authors: [haruiz]
+tags: [python, data-science]
+---
+<!--truncate-->
+In the [last post](blog/python-for-data-science-part-getting-started) we discussed the importance of programming in the data science context and why Python is considered one of the top languages used by data scientists. In this week's post, we will explore the syntax of Python and create a simple program that uses Google Cloud Vision API to detect faces in an image.
+
+You will learn today:
+- What is a computer program?
+- How to write a program in Python?
+  - Python syntax
+  - How to organize your code in python using functions
+- What is a REST API, and how to use it?
+- How to use Google Cloud Vision API to detect faces in an image?
+
+So lets started!!!
+
+# What is a computer program?
+
+A computer program is a sequence of instructions we write using a programming language to tell the computer what to do for us. This sequence of instructions contains but is not limited to:
+Show information to the user, ask the user for input, save and recover data in memory/disk and perform calculations. So, programming languages provide a set of built-in functions and instructions that can be used to accomplish these tasks.
+
+:::tip
+If we think about programming languages, we can think about how we communicate with others in different idioms. Accordingly, we select the appropriate language depending on the application or where our program will be running.
+:::
+
+# How to write a program in Python?
+
+When we write programs, independent of the programming language, it is always helpful to write down our algorithm in simple words. In a way, we can have a mental model of what our program will be doing and how it will be executed. To do so, we can use Pseudocode, a simplified version of computer programs written in natural or human-readable language that can be easily interpreted. You can check this [**cheat sheet**](https://cheatography.com/lcheong/cheat-sheets/pseudocode/) that will help you to write your program in Pseudocode.
+
+:::info Algorithm
+Finite set of rules to be followed in calculations or other problem-solving operations, especially by a computer.
+:::
+
+So, let's define our pseudocode for our face detection program:
+
+```pseudocode showLineNumbers
+VAR image_path as STRING = INPUT("Please provide the path of the image: ")
+IF image_path is empty or image_path dont exist THEN
+    PRINT("image path could not be empty or the image does not exist")
+    EXIT
+ENDIF
+
+FUNCTION read_image(image_path) as STRING
+    VAR image_bytes as BYTES = read(image_path)
+    RETURN image_bytes
+ENDFUNCTION
+
+FUNCTION detect_faces_on_image(image_bytes as BYTES) as LIST:
+    api_response as LIST = call_face_detection_gcp_api(image_bytes)
+    IF api_response is empty THEN
+        PRINT("No faces found")
+        RETURN
+    faces as LIST = []
+    FOR json_entity in api_response THEN
+        face as DICT = {
+            "confidence": json_entity.confidence,
+            "bounding_box": json_entity.bounding_box,
+            "is_happy" : json_entity.joy_likelihood == "VERY_LIKELY"
+        }
+        faces.append(face)
+    ENDFOR
+    RETURN faces
+ENDFUNCTION
+
+image_bytes = read_image(image_path)
+faces_list = detect_faces(image_bytes)
+display_detect_faces(faces_list)
+```
+
+As you can see in Pseudocode, we don't need to think about the implementation details of our program. We just write down our algorithm using a high-level language, so in this way we have a big picture of the tasks we need to perform that we can use later to translate our algorithm to a programming language. In line 13, for instance,  we call the Google Cloud Vision API to detect the faces in the image, but we don't know yet how it will happen.  
+
+## Python syntax
+
+To learn about python syntax, we will navigate through the Pseudocode and convert it into a python script.
+
+### Variables
+
+Programming is all about data and how we can use it to solve problems. So, we need to have a way to store data on our computer that we can access later during execution. To do so, we use variables. Variables are a way to store data in memory where we can almost save any data. In Python, it is straightforward to define a variable, we need to use the assignment operator `=` followed by the value we want to store, the Python interpreter will take care of the rest. It will under the hood allocate memory for the variable and store the value in it. 
+
+```python
+# String
+my_string = "Hello World"
+# Integer
+my_integer = 1
+# Float
+my_float = 1.0
+# Boolean
+my_boolean = True
+# List
+my_list = [1, 2, 3]
+# Dictionary
+my_dict = {"key": "value"}
+```
+
+We can obtain the memory address and type of a variable using the `id()` and `type()` functions respectively.
+
+```python 
+
+```python
+my_string = "Hello World"
+my_string_2 = "Hello World"
+print(id(my_string))
+print(id(my_string_2))
+print(type(my_string))
+print(type(my_string_2))
+```
+
+In our program, in line 1, we define a variable `image_path` and assign it the value of the user input. In Python, the `input()` function allows us to grab information from the user so we can save the value into a variable. Let's see how we can translate this Pseudocode line into Python:
+
+```python
+image_path = input("Please provide the path of the image:")
+```
+
+The syntax is very similar to the Pseudocode. However, you can notice that in Python, we don't specify the variable type. That is because Python is a dynamically typed language, meaning that the variable type is inferred during the execution. In terms of productivity, this is very convenient because we don't need to worry about specifying the type when we define it. However, it can sometimes be a source of errors if we are not carefully doing operations. 
+
+Python will raise an error if we try to perform an operation that is not supported by the type of the variable. Let's see an example:
+
+```python
+a = 2   
+b = "2"
+# error-line-next
+print(a + b)
+# TypeError: unsupported operand type(s) for +: 'int' and 'str'
+```
+
+
+:::warning Rules for creating variables across languages
+- A variable name must start with a letter or an underscore character.
+- A variable name cannot start with a number.
+- A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ ).
+- Variable names are case-sensitive (name, Name and NAME are three different variables).
+- The reserved words(keywords) cannot be used naming the variable.
+:::
+
+### Conditional blocks
+
+A common task in programming is to execute a block of code only if a condition is met. In Python, we can use the `if` statement to do so. Let's see an example:
+
+```python
+a = 2
+if a == 2:
+    print("a is equal to 2")
+```
+
+In the example above, we check if the variable `a` is equal to 2. If that is the case, we print the message "a is equal to 2". We can also use the `else` statement to execute a block of code if the condition is not met. Let's see an example:
+
+```python
+a = 2
+if a == 2:
+    print("a is equal to 2")
+else:
+    print("a is not equal to 2")
+```
+
+In our program, we need to check if the user input is empty or if the image path does not exist. We can use the `if` statement to do so. Let's see how we can translate this Pseudocode line into Python:
+
+```python
+import os
+
+image_path = input("Please provide the path of the image:")
+if image_path == "" or not os.path.exists(image_path):
+    print("image path could not be empty or the image does not exist")
+    exit()
+```
+
+Again, we can observe that the syntax is very similar to the Pseudocode, just with the addition of the `os.path.exists()` function in the condition to check whether a image exists or not. The os module it is included in the Python standard library, and it provides a way to interact with the operating system. We also use the `exit()` function to exit the program in case the condition is met. We are going to discuss about modules later in this article.
+
+:::info Python Standard Library
+The Python Standard Library is a set of modules that comes with the Python installation. It provides a wide range of built-in functions and classes that we can use in our programs for different purposes. You can find more information about the Python Standard Library [here](https://docs.python.org/3/library/index.html).
+
+Some of the most used modules are:
+- **os:** provides a way to interact with the operating system.
+- **sys:** provides a way to interact with the Python interpreter.
+- **json:** provides a way to work with JSON data.
+- **re:** provides a way to work with regular expressions.
+- **math:** provides a way to work with mathematical operations.
+- **random:** provides a way to work with random numbers.
+- **datetime:** provides a way to work with dates and times.
+- **urllib:** provides a way to work with URLs.It is a very useful module to work with APIs. We are going to use it in the next section to call the Google Cloud Vision API. 
+:::
+
+### Functions
+
+Functions are a way to encapsulate a block of code that we can reuse in our program. In Python, we can define a function using the `def` keyword followed by the function name and the parameters. Let's see an example:
+
+```python
+def add(a, b):
+    return a + b
+
+if __name__ == "__main__":
+    print(add(1, 2))
+```
+
+The paremeters are the variables that we need to pass to the function to perform the task. In the example above, we define a function called `add` that takes two parameters `a` and `b`, and the function returns the sum of the values of the two parameters. We can call the function by using the function name followed by the parameters. In the example above, we call the function `add` with the parameters `1` and `2`. The function returns the value `3` and we print it in the console.
+
+In our program, we have two main functions that we need to implement, `read_image` and `call_face_detection_gcp_api`. The firts takes the image path as a parameter and returns the image data. The second takes the image data as a parameter, send a request to the Google Cloud Vision API to detect faces in the image and returns the response. Let's see how we can translate this Pseudocode lines into Python:
+
+```python
+def read_image(image_path: str) -> bytes:
+    # read and load the file into memory
+    with open(image_path, "rb") as f:
+        return f.read() # read the image's bytes
+```
+
+There is a new syntax here in the `read_image` function to be discussed. 
+
+- **Function annotations:** Although it is not mandatory, we can specify the parameters' type and the functions' return value in Python. This is called function annotations, and it is very useful for other developers to know how to call the function and the return value. In the example above, we specify that the function takes a string as a parameter and returns a bytes object. However, this is not enforced by the Python interpreter, so we still have to check the type of the parameters programmatically. 
+
+Another good thing about function annotations is that It makes the function more readable and will also helps to avoid errors when function is called in other parts of the program.
+
+- **Context Managers:** It can also be noticed that we use the `with` statement to open the file in the `read_image` function. This blocks of code are called context managers in Python, and in this case it makes sure that the file is closed after the block of code is executed. We are going to discuss about context managers later in other articles since this is an advanced topic. For more information about context managers, you can check the [Python documentation](https://docs.python.org/3/reference/compound_stmts.html#with).
+
+
+- **Encoding:** We can also see that we use the `rb` mode to open the file. This mode allows us to read the file as bytes so we can encode it in base64 to send it to the Google Cloud Vision API. That is required because the API only accepts images encoded in this format. For more information about the `rb` mode, you can check the [Python documentation](https://docs.python.org/3/library/functions.html#open), and face detection API documentation [here](https://cloud.google.com/vision/docs/detecting-faces).
+
+:::info Encoding data
+Encodings are a way to represent a sequence of bytes in a different format. The most common encodings are ASCII, UTF-8, and base64. ASCII is a 7-bit encoding that represents the first 128 characters of Unicode. UTF-8 is a variable-length encoding that represents the first 1,112,064 characters of Unicode. Base64 is a way to represent binary data in ASCII characters and it is used to send binary data in text-based protocols such as HTTP. For more information about encodings, you can check the [Python documentation](https://docs.python.org/3/library/codecs.html#standard-encodings).
+:::
+
+- **Error handling:** In order to catch the errors that can happen when we try to open a file or during the API call, we use the `try` and `except` statements. The `try` statement allows us to execute a block of code and catch the errors that can happen in the `except` statement. Let's see how to do this:
+
+```python
+def read_image(image_path: str) -> bytes:
+    try:
+        # read and load the file into memory
+        with open(image_path, "rb") as f:
+            return f.read() # read the image's bytes
+    except Exception as e:
+        raise Exception("Error reading the image: ", e)
+```
+
+### Modules
+
+Modules are a way to encapsulate a set of functions and classes that we can reuse in our programs. In Python, we can import a module using the `import` keyword followed by the module name. Let's see an example:
+
+```python
+import os
+if __name__ == "__main__":
+    print(os.path.exists("image.jpg"))
+```
+
+To implement the `call_face_detection_gcp_api` function, we need to import the `urllib` module. This module provides a set of function we can use to call the Google Cloud Vision API. Let's see how to do this:
+
+```python showLineNumbers
+import base64
+import urllib.error
+import urllib.parse
+import urllib.request
+import json
+import os
+
+
+def read_image(image_path: str) -> bytes:
+    """
+    Read image from file and return as bytes
+    :param image_path:
+    :return:
+    """
+    # Read image
+    with open(image_path, "rb") as image_file:
+        # obtain image data
+        return image_file.read()
+
+
+def image_to_base64(image_bytes: bytes) -> str:
+    """
+    Convert image to base64 string
+    :param image_bytes:
+    :return:
+    """
+    # Convert image to base64 string, so it can be sent to the API
+    return base64.b64encode(image_bytes).decode("utf-8")
+
+
+def call_face_detection_gcp_api(image_bytes: bytes, API_KEY: str = None) -> dict:
+    """
+    Call Google Cloud Platform Face Detection API
+    :param API_KEY: API Key for Google Cloud Platform
+    :param image_bytes: image as bytes
+    :return:
+    """
+    api_url = f"https://vision.googleapis.com/v1/images:annotate?key={API_KEY}"
+    image_base64 = image_to_base64(image_bytes)
+    request_body = {
+        "requests": [
+            {
+                "image": {
+                    "content": image_base64
+                },
+                "features": [
+                    {
+                        "type": "FACE_DETECTION",
+                        "maxResults": 10
+                    }
+                ]
+            }
+        ]
+    }
+    # Convert request body to JSON format
+    request_body = json.dumps(request_body).encode("utf-8")
+    # Create request
+    request = urllib.request.Request(api_url, data=request_body)
+    # Set request header
+    request.add_header("Content-Type", "application/json")
+    try:
+        # Send request
+        response = urllib.request.urlopen(request)
+        # Read response body as bytes
+        response_body_bytes = response.read()
+        # # Convert response body to JSON format
+        response_body_text = response_body_bytes.decode("utf-8")
+        # Convert response body to JSON format
+        response_body_json = json.loads(response_body_text)
+        # Convert response to JSON format
+        return response_body_json["responses"][0]["faceAnnotations"]
+
+    except urllib.error.HTTPError as e:
+        # Get error message
+        error_message = json.loads(e.read())["error"]["message"]
+        error_code = e.code
+        if e.code == 400:
+            error_status = "Bad Request"
+        elif e.code == 401:
+            error_status = "Unauthorized"
+        elif e.code == 403:
+            error_status = "Forbidden"
+        elif e.code == 404:
+            error_status = "Not Found"
+        elif e.code == 500:
+            error_status = "Internal Server Error"
+        elif e.code == 503:
+            error_status = "Service Unavailable"
+        else:
+            error_status = "Unknown Error"
+
+        raise Exception(f"Error {error_code} calling the GCP Face Detection API: {error_status} - {error_message}")
+```
+
+For more information about API calls, you can check the [Python documentation](https://docs.python.org/3/library/urllib.request.html).
+
+:::tip What is an REST API?
+REST stands for Representational State Transfer. It is an architectural style for designing networked applications, that allows to expose data and functionality to external clients in public(wan) or private(lan) networks. Clients could be web applications, mobile applications, or even other services. For more information about REST APIs, you can check the [Wikipedia page](https://en.wikipedia.org/wiki/Representational_state_transfer).REST APIs are implemented using HTTP methods. The most common methods are `GET`, `POST`, `PUT`, `PATCH`, and `DELETE`, you can check the [Wikipedia page](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods). It also provides standard data formats to send and receive data, for instance `JSON` and `XML`. More information [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages).
+:::
+
+The video below give you a quick overview of how REST APIs work:
+
+<center>
+    <iframe width="100%" height="400" src="https://www.youtube.com/embed/7YcW25PHnAA" f allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
+
+### Loops
+
+Loops are a way to execute a block of code multiple times. In Python, we can use the `for` loop to iterate over a list of elements. Let's see an example:
+
+```python
+for i in range(10):
+    print(i)
+```
+
+The `range` function returns a list of numbers from 0 to 10. The `for` loop iterates over the list and prints each element. The `range` function can also receive a start and end value. Let's see an example:
+
+```python
+for i in range(5, 10):
+    print(i)
+```
+
+The `range` function can also receive a step value. Let's see an example:
+
+```python
+for i in range(5, 10, 2):
+    print(i)
+```
+
+The `for` loop can also be used to iterate over a list of elements. Let's see an example:
+
+```python   
+for i in [1, 2, 3, 4, 5]:
+    print(i)
+```
+
+The `for` loop can also be used to iterate over a dictionary. Let's see an example:
+
+```python
+for key, value in {"a": 1, "b": 2, "c": 3}.items():
+    print(f"key: {key}, value: {value}")
+```
+
+The `for` loop can also be used to iterate over a string. Let's see an example:
+
+```python
+for char in "Hello World":
+    print(char)
+```
+
+The `while` loop is used to execute a block of code while a condition is true. Let's see an example:
+
+```python
+i = 0
+while i < 10:
+    print(i)
+    i += 1
+```
+
+In our code in the last function of our script, we need to iterate over the list of faces returned by the API. Let's see how we do this in line `18`
+
+```python showLineNumbers {18-23}
+def detect_faces_on_image(image_bytes: bytes, API_KEY: str = None) -> list:
+    """
+    Detect faces on image
+    :param API_KEY: API Key for Google Cloud Platform
+    :param image_bytes: image as bytes
+    :return:
+    """
+    # Call Google Cloud Platform Face Detection API
+    api_response = call_face_detection_gcp_api(image_bytes, API_KEY)
+
+    # Check if API response is empty
+    if not api_response:
+        print("No faces found")
+        return []  # return empty list
+
+    # Create list to store faces
+    faces = []
+    for json_entity in api_response:
+        face = {
+            "bounding_box": json_entity["boundingPoly"],
+            "is_happy": json_entity["joyLikelihood"] in ["VERY_LIKELY", "LIKELY"],
+        }
+        faces.append(face)
+    return faces
+```
+
+I have skipped the `call_face_detection_gcp_api` function implementation since It was supposed to be an introductory tutorial. However, I have tried my best to comment on the code. To get more information about how to call the `GCP face detection API,` you can check the official documentation [here](https://cloud.google.com/vision/docs/detecting-faces). You must create a Google Cloud Platform account to use the API. To see how to create the project and get the API key, you can check the [official documentation](https://cloud.google.com/vision/docs/libraries#client-libraries-install-python).
+
+In the next section, we will see how to do more advance things with Python using third party packages and libraries. For now I will leave you with the full code of the script:
+
+```python showLineNumbers
+import base64
+import urllib.error
+import urllib.parse
+import urllib.request
+import json
+import os
+
+
+def read_image(image_path: str) -> bytes:
+    """
+    Read image from file and return as bytes
+    :param image_path:
+    :return:
+    """
+    # Read image
+    with open(image_path, "rb") as image_file:
+        # obtain image data
+        return image_file.read()
+
+
+def image_to_base64(image_bytes: bytes) -> str:
+    """
+    Convert image to base64 string
+    :param image_bytes:
+    :return:
+    """
+    # Convert image to base64 string, so it can be sent to the API
+    return base64.b64encode(image_bytes).decode("utf-8")
+
+
+def call_face_detection_gcp_api(image_bytes: bytes, API_KEY: str = None) -> dict:
+    """
+    Call Google Cloud Platform Face Detection API
+    :param API_KEY: API Key for Google Cloud Platform
+    :param image_bytes: image as bytes
+    :return:
+    """
+    api_url = f"https://vision.googleapis.com/v1/images:annotate?key={API_KEY}"
+    image_base64 = image_to_base64(image_bytes)
+    request_body = {
+        "requests": [
+            {
+                "image": {
+                    "content": image_base64
+                },
+                "features": [
+                    {
+                        "type": "FACE_DETECTION",
+                        "maxResults": 10
+                    }
+                ]
+            }
+        ]
+    }
+    # Convert request body to JSON format
+    request_body = json.dumps(request_body).encode("utf-8")
+    # Create request
+    request = urllib.request.Request(api_url, data=request_body)
+    # Set request header
+    request.add_header("Content-Type", "application/json")
+    try:
+        # Send request
+        response = urllib.request.urlopen(request)
+        # Read response body as bytes
+        response_body_bytes = response.read()
+        # # Convert response body to JSON format
+        response_body_text = response_body_bytes.decode("utf-8")
+        # Convert response body to JSON format
+        response_body_json = json.loads(response_body_text)
+        # Convert response to JSON format
+        return response_body_json["responses"][0]["faceAnnotations"]
+
+    except urllib.error.HTTPError as e:
+        # Get error message
+        error_message = json.loads(e.read())["error"]["message"]
+        error_code = e.code
+        if e.code == 400:
+            error_status = "Bad Request"
+        elif e.code == 401:
+            error_status = "Unauthorized"
+        elif e.code == 403:
+            error_status = "Forbidden"
+        elif e.code == 404:
+            error_status = "Not Found"
+        elif e.code == 500:
+            error_status = "Internal Server Error"
+        elif e.code == 503:
+            error_status = "Service Unavailable"
+        else:
+            error_status = "Unknown Error"
+
+        raise Exception(f"Error {error_code} calling the GCP Face Detection API: {error_status} - {error_message}")
+
+
+def detect_faces_on_image(image_bytes: bytes, API_KEY: str = None) -> list:
+    """
+    Detect faces on image
+    :param API_KEY: API Key for Google Cloud Platform
+    :param image_bytes: image as bytes
+    :return:
+    """
+    # Call Google Cloud Platform Face Detection API
+    api_response = call_face_detection_gcp_api(image_bytes, API_KEY)
+
+    # Check if API response is empty
+    if not api_response:
+        print("No faces found")
+        return []  # return empty list
+
+    # Create list to store faces
+    faces = []
+    for json_entity in api_response:
+        face = {
+            "bounding_box": json_entity["boundingPoly"],
+            "is_happy": json_entity["joyLikelihood"] in ["VERY_LIKELY", "LIKELY"],
+        }
+        faces.append(face)
+    return faces
+
+
+def main():
+    image_path = input("Please provide the path of the image:")
+    if image_path == "" or not os.path.exists(image_path):
+        print("image path could not be empty or the image does not exist")
+        exit()
+
+    image = read_image(image_path)
+    # to get the API key go to GCP documentation
+    faces = detect_faces_on_image(image, API_KEY="<GCP API KEY>")
+    print("number of faces found:", len(faces))
+    for face in faces:
+        print(face["is_happy"])
+
+
+if __name__ == "__main__":
+    main()
+
+```
+
+This is all for this tutorial. I hope you enjoyed it. If you have any questions, please leave a comment below or contact me on LinkedIn. If you want to see more tutorials like this, please subscribe to my newsletter (See top menu). To access the code for this tutorial, you can check the [GitHub repository](https://github.com/haruiz/blog-code/blob/main/python-for-data-science-exploring-the-syntax/main.py)
+
+
+## Useful Links
+- [GCP Face Detection API](https://cloud.google.com/vision/docs/detecting-faces)
+- [GCP Machine Learning APIs](https://cloud.google.com/products/ai)
+- [Python Cheat Sheet](https://www.pythoncheatsheet.org/)
+- [Python Documentation](https://docs.python.org/3/)
+- [Python Tutorial](https://docs.python.org/3/tutorial/index.html)
+- [Python Standard Library](https://docs.python.org/3/library/index.html)
+- [Python Package Index](https://pypi.org/)
+- [Python for Data Science](https://www.python.org/about/apps/)
+- [What is a REST API?](https://www.youtube.com/watch?v=lsMQRaeKNDk&ab_channel=IBMTechnology)
+- [What is JSON?](https://www.youtube.com/watch?v=iiADhChRriM&ab_channel=IBMTechnology)

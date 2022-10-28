@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useRef, useState} from "react";
+import React, {useCallback, useEffect, useRef} from "react";
 import clsx from "clsx";
 import styles from "./index.module.css";
 import { useMediaQuery } from 'react-responsive'

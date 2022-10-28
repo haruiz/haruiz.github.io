@@ -10,6 +10,7 @@ export default function CoursesPage() {
                 <dl style={{textAlign: "center"}}>
                     <dd><a href="/blog/python-environments-with-pyenv-and-poetry">Python environments with pyenv and poetry</a></dd>
                     <dd><a href="/blog/python-for-data-science-part-getting-started">Python for Data Science - Getting Started</a></dd>
+                    <dd><a href="/blog/python-for-data-science-exploring-the-syntax">Python for Data Science - Exploring the syntax</a></dd>
                 </dl>
             </Box>
         </CustomLayout>

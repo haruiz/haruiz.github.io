@@ -16,7 +16,8 @@
 
 
 :root {
-    --ifm-font-family-base: 'Roboto','Google Sans', 'Open Sans', 'PT Sans','Lora', serif;
+    --ifm-font-family-base:  'PT Sans','Lora', serif;
+    --docusaurus-highlighted-code-line-bg: rgb(72, 77, 91);
     /*--ifm-color-primary: #25c2a0;*/
     /*--ifm-color-primary-dark: rgb(33, 175, 144);*/
     /*--ifm-color-primary-darker: rgb(31, 165, 136);*/
@@ -103,6 +104,13 @@ html[data-theme='dark'] * {
  * override Button Buy me a coffee styles
  */
 
+ .code-block-error-line {
+    background-color: #ff000020;
+    display: block;
+    margin: 0 calc(-1 * var(--ifm-pre-padding));
+    padding: 0 var(--ifm-pre-padding);
+    border-left: 3px solid #ff000080;
+  }
 
 @font-face {
     font-family: 'Cookie';
