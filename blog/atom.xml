@@ -13,7 +13,7 @@
         <link href="https://haruiz.github.io/blog/python-for-data-science-exploring-the-syntax"/>
         <updated>2022-10-26T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[In the last post, we discussed the importance of programming in the data science context and why Python is considered one of the top languages used by data scientists. In this week's post, we will explore the syntax of Python and create a simple program that uses Google Cloud Vision API to detect faces in an image.]]></summary>
-        <content type="html"><![CDATA[<p>In the <a href="https://haruiz.github.io/blog/blog/python-for-data-science-part-getting-started">last post</a> we discussed the importance of programming in the data science context and why Python is considered one of the top languages used by data scientists. In this week's post, we will explore the syntax of Python by creating a simple program that uses Google Cloud Vision API to detect faces in an image.</p>
+        <content type="html"><![CDATA[<p>In the <a href="https://haruiz.github.io/blog/python-for-data-science-part-getting-started">last post</a> we discussed the importance of programming in the data science context and why Python is considered one of the top languages used by data scientists. In this week's post, we will explore the syntax of Python by creating a simple program that uses Google Cloud Vision API to detect faces in an image.</p>
 <p>You will learn today:</p>
 <ul>
 <li>What is a computer program?</li>
