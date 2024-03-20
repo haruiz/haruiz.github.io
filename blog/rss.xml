@@ -57,9 +57,13 @@
 <li>
 <p><strong>Regulatory Requirements</strong>: These are the requirements that describe the legal, ethical, and regulatory constraints of the system. They specify how the system should comply with laws, regulations, and standards, and they are typically expressed as compliance requirements, privacy requirements, and security requirements.</p>
 </li>
+<li>
+<p><strong>Data Requirements</strong>: These are the requirements that describe the data needs, constraints, and dependencies of the system. They specify what data the system will use, store, and process, and they are typically expressed as data models, data flows, and data storage.</p>
+</li>
 </ol>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-selecting-the-appropriate-methodology">2. Selecting the appropriate methodology<a href="https://haruiz.github.io/blog/intro-to-system-design#2-selecting-the-appropriate-methodology" class="hash-link" aria-label="Direct link to 2. Selecting the appropriate methodology" title="Direct link to 2. Selecting the appropriate methodology">​</a></h3>
-<p>There are several <strong>software development methodologies</strong> that can be used to develop a system, such as the waterfall model, the agile model, and the iterative model. Each of these methodologies has its own strengths and weaknesses, and they are suitable for different types of projects and teams. These methodologies also provided a framework for gathering, analyzing, and documenting the requirements the system.</p>
+<p>Like any other software solution, ML systems require a well-structured methodology to maximize the success rate of the implementation. ML algorithms are the less challenging part. The hard part is making algorithms work with other software components to solve real-world problems.</p>
+<p>There are several <strong>software development methodologies</strong> that can be used to develop a ML system, such as the waterfall model, the agile model, and the iterative model. Each of these methodologies has its own strengths and weaknesses, and they are suitable for different types of projects and teams. These methodologies also provided a framework for gathering, analyzing, and documenting the requirements the system.</p>
 <ol>
 <li>
 <p><strong>Waterfall Model</strong>: The waterfall model is a linear and sequential software development methodology that divides the development process into distinct phases, such as requirements analysis, design, implementation, testing, and maintenance. Each phase must be completed before the next phase can begin, and the process is difficult to change once it has started. The waterfall model is suitable for projects with well-defined requirements and stable technologies, but it is not suitable for projects with changing requirements and emerging technologies.</p>
@@ -69,6 +73,41 @@
 </li>
 <li>
 <p><strong>Iterative Model</strong>: The iterative model is a software development methodology that divides the development process into small, incremental, and iterative cycles, each of which produces a working prototype of the system. The iterative model is suitable for projects with evolving requirements and complex technologies, and it is based on the principles of the spiral model, which emphasizes risk management, prototyping, and incremental development.</p>
+</li>
+</ol>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="adaptations-for-ml-and-data-science-projects">Adaptations for ML and Data Science Projects<a href="https://haruiz.github.io/blog/intro-to-system-design#adaptations-for-ml-and-data-science-projects" class="hash-link" aria-label="Direct link to Adaptations for ML and Data Science Projects" title="Direct link to Adaptations for ML and Data Science Projects">​</a></h4>
+<p><strong>Considerations</strong></p>
+<p>While these methodologies offer frameworks for managing work, ML projects may require specific adaptations:</p>
+<ol>
+<li>
+<p><strong>Iterative Experimentation:</strong> Embrace the iterative nature of ML, where initial models often serve as baselines for further experimentation and refinement.</p>
+</li>
+<li>
+<p><strong>Flexible Planning:</strong> Allow for adjustments in project scope and direction based on intermediate results and discoveries.</p>
+</li>
+<li>
+<p><strong>Model Versioning and Experiment Tracking:</strong> Implement tools and practices for tracking different model versions, experiment parameters, and results to ensure reproducibility and facilitate decision-making.</p>
+</li>
+<li>
+<p><strong>Collaboration between Data Scientists and Domain Experts:</strong> Foster close collaboration to ensure that models are developed with a deep understanding of the domain and are aligned with business needs.</p>
+</li>
+</ol>
+<p><strong>Adaptations</strong></p>
+<ol>
+<li>
+<p><strong>Scrum:</strong> Scrum is a popular Agile framework that organizes work into small, manageable pieces delivered in short cycles called sprints, typically lasting 2-4 weeks. For ML projects, Scrum can facilitate rapid experimentation and iteration. Teams can define sprints for different phases of ML development, such as data preparation, model training, evaluation, and deployment. Daily stand-ups can help track progress and address blockers quickly.</p>
+</li>
+<li>
+<p><strong>Kanban:</strong> Kanban emphasizes continuous delivery without overburdening the team, using a visual board to track work items through various stages of completion. In ML projects, Kanban can be used to manage the flow of tasks like data annotation, feature engineering, model experimentation, and performance tuning. Its flexibility is particularly useful for projects where priorities shift frequently based on experimental results or business needs.</p>
+</li>
+<li>
+<p><strong>Extreme Programming (XP):</strong> XP focuses on technical excellence and high customer involvement, with practices like pair programming, test-driven development (TDD), and frequent releases. While some XP practices may not directly translate to ML projects (e.g., TDD is challenging due to the probabilistic nature of ML outcomes), the emphasis on quality and collaboration can be beneficial. For instance, pair programming can be adapted for collaborative model development and code reviews, ensuring high-quality code and model architecture.</p>
+</li>
+<li>
+<p><strong>Lean Development:</strong> Lean development aims to reduce waste and focus on delivering value. For ML projects, this can mean focusing on high-value tasks, such as feature engineering, model experimentation, and deployment, while minimizing time spent on less critical activities. Techniques like value stream mapping can help identify bottlenecks and streamline the ML workflow.</p>
+</li>
+<li>
+<p><strong>Feature-Driven Development (FDD):</strong> FDD is an iterative and incremental approach that focuses on building features in short iterations. For ML projects, this can translate to developing specific features or components of the ML pipeline in short cycles, ensuring that each iteration delivers tangible value.</p>
 </li>
 </ol>
 <p>Once we have gathered, analyzed, and documented the requirements for the system, we can move on to the next phase of the system design process, which is architecturing the system.</p>
