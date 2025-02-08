@@ -16,7 +16,7 @@ export default function BlogLayout(props) {
           <main
             className={clsx('col', {
               'col--7': hasSidebar,
-              'col--9 col--offset-1': !hasSidebar,
+              "col--9": !hasSidebar,
             })}
             itemScope
             itemType="http://schema.org/Blog">

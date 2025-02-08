@@ -9,7 +9,7 @@ function Footer() {
   return  (
   <Flex flexDirection="column" justifyContent="space-between" alignItems="center" margin={20}>
     <Box textAlign="center">
-      <SocialLinks />
+
     </Box>
   </Flex>
   )

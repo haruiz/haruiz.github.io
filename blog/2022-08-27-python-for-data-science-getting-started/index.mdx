@@ -1,5 +1,5 @@
 ---
-title: Python for Data Science - Getting started
+title: Python for Data Science Series - Getting started
 slug: python-for-data-science-part-getting-started
 image: https://haruiz.github.io/img/2022-08-27-python-for-data-science-getting-started-og-image.jpg
 description: Thinking about jumping into a data science role, but you don't know why you should learn how to program and which programming language to choose? In this post, I will show you how to use python and discuss why this programming language is considered one of the top used in data science. 
@@ -81,29 +81,29 @@ We will start with a simple program that prints "Hello World" on the screen, and
 ]} />
 
 If all the command runs successfully, you should see the following folder structure:
-
-    ├── python_demo
-    │   ├── hello_world.py
-    │   ├── poetry.lock
-    │   └── pyproject.toml
-
+```bash
+├── python_demo
+│   ├── hello_world.py
+│   ├── poetry.lock
+│   └── pyproject.toml
+```
 And the `pyproject.toml` file should look like this:
+```toml
+[tool.poetry]
+name = "python_demo"
+version = "0.1.0"
+description = ""
+authors = [`Henry Ruiz  <henryruiz22@gmail.com>`]
 
-    [tool.poetry]
-    name = "python_demo"
-    version = "0.1.0"
-    description = ""
-    authors = ["Henry Ruiz  <henryruiz22@gmail.com>"]
-    
-    [tool.poetry.dependencies]
-    python = "^3.10"
-    
-    [tool.poetry.dev-dependencies]
-    
-    [build-system]
-    requires = ["poetry-core>=1.0.0"]
-    build-backend = "poetry.core.masonry.api"
+[tool.poetry.dependencies]
+python = "^3.10"
 
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+```
 You can see that the Python version was set to 3.10.0. that will depend on the version of Python you are using with pyenv.
 
 :::tip

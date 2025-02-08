@@ -1,12 +1,36 @@
-import React from "react";
+import React, {useState} from "react";
+import {Suspense} from "react";
 import CustomLayout from "../../components/CustomLayout";
 import {Box} from "rebass";
 import styles from "./index.module.css";
 import clsx from "clsx";
 
+const LoadingPoster = () => <div >Loading poster...</div>
+
+const PosterIframe = ({title, url}) => {
+    const [loadingIframe, setLoadingIframe] = useState(true);
+    return (
+        <>
+        {loadingIframe && <LoadingPoster />}
+        <iframe
+            src={`${url}/preview`}
+            className={clsx(styles.responsive_iframe)}
+            onLoad={() => setLoadingIframe(false)}
+            />
+        </>
+    )
+}
 
 export default function PostersPage() {
     const posters = [
+        {
+            title: "Using GPR and Machine Learning to Automate the Predictions of Root and Tuber Crop Biomass",
+            url: "https://drive.google.com/file/d/13T4XqG9-tnTqWS1B2vMRJuGPM61aZIqC"
+        },
+        {
+            title: "Ground Penetrating Radar (GPR) curvelet analysis at the citadel of Alcatraz",
+            url: "https://drive.google.com/file/d/1RPThCqdq7DKi2w6DxV_-jCAmGvnAclbe"
+        },
         {
             title: "Using Deep Learning to Discover Cassava Roots on GPR Radargrams",
             url: "https://drive.google.com/file/d/1Q7hTs9Yt2IxR-iuz6G07IY1iSg7qNBLN",
@@ -23,11 +47,12 @@ export default function PostersPage() {
     ]
     return (
         <CustomLayout title="Posters" description="Posters">
+
             <Box textAlign="center">
                 <h2>Posters</h2>
                 {posters.map((poster, index) =>
                     <div key={index} >
-                        <iframe src={`${poster.url}/preview`}  className={clsx(styles.responsive_iframe)} ></iframe>
+                        <PosterIframe title={poster.title} url={poster.url}/>
                     </div>
                 )}
             </Box>

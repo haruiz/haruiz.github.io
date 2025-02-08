@@ -28,10 +28,8 @@ export default function TermynalReact(props){
                 });
 
                 intersectionObserver.observe(termynalEl.current)
-                return{
-                    unmount:()=>{
-                        intersectionObserver.unobserve(termynalEl.current)
-                    }
+                return () => {
+                    intersectionObserver.disconnect();
                 }
             }, [termynalEl])
 

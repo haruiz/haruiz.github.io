@@ -15,7 +15,9 @@ export default function TypedText(props) {
     });
   
     return () => {
-      typed.destroy();
+      // if(typed) {
+      //   typed.destroy();
+      // }
     };
    },[]);
 

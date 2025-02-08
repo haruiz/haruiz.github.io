@@ -1,5 +1,5 @@
 ---
-title: Python environments with pyenv and poetry
+title: Python for Data Science Series - Python environments with pyenv and poetry
 slug: python-environments-with-pyenv-and-poetry
 hide_table_of_contents: false
 image: https://haruiz.github.io/img/2022-08-07-Python-environments-with-pyenv-and-poetry-og_image.png
@@ -30,6 +30,9 @@ import TabItem from '@theme/TabItem';
 [//]: # ()
 [//]: # (:::)
 
+## Introduction
+
+Python, a versatile programming language widely embraced in fields such as web development, data science, machine learning, and scientific computing. However, navigating through different Python installations and dependencies can often become overwhelming. On this post we will explore how tools like pyenv and poetry can simplify this process by effectively managing project dependencies. Let's embark on this journey of optimizing code environments together!
 
 ### Why Python?
 
@@ -178,11 +181,12 @@ Now we can start adding dependencies to our project. To do so, we use the comman
 
 Now our `pyproject.toml` file looks like:
 
+```toml
     [tool.poetry]
     name = "myproject"
     version = "0.1.0"
     description = ""
-    authors = ["Henry Ruiz  <henry.ruiz.tamu@gmail.com>"]
+    authors = [`Henry Ruiz  <henry.ruiz.tamu@gmail.com>`]
     
     [tool.poetry.dependencies]
     python = "^3.10"
@@ -195,6 +199,7 @@ Now our `pyproject.toml` file looks like:
     [build-system]
     requires = ["poetry-core>=1.0.0"]
     build-backend = "poetry.core.masonry.api"
+```
 
 Lest review that file sections:
 
@@ -215,21 +220,23 @@ If we are not sure at some point that we have the latest version of a dependency
 
 If we list our folder content, we will see that not only the `pyproject.toml` file is created, but also some other folders and files. So, let's take a look at the contents of the `myproject` folder.
 
-    ├── .venv
-    │   ├── .gitignore
-    │   ├── bin
-    │   ├── lib
-    │   └── pyvenv.cfg
-    ├── README.rst
-    ├── myproject
-    │   └── __init__.py
-    ├── poetry.lock
-    ├── pyproject.toml
-    └── tests
-        ├── __init__.py
-        └── test_myproject.py
-    
-    5 directories, 11 files
+```bash
+├── .venv
+│   ├── .gitignore
+│   ├── bin
+│   ├── lib
+│   └── pyvenv.cfg
+├── README.rst
+├── myproject
+│   └── __init__.py
+├── poetry.lock
+├── pyproject.toml
+└── tests
+    ├── __init__.py
+    └── test_myproject.py
+
+5 directories, 11 files
+```
 
 - **\`.venv\`**: This folder is created by poetry when it creates a virtual environment.It isolates the project from the system environment and provides a clean environment for your project. It contains the Python interpreter and your projects dependencies. 
 - **poetry.lock**: When Poetry finished installing the dependencies, it writes all of the packages and the exact versions of them to the poetry.lock file, locking the project to those specific versions. 
@@ -280,26 +287,26 @@ For tensorflow, a possible solution would be to set the 'python' property to ">=
 ]} />
 
 We will see that there is an error trying to install tensorflow:
+```bash showLineNumbers {14-15}
+Creating virtualenv style-image in /Users/haruiz/temp/style_image/.venv
+Using version ^0.12.0 for tensorflow-hub
+Using version ^2.9.1 for tensorflow
+Using version ^1.23.1 for numpy
+Using version ^9.2.0 for Pillow
+Using version ^0.20.0 for validators
+Using version ^0.6.1 for typer
 
-    Creating virtualenv style-image in /Users/haruiz/temp/style_image/.venv
-    Using version ^0.12.0 for tensorflow-hub
-    Using version ^2.9.1 for tensorflow
-    Using version ^1.23.1 for numpy
-    Using version ^9.2.0 for Pillow
-    Using version ^0.20.0 for validators
-    Using version ^0.6.1 for typer
-    
-    Updating dependencies
-    Resolving dependencies... (4.2s)
-    
-      SolverProblemError
-    
-      The current project's Python requirement (>=3.10,<4.0) is not compatible with some of the required packages Python requirement:
-        - tensorflow-io-gcs-filesystem requires Python >=3.7, <3.11, so it will not be satisfied for Python >=3.11,<4.0
+Updating dependencies
+Resolving dependencies... (4.2s)
 
-The great thing is that poetry generally provides information on how to fix them. For the error above, poetry suggests restricting the python property to ">=3.10,<3.11" in the pyproject.toml file. 
+SolverProblemError
 
-        For tensorflow-io-gcs-filesystem, a possible solution would be to set the `python` property to ">=3.10,<3.11"
+The current project's Python requirement `(>=3.10,<4.0)` is not compatible with some of the required packages Python requirement:
+- tensorflow-io-gcs-filesystem requires Python `>=3.7, <3.11`, so it will not be satisfied for Python `>=3.11,<4.0`
+```
+
+The great thing is that poetry generally provides information on how to fix them. For the error above, poetry suggests restricting the python property to `>=3.10,<3.11` in the pyproject.toml file.
+For tensorflow-io-gcs-filesystem, a possible solution would be to set the `python` property to `>=3.10,<3.11`
 
 :::tip
 Make sure you always check the output in the terminal.
@@ -370,7 +377,7 @@ build-backend = "poetry.core.masonry.api"
 **Coding our `style_image` package**
 
 At this point, we are ready to start coding, let's create the folder structure below and replace the code in each .py file with the code on this repository [https://github.com/haruiz/style_image](https://github.com/haruiz/style_image):
-
+```bash
     ├── README.md
     ├── README.rst
     ├── data
@@ -392,10 +399,8 @@ At this point, we are ready to start coding, let's create the folder structure b
     └── tests
         ├── __init__.py
         └── test_style_image.py
-
+```
 Code :
-
-
 
 <Tabs>
   <TabItem value="main.py" label="main.py" default>

@@ -7,6 +7,8 @@ import clsx from "clsx";
 
 
 
+
+
 const Highlighted = ({ text = "", highlight = "" }) => {
   if (!highlight.trim()) {
     return <span>{text}</span>;
@@ -18,7 +20,7 @@ const Highlighted = ({ text = "", highlight = "" }) => {
     <span>
       {parts.filter(String).map((part, i) => {
         return regex.test(part) ? (
-          <mark key={i}>{part}</mark>
+            <span key={i}><strong>{part}</strong></span>
         ) : (
           <span key={i}>{part}</span>
         );
@@ -31,14 +33,17 @@ function PublicationEntry({entry}) {
     const {title, year, journal, authors} = entry;
 
     return (
-        <div className={clsx(styles.pub_item)}>
+        <div className={clsx(styles.pub_item)} style={{
+            padding: "1em",
+            margin: "1em"
+        }}>
             <h4>{title}</h4>
             <p>{year}, {journal}</p>
-            <p>{authors}</p>
-            {/*<Highlighted
+            {/*<p>{authors}</p>*/}
+            {<Highlighted
               text={authors}
-              highlight="Ruiz-Guzman, Henry Alonso"
-            />*/}
+              highlight="Ruiz-Guzman, Henry"
+            />}
         </div>
     );
 }

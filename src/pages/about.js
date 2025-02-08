@@ -8,6 +8,7 @@ export default function IndexPage() {
         <Layout title="Hello" description="Hello From my Blog">
             <Header/>
             <AboutMe/>
+
         </Layout>
     );
 }

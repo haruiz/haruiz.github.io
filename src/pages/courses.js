@@ -1,18 +1,39 @@
 import React from 'react';
-import {Box} from "rebass";
+import {Box, Flex, Text} from "rebass";
 import CustomLayout from "../components/CustomLayout";
 
 export default function CoursesPage() {
     return (
         <CustomLayout title="Courses" description="Courses">
-            <Box textAlign="center" style={{margin: 20}}>
-                <h2>Data Science Course</h2>
-                <dl style={{textAlign: "center"}}>
-                    <dd><a href="/blog/python-environments-with-pyenv-and-poetry">Python environments with pyenv and poetry</a></dd>
-                    <dd><a href="/blog/python-for-data-science-part-getting-started">Python for Data Science - Getting Started</a></dd>
-                    <dd><a href="/blog/python-for-data-science-exploring-the-syntax">Python for Data Science - Exploring the syntax</a></dd>
-                </dl>
-            </Box>
+            <Flex flexDirection="column" justifyContent="space-between" alignItems="center" margin={30}>
+                <Text textAlign="center"><h1> Courses</h1></Text>
+                <Text textAlign="center"><h2>UAO AI-Specialization </h2></Text>
+                <Box className="responsive-wrapper" textAlign="center">
+                    <dl style={{textAlign: "center"}}>
+                        <dd>
+                            <a href="https://haruiz.github.io/fullstack-ai-notes/" target="_blank">
+                                <Text textAlign="center">
+                                    <h3>FullStack AI</h3>
+                                </Text>
+                            </a>
+                        </dd>
+                        <p>
+                            The “Fullstack AI” course offered at Autonoma de Occidente University in Cali, Colombia. The course is part of the AI Specialization Program and aims to provide a comprehensive introduction to the design and development of AI systems, covering both theoretical and practical aspects. The course is designed to be accessible to students with varying backgrounds, including those without any prior experience in AI.
+                        </p>
+                    </dl>
+                </Box>
+            </Flex>
         </CustomLayout>
     );
 }
+
+{/*    <Box textAlign="center" style={{margin: 20}}>*/}
+{/*        <h2>UAO AI-Specialization </h2>*/}
+{/*        <dl style={{textAlign: "center"}}>*/}
+{/*            <dd><a href="https://haruiz.github.io/FullStack-AI-Notes/" target="_blank">FullStack AI</a></dd>*/}
+{/*            <p>*/}
+{/*                the “Fullstack AI” course offered at Autonoma de Occidente University in Cali, Colombia. The course is part of the AI Specialization Program and aims to provide a comprehensive introduction to the design and development of AI systems, covering both theoretical and practical aspects. The course is designed to be accessible to students with varying backgrounds, including those without any prior experience in AI.*/}
+{/*            </p>*/}
+{/*        </dl>*/}
+{/*    </Box>*/}
+{/*</CustomLayout>*/}
