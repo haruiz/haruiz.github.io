@@ -18,7 +18,7 @@ export default function CoursesPage() {
                             </a>
                         </dd>
                         <p>
-                            The “Fullstack AI” course offered at Autonoma de Occidente University in Cali, Colombia. The course is part of the AI Specialization Program and aims to provide a comprehensive introduction to the design and development of AI systems, covering both theoretical and practical aspects. The course is designed to be accessible to students with varying backgrounds, including those without any prior experience in AI.
+                            “Fullstack AI” is a flagship course offered at Universidad Autónoma de Occidente in Cali, Colombia, as part of the AI Specialization Program. This course delivers a comprehensive introduction to the design and development of end-to-end ML systems. It blends foundational theory with hands-on practice to equip students with the skills needed to build ML/AI applications from scratch.
                         </p>
                     </dl>
                 </Box>

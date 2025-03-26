@@ -25,11 +25,11 @@ export default function PostersPage() {
     const posters = [
         {
             title: "Using GPR and Machine Learning to Automate the Predictions of Root and Tuber Crop Biomass",
-            url: "https://drive.google.com/file/d/13T4XqG9-tnTqWS1B2vMRJuGPM61aZIqC"
+            url: "https://drive.google.com/file/d/1-EYlvvtlEWD5GRU_VCLSIvXeqwTWebsL"
         },
         {
             title: "Ground Penetrating Radar (GPR) curvelet analysis at the citadel of Alcatraz",
-            url: "https://drive.google.com/file/d/1RPThCqdq7DKi2w6DxV_-jCAmGvnAclbe"
+            url: "https://drive.google.com/file/d/1-Ej2zN8fY26Qan1h-8vCNBuGMwstWqrc"
         },
         {
             title: "Using Deep Learning to Discover Cassava Roots on GPR Radargrams",

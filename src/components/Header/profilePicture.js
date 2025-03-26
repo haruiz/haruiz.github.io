@@ -5,5 +5,5 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 export function ProfilePicture(props) {
     const {pictureUri,opacity, ...rest} = props;
-    return <Sticker avatar={useBaseUrl(pictureUri)} opacity={opacity} {...rest}/>
+    return <Sticker avatar={useBaseUrl(pictureUri)} opacity={opacity} {...rest} />
 }

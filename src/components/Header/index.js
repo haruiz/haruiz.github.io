@@ -15,6 +15,8 @@ export default function  Header(){
 
     const {siteConfig} = useDocusaurusContext();
     const {githubUri, pictureUri} = siteConfig.customFields;
+    const currentMonth = new Date().getMonth();
+    const isChristmasTime = currentMonth === 11;
     const btnBuyMeACoffeeStyle ={
         margin: "20px"
     }
@@ -24,9 +26,11 @@ export default function  Header(){
         <header>
             <Banner>
                 <div style={{width: "100%"}}>
-                {/*<ChristmasLights numberOfBalls={20} style={{*/}
-                {/* zIndex: 999999999999,*/}
-                {/*}}/>*/}
+                {siteConfig.customFields.showChristmasLights || isChristmasTime &&
+                    <ChristmasLights numberOfBalls={20} style={{
+                        zIndex: 999999999999,
+                    }}/>
+                }
                 <GithubCorner repoUri={githubUri} className={clsx(styles.github_corner)}/>
                 <div className={clsx(styles.profile_pic_wrapper_div)}>
                     <ProfilePicture opacity={0.8} pictureUri={pictureUri} className={clsx(styles.profile_pic)} />

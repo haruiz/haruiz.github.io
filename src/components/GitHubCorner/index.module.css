@@ -1,0 +1,61 @@
+.githubCorner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 80px;
+    height: 80px;
+    display: block;
+}
+
+.githubSvg {
+    fill: #2ecc71;
+    color: white;
+    animation: pulseColor 6s ease-in-out infinite;
+    pointer-events: auto; /* 👈 KEY FIX */
+    cursor: pointer;
+}
+
+.githubCorner * {
+    pointer-events: auto; /* 👈 Enable interaction inside SVG */
+}
+
+.octoArm {
+    transition: transform 0.3s ease;
+}
+
+.githubCorner:hover .octoArm {
+    animation: octocat-wave 560ms ease-in-out;
+}
+
+/* Cool pulsing color animation */
+@keyframes pulseColor {
+    0% {
+        fill: #2ecc71;
+    }
+    25% {
+        fill: #3498db;
+    }
+    50% {
+        fill: #9b59b6;
+    }
+    75% {
+        fill: #e67e22;
+    }
+    100% {
+        fill: #2ecc71;
+    }
+}
+
+/* Optional: wave on hover */
+@keyframes octocat-wave {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    20%, 60% {
+        transform: rotate(-25deg);
+    }
+    40%, 80% {
+        transform: rotate(10deg);
+    }
+}

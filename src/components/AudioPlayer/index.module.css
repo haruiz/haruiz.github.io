@@ -1,0 +1,179 @@
+/* AudioPlayer.module.css */
+
+.audioPlayer {
+    /* background-color: #f0f2f5; */ /* REMOVED */
+    border-radius: 50px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-width: 500px;
+    margin: 20px auto; /* Or adjust positioning as needed */
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */ /* REMOVED - Often looks better without shadow if background is transparent */
+    font-family: sans-serif;
+    color: #333; /* Default text color, might need adjustment based on your blog's theme */
+}
+
+/* --- Styles for buttons, progress bar, volume, etc. remain the same --- */
+
+.controlButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    color: #555; /* Adjust if needed for contrast */
+    font-size: 1.2em;
+    transition: color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.controlButton:hover:not(:disabled) {
+    color: #007bff;
+}
+.controlButton:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.playPauseButton {
+    color: #007bff;
+    font-size: 1.4em;
+}
+.playPauseButton:hover:not(:disabled) {
+    color: #0056b3;
+}
+
+.timeDisplay {
+    font-size: 0.9em;
+    min-width: 45px;
+    text-align: center;
+    color: #666; /* Adjust if needed for contrast */
+}
+
+/* --- Progress Bar Styling --- */
+.progressBar {
+    flex-grow: 1;
+    height: 8px;
+    cursor: pointer;
+    appearance: none;
+    background: #d3d3d3; /* Track background - Keep this for the bar itself */
+    border-radius: 5px;
+    outline: none;
+    position: relative;
+}
+
+.progressBar::before {
+    content: '';
+    height: 8px;
+    background-color: #007bff; /* Progress fill color */
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--seek-before-width, 0%);
+    z-index: 1;
+}
+
+/* Chrome, Edge, Safari - Thumb */
+.progressBar::-webkit-slider-thumb {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #007bff; /* Thumb color */
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    margin-top: -4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Firefox - Thumb */
+.progressBar::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: #007bff; /* Thumb color */
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Volume Control --- */
+.volumeControl {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.volumeSlider {
+    width: 70px;
+    height: 6px;
+    cursor: pointer;
+    appearance: none;
+    background: #d3d3d3; /* Track background */
+    border-radius: 3px;
+    outline: none;
+    position: relative;
+}
+
+.volumeSlider::before {
+    content: '';
+    height: 6px;
+    background-color: #555; /* Volume fill color */
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--volume-before-width, 100%);
+    z-index: 1;
+}
+
+/* Chrome, Edge, Safari - Volume Thumb */
+.volumeSlider::-webkit-slider-thumb {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background: #555; /* Thumb color */
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    margin-top: -3px;
+}
+
+/* Firefox - Volume Thumb */
+.volumeSlider::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    background: #555; /* Thumb color */
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+}
+
+/* --- Speed Control --- */
+.speedControl {
+    margin-left: 5px;
+}
+
+.speedSelect {
+    background-color: transparent; /* Keep this transparent */
+    border: 1px solid #ccc; /* Adjust border color if needed */
+    border-radius: 4px;
+    padding: 3px 5px;
+    font-size: 0.85em;
+    cursor: pointer;
+    color: inherit; /* Inherit text color from parent */
+}
+.speedSelect:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* Optional Title */
+/*
+.audioTitle { ... }
+*/

@@ -10,7 +10,7 @@ export const AboutMe = () => {
                 <Text textAlign="center"><h1> About Me</h1></Text>
                 <p>
                     <h3>Current Position</h3>
-                    I'm a Research Scientist at Texas A&M AgriLife. My expertise and research interests lie in applying
+                    I'm a Research Scientist at Texas A&M University @ AgriLife Research. My expertise and research interests lie in applying
                     Geophysics tools like Ground-Penetrating Radar (GPR), mathematical and electromagnetism simulations,
                     signal processing, Artificial Intelligence, Machine Learning, and Deep Learning. My current research
                     is focused on designing, developing, and implementing end-to-end software solutions and

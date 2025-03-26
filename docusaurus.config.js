@@ -22,7 +22,7 @@ const config = {
   // staticDirectories: ['public', 'static'],
   customFields: {
     githubUri: "https://github.com/haruiz",
-    pictureUri: "/img/profile.png",
+    pictureUri: "/img/profile4.jpg",
     CONVERTKIT_API_KEY: process.env.CONVERTKIT_API_KEY,
     CONVERTKIT_FORM_ID: process.env.CONVERTKIT_FORM_ID
   },
