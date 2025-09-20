@@ -27,7 +27,7 @@
 <li><strong>Anomaly Detection</strong>: Spot outliers based on distance from “normal” behavior in embedding space, useful in fraud detection or monitoring systems.</li>
 <li><strong>Intent Routing and Tool Selection</strong>: Embed user queries and route them to the appropriate models, APIs, or workflows based on semantic similarity.</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="a-hands-on-example-recipe-based-rag">A Hands-On Example: Recipe-Based RAG<a href="https://haruiz.github.io/blog/building-a-rag-system-with-postgresql-pgvector-sqlalchemy-gemma-gemini-embeddings#a-hands-on-example-recipe-based-rag" class="hash-link" aria-label="Direct link to A Hands-On Example: Recipe-Based RAG" title="Direct link to A Hands-On Example: Recipe-Based RAG">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="building-a-recipe-rag-pipeline">Building a Recipe RAG Pipeline<a href="https://haruiz.github.io/blog/building-a-rag-system-with-postgresql-pgvector-sqlalchemy-gemma-gemini-embeddings#building-a-recipe-rag-pipeline" class="hash-link" aria-label="Direct link to Building a Recipe RAG Pipeline" title="Direct link to Building a Recipe RAG Pipeline">​</a></h3>
 <p>In this post, we’ll put embeddings to work with a hands-on example that shows how they make RAG possible end to end. Specifically, we are building a <strong>recipe-focused Retrieval-Augmented Generation (RAG) pipeline</strong>, powered by a synthetic dataset generated with Gemini. Recipes provide a familiar yet structured domain that makes it easy to showcase how semantic search goes beyond traditional keyword-based approaches.</p>
 <p>Unlike simple keyword queries, this system allows you to explore recipes by <strong>semantic meaning</strong>. That means you can:</p>
 <ul>
