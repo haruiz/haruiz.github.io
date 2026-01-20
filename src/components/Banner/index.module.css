@@ -1,0 +1,14 @@
+.banner {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #272936;
+}
+
+@media screen and (max-width: 966px) {
+  .banner {
+  }
+}
+

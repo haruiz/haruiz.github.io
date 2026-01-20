@@ -1,0 +1,15 @@
+project:
+  type: docusaurus
+format: 
+  docusaurus-md:
+    code-fold: false
+    code-line-numbers: true
+    html-math-method: 
+      method: webtex
+      url: https://latex.codecogs.com/png.image?%5Cbg_black&space;
+  html:
+    html-math-method: webtex
+execute: 
+  warning: false
+
+biliography: references.lib

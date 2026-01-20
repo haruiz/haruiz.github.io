@@ -1,0 +1,40 @@
+.quote-card {
+    background-color: #0a53be;
+}
+
+.quote-text {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+}
+
+.quote-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.author-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-name {
+    font-weight: 500;
+    color: #111827;
+    margin: 0;
+}
+
+.author-title {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin: 0;
+}

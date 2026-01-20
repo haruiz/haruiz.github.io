@@ -1,0 +1,307 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@100;200;300;400;500;700;900&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=PTSans&display=swap');*/
+/*@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');*/
+
+/*
+ * override docusaurus theme styles
+ */
+
+
+:root {
+    --ifm-font-family-base:  'PT Sans','Lora', serif;
+    --docusaurus-highlighted-code-line-bg: rgb(72, 77, 91);
+    /*--ifm-color-primary: #25c2a0;*/
+    /*--ifm-color-primary-dark: rgb(33, 175, 144);*/
+    /*--ifm-color-primary-darker: rgb(31, 165, 136);*/
+    /*--ifm-color-primary-darkest: rgb(26, 136, 112);*/
+    /*--ifm-color-primary-light: rgb(70, 203, 174);*/
+    /*--ifm-color-primary-lighter: rgb(102, 212, 189);*/
+    /*--ifm-color-primary-lightest: rgb(146, 224, 208);*/
+    /*--ifm-code-font-size: 95%;*/
+}
+
+
+
+[data-theme='dark'] {
+    --ifm-color-primary: white;
+    --ifm-background-color: #1C0001;
+     --docusaurus-highlighted-code-line-bg: rgb(100, 100, 100);
+}
+
+[data-theme='light'] {
+    --ifm-color-primary: #1C0001;
+    --ifm-background-color: #F2F1F2;
+     --docusaurus-highlighted-code-line-bg: rgb(203, 201, 201);
+}
+
+html[data-theme='dark'] * {
+    color: #fff;
+}
+/*[data-theme='light'] a:hover {*/
+/*  color: #2ECC71;*/
+/*}*/
+
+/*[data-theme='dark'] a:hover {*/
+/*    color: #2ECC71;*/
+/*}*/
+
+/*[data-theme='light'] a:visited {*/
+/*    color: #000000;*/
+/*}*/
+
+
+
+
+.docusaurus-highlight-code-line {
+    background-color: rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 calc(-1 * var(--ifm-pre-padding));
+    padding: 0 var(--ifm-pre-padding);
+}
+
+.responsive-wrapper {
+    width: 50%;
+    /*border: #3fc48b solid 2px;*/
+    padding: 10px;
+}
+.responsive-wrapper h1 {
+
+}
+@media screen and (max-width: 767px) {
+    .responsive-wrapper{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 400px) {
+    .responsive-wrapper{
+        width: 90%;
+    }
+}
+
+/*
+ * override TypedText styles
+ */
+
+
+.typed_text {
+    font-weight: bold;
+    font-size: xx-large;
+}
+.typed-cursor {
+    font-size: xx-large;
+}
+
+
+/*
+ * override Button Buy me a coffee styles
+ */
+
+ .code-block-error-line {
+    background-color: #ff000020;
+    display: block;
+    margin: 0 calc(-1 * var(--ifm-pre-padding));
+    padding: 0 var(--ifm-pre-padding);
+    border-left: 3px solid #ff000080;
+  }
+
+@font-face {
+    font-family: 'Cookie';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/cookie/v12/syky-y18lb0tSbf9kgqS.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+.bmc-button img {
+    height: 34px !important;
+    width: 35px !important;
+    margin-bottom: 1px !important;
+    box-shadow: none !important;
+    border: none !important;
+    vertical-align: middle !important;
+}
+
+.bmc-button {
+    padding: 7px 10px 7px 10px !important;
+    line-height: 35px !important;
+    height: 51px !important;
+    min-width: 217px !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    color: #ffffff !important;
+    background-color: #3fc48b !important;
+    border-radius: 5px !important;
+    border: 1px solid transparent !important;
+    font-size: 28px !important;
+    letter-spacing: 0.6px !important;
+    /*box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;*/
+    /*-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;*/
+    margin: 0 auto !important;
+    font-family: 'Cookie', cursive !important;
+    -webkit-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    -o-transition: 0.3s all linear !important;
+    -webkit-transition: 0.3s all linear !important;
+    -moz-transition: 0.3s all linear !important;
+    -ms-transition: 0.3s all linear !important;
+    transition: 0.3s all linear !important;
+}
+.bmc-text{
+    margin-left:15px;font-size:28px !important;
+}
+
+.bmc-button:hover,
+.bmc-button:active,
+.bmc-button:focus {
+    -webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+    text-decoration: none !important;
+    box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+    opacity: 0.85 !important;
+    color: #ffffff !important;
+}
+
+
+/**
+ * termynal.js
+ *
+ * @author Ines Montani <ines@ines.io>
+ * @version 0.0.1
+ * @license MIT
+ */
+
+:root {
+    --color-bg: #252a33;
+    --color-text: #eee;
+    --color-text-subtle: #a2a2a2;
+
+    /*--color-bg: #F6F8FA;*/
+    /*--color-text: #1a1e24;*/
+    /*--color-text-subtle: #D76D77;*/
+}
+
+[data-termynal] {
+    max-width: 100%;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-size: 14px;
+    font-family: Consolas, Menlo, Monaco, 'Courier New', Courier, monospace;
+    border-radius: 8px;
+    padding: 50px 30px 20px;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+[data-termynal]:before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    /* A little hack to display the window buttons in one pseudo element. */
+    background: #d9515d;
+    -webkit-box-shadow: 25px 0 0 #f4c025, 50px 0 0 #3ec930;
+    box-shadow: 25px 0 0 #f4c025, 50px 0 0 #3ec930;
+}
+
+[data-termynal]:after {
+    content: 'bash';
+    position: absolute;
+    color: var(--color-text-subtle);
+    top: 5px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+[data-ty] {
+    display: block;
+    line-height: 2;
+}
+
+[data-ty]:before {
+    /* Set up defaults and ensure empty lines are displayed. */
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+}
+
+[data-ty="input"]:before,
+[data-ty-prompt]:before {
+    margin-right: 0.75em;
+    color: var(--color-text-subtle);
+}
+
+[data-ty="input"]:before {
+    content: '$';
+}
+
+[data-ty][data-ty-prompt]:before {
+    content: attr(data-ty-prompt);
+}
+
+[data-ty-cursor]:after {
+    content: attr(data-ty-cursor);
+    font-family: monospace;
+    margin-left: 0.5em;
+    -webkit-animation: blink 1s infinite;
+    animation: blink 1s infinite;
+}
+
+
+/* Cursor animation */
+
+@-webkit-keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.github-corner {
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    fill: #2ecc71;
+    color: white;
+    z-index: 1000;
+
+    svg {
+        pointer-events: auto;
+    }
+
+    &:hover .octo-arm {
+        animation: octocat-wave 560ms ease-in-out;
+    }
+}
+
+@keyframes octocat-wave {
+    0%, 100% { transform: rotate(0); }
+    20%, 60% { transform: rotate(-25deg); }
+    40%, 80% { transform: rotate(10deg); }
+}
+
+/* Optional: fix waving on larger screens only */
+@media (max-width: 500px) {
+    .github-corner:hover .octo-arm {
+        animation: none;
+    }
+}
+

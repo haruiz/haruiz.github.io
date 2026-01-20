@@ -1,0 +1,81 @@
+---
+title: Python for Data Science Series - Managing your private Python packages using Poetry and Google Cloud Artifact Registry
+slug: managing-your-private-python-packages-using-poetry-and-google-cloud-artifact-registry
+description: Managing your private Python packages using Poetry and Google Cloud Artifact Registry
+authors: [haruiz]
+draft: true
+tags: [python, data-science, gcp]
+---
+
+<!--truncate-->
+
+import TermynalReact from "@site/src/components/Termynal";
+
+Protecting any software supply chain goes beyond defining the stack technology. The processes and practices used to develop, build, and run the software impact not only the integrity of it but also the security of the entire system. Dependency management is a crucial part of this process, and several tools in the Python ecosystem exist to facilitate this task ( like pyenv, conda, poetry, and many others). This post focuses on demonstrating how Poetry and "GCP artifact registry" can be employed to manage the dependencies and store and manage private packages for Python projects, respectively.
+
+[**Artifact Registry**](https://cloud.google.com/artifact-registry/docs/overview) is a Google Cloud Platform (GCP) service that provides a secure and centralized cloud-based repository for storing and managing your language packages(Python et al.) and Docker container images. It seamlessly integrates with other GCP services, such as Cloud Build, to automate the [CI/CD pipelines](https://www.redhat.com/en/topics/devops/what-cicd-pipeline#:~:text=A%20continuous%20integration%20and%20continuous,development%20life%20cycle%20via%20automation), including the deployment of code packages and container images to GCP services like Cloud Run, GKE, and App Engine.
+
+**Poetry**, on the other hand, is a [CLI tool](https://en.wikipedia.org/wiki/Command-line_interface) that facilitates the process of packaging Python project dependencies for distribution. It also provides a way to publish Python packages to PyPI, a public repository for Python packages. However, some cases require keeping the Python packages private, and cloud-managed repositories such as Artifact Registry on Google Cloud can be used to store and manage them. This tutorial shows how it can be done.
+
+:::info
+Check the previous post [here](https://haruiz.github.io/blog/python-environments-with-pyenv-and-poetry) to learn more about Poetry.
+:::
+
+Let us review which are the prerequisites to follow this tutorial.
+
+## Prerequisites
+
+- [Download and install Poetry and Pyenv](https://haruiz.github.io/blog/python-environments-with-pyenv-and-poetry)
+- [Create a GCP project](https://cloud.google.com/resource-manager/docs/creating-managing-projects)
+- [Download and Install the Google Cloud CLI tool](https://cloud.google.com/sdk/docs/install)
+
+For this tutorial, we will use the following versions:
+
+<TermynalReact lines ={[
+    {type: 'input', value: 'pyenv --version', comment: "Check pyenv version"},
+    {type: 'output', value: 'pyenv 2.3.12'},
+    {type: 'input', value: 'poetry --version', comment: "Check poetry version"},
+    {type: 'output', value: 'Poetry (version 1.7.1)'},
+    {type: 'input', value: 'gcloud --version', comment: "Check gcloud CLI version"},
+    {type: 'output', value: 'Google Cloud SDK 448.0.0'},
+]} />
+
+## How to create a python package using poetry
+
+Creating a Python package using poetry is straightforward. For this tutorial, we will create a package called `jocker,` which uses OpenAI and LangChain under the hood to generate funny jokes. The following command will create the package and initialize the project structure.
+
+<TermynalReact lines ={[
+    {type: 'input', value: 'poetry new jocker', comment: "Create a new package called jocker"},
+    {type: 'output', value: 'Created package jocker in jocker'},
+]} />
+
+Once the package is created, the project structure will look like this:
+
+<TermynalReact
+    lines ={[
+        {type: 'input', value: 'cd jocker', comment: "Change directory to jocker"},
+        {type: 'input', value: 'tree -F', comment: "Show the folder structure, you can also use the ls or dir commands unix based SOs and windows respectively"}
+    ]}
+/>
+
+```bash
+./
+├── README.md
+├── jocker/
+│   └── __init__.py
+├── pyproject.toml
+└── tests/
+    └── __init__.py
+
+3 directories, 4 files
+```
+This folder structure is reviewed in detail in the previous post [here](https://haruiz.github.io/blog/python-environments-with-pyenv-and-poetry).
+
+Next, the folder could be opened using our favorite IDE or text editor, getting prepared to start coding our package. For this tutorial, we will use [Pycharm](https://www.jetbrains.com/pycharm/), but you can use any other IDE or text editor based on your preferences. Following this link [[click here](https://haruiz.github.io/blog/python-for-data-science-part-getting-started#hands-on-tutorial)], there is a video where I explain how to open your project on Pycharm.
+
+:::note
+Because this tutorial is focused on how to publish a package to GCP Artifact Registry, rather than going into detail about how to code the package, the code explanation will be skipped this time. However, the code is available on Github [here](https://haruiz.github.io/blog/python-for-data-science-part-getting-started#hands-on-tutorial).
+:::
+
+## How to create a private repository o Artifact Registry
+## How to publish your packages to GCP Artifact Registry
