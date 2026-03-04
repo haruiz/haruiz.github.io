@@ -4,10 +4,45 @@
         <title>Henry Ruiz Blog</title>
         <link>https://haruiz.github.io/blog</link>
         <description>Henry Ruiz Blog</description>
-        <lastBuildDate>Sat, 13 Sep 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 19 Feb 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[From Single-Agent to Production-Ready Multi-Agent Architecture with ADK, MCP, A2A, and AG-UI]]></title>
+            <link>https://haruiz.github.io/blog/from-single-agent-to-production-ready-multi-agent-architecture-with-adk-mcp-a2a-and-ag-ui</link>
+            <guid>https://haruiz.github.io/blog/from-single-agent-to-production-ready-multi-agent-architecture-with-adk-mcp-a2a-and-ag-ui</guid>
+            <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[This post shows how to evolve a single-agent ADK application into a production-ready multi-agent architecture using MCP for distributed tool execution, A2A for inter-agent coordination, and AG-UI for a unified interactive user experience.]]></description>
+            <content:encoded><![CDATA[
+<p>Redirecting to Medium...</p>
+<p>If you are not redirected automatically, open the article on
+<a href="https://medium.com/google-cloud/from-single-agent-to-production-ready-multi-agent-architecture-with-adk-mcp-a2a-and-ag-ui-1fe0c0378bef" target="_blank" rel="noopener noreferrer">Medium</a>.</p>]]></content:encoded>
+            <category>agents</category>
+            <category>multi-agent</category>
+            <category>google-cloud</category>
+            <category>adk</category>
+            <category>mcp</category>
+            <category>a2a</category>
+            <category>ag-ui</category>
+            <category>medium</category>
+        </item>
+        <item>
+            <title><![CDATA[Building Interactive Agentic Applications Using ADK and AG-UI Protocol]]></title>
+            <link>https://haruiz.github.io/blog/building-interactive-agentic-applications-using-adk-and-ag-ui-protocol</link>
+            <guid>https://haruiz.github.io/blog/building-interactive-agentic-applications-using-adk-and-ag-ui-protocol</guid>
+            <pubDate>Sat, 20 Dec 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[This post explores how to integrate AG-UI with ADK to build usable, event-driven agentic applications, with a practical example that combines weather tools and Google Maps context for real-time interactive experiences.]]></description>
+            <content:encoded><![CDATA[
+<p>Redirecting to Medium...</p>
+<p>If you are not redirected automatically, open the article on
+<a href="https://medium.com/google-cloud/building-interactive-agentic-applications-using-adk-and-ag-ui-protocol-3a49ae6d3dc9" target="_blank" rel="noopener noreferrer">Medium</a>.</p>]]></content:encoded>
+            <category>agents</category>
+            <category>google-cloud</category>
+            <category>adk</category>
+            <category>ag-ui</category>
+            <category>medium</category>
+        </item>
         <item>
             <title><![CDATA[Building a RAG System with PostgreSQL, pgvector, SQLAlchemy, and Gemma/Gemini Embeddings]]></title>
             <link>https://haruiz.github.io/blog/building-a-rag-system-with-postgresql-pgvector-sqlalchemy-gemma-gemini-embeddings</link>
