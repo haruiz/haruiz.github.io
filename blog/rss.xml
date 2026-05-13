@@ -14,7 +14,9 @@
             <guid>https://haruiz.github.io/blog/post-training-gemma-3-for-earth-observation-eo-understanding-a-jax-stack-tpu-pipeline</guid>
             <pubDate>Tue, 21 Apr 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[This post presents GemmaEarth, a TPU-native JAX post-training and benchmarking pipeline that adapts Gemma 3 4B IT for Earth observation tasks, starting with multi-label Sentinel remote-sensing scene classification using EarthDial and BigEarthNet.]]></description>
-            <content:encoded><![CDATA[
+            <content:encoded><![CDATA[<p>This post is hosted on
+<a href="https://medium.com/google-cloud/post-training-gemma-3-for-earth-observation-eo-understanding-a-jax-stack-tpu-pipeline-for-cc26da11e338" target="_blank" rel="noopener noreferrer">Medium</a>.</p>
+<!-- -->
 <p>Redirecting to Medium...</p>
 <p>If you are not redirected automatically, open the article on
 <a href="https://medium.com/google-cloud/post-training-gemma-3-for-earth-observation-eo-understanding-a-jax-stack-tpu-pipeline-for-cc26da11e338" target="_blank" rel="noopener noreferrer">Medium</a>.</p>]]></content:encoded>
@@ -32,7 +34,9 @@
             <guid>https://haruiz.github.io/blog/from-single-agent-to-production-ready-multi-agent-architecture-with-adk-mcp-a2a-and-ag-ui</guid>
             <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[This post shows how to evolve a single-agent ADK application into a production-ready multi-agent architecture using MCP for distributed tool execution, A2A for inter-agent coordination, and AG-UI for a unified interactive user experience.]]></description>
-            <content:encoded><![CDATA[
+            <content:encoded><![CDATA[<p>This post is hosted on
+<a href="https://medium.com/google-cloud/from-single-agent-to-production-ready-multi-agent-architecture-with-adk-mcp-a2a-and-ag-ui-1fe0c0378bef" target="_blank" rel="noopener noreferrer">Medium</a>.</p>
+<!-- -->
 <p>Redirecting to Medium...</p>
 <p>If you are not redirected automatically, open the article on
 <a href="https://medium.com/google-cloud/from-single-agent-to-production-ready-multi-agent-architecture-with-adk-mcp-a2a-and-ag-ui-1fe0c0378bef" target="_blank" rel="noopener noreferrer">Medium</a>.</p>]]></content:encoded>
@@ -51,7 +55,9 @@
             <guid>https://haruiz.github.io/blog/building-interactive-agentic-applications-using-adk-and-ag-ui-protocol</guid>
             <pubDate>Sat, 20 Dec 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[This post explores how to integrate AG-UI with ADK to build usable, event-driven agentic applications, with a practical example that combines weather tools and Google Maps context for real-time interactive experiences.]]></description>
-            <content:encoded><![CDATA[
+            <content:encoded><![CDATA[<p>This post is hosted on
+<a href="https://medium.com/google-cloud/building-interactive-agentic-applications-using-adk-and-ag-ui-protocol-3a49ae6d3dc9" target="_blank" rel="noopener noreferrer">Medium</a>.</p>
+<!-- -->
 <p>Redirecting to Medium...</p>
 <p>If you are not redirected automatically, open the article on
 <a href="https://medium.com/google-cloud/building-interactive-agentic-applications-using-adk-and-ag-ui-protocol-3a49ae6d3dc9" target="_blank" rel="noopener noreferrer">Medium</a>.</p>]]></content:encoded>
