@@ -90,8 +90,7 @@
 <p><strong>Google Search Agent (<code>google_search_agent</code>):</strong> This agent provides up-to-date information from official documentation and other sources outside the Hugging Face ecosystem, including software releases, API changes, compatibility details, and implementation guidance.</p>
 </li>
 <li>
-<p><strong>Antigravity Tool (<code>run_antigravity_agent</code>):</strong> Antigravity is registered as an opt-in tool at the root orchestrator level. This placement is deliberate: it ensures that artifact generation, image creation, report drafting, and large implementation tasks remain explicit user decisions. The wrapper records artifact roots and tool results, denies file writes by default, and enables creation or editing policies only after receiving confirmation.
-on.</p>
+<p><strong>Antigravity Tool (<code>run_antigravity_agent</code>):</strong> Antigravity is registered as an opt-in tool at the root orchestrator level. This placement is deliberate: it ensures that artifact generation, image creation, report drafting, and large implementation tasks remain explicit user decisions. The wrapper records artifact roots and tool results, denies file writes by default, and enables creation or editing policies only after receiving confirmation.</p>
 </li>
 </ol>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="implementation-details-adk-and-mcp-server-integration">Implementation Details: ADK and MCP Server Integration<a href="https://haruiz.github.io/blog/visionops-crew-multi-agent-architecture-for-computer-vision-operations#implementation-details-adk-and-mcp-server-integration" class="hash-link" aria-label="Direct link to Implementation Details: ADK and MCP Server Integration" title="Direct link to Implementation Details: ADK and MCP Server Integration">​</a></h2>
