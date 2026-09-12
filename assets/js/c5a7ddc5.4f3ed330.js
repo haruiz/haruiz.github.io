@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkblog||=[]).push([[2731],{86613(t){t.exports=JSON.parse('{"authors":[{"name":"Henry Ruiz","title":"Blog Author","url":"https://github.com/haruiz","imageURL":"https://github.com/haruiz.png","key":"haruiz","page":null,"count":12}]}')}}]);

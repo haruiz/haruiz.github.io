@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkblog||=[]).push([[1921],{963(a){a.exports=JSON.parse('{"tag":{"label":"ai-workflows","permalink":"/blog/tags/ai-workflows","allTagsPath":"/blog/tags","count":1,"unlisted":false},"listMetadata":{"permalink":"/blog/tags/ai-workflows","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

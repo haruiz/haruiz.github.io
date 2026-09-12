@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkblog||=[]).push([[3735],{20183(a){a.exports=JSON.parse('{"tag":{"label":"llamaindex","permalink":"/blog/tags/llamaindex","allTagsPath":"/blog/tags","count":1,"unlisted":false},"listMetadata":{"permalink":"/blog/tags/llamaindex","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
